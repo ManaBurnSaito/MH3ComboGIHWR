@@ -1,0 +1,2028 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17285</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.60</td>
+      <td>63.38</td>
+      <td>8.78</td>
+      <td>142</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49100</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.50</td>
+      <td>63.04</td>
+      <td>8.54</td>
+      <td>138</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44252</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>57.05</td>
+      <td>65.56</td>
+      <td>8.51</td>
+      <td>151</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32435</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.15</td>
+      <td>63.37</td>
+      <td>8.22</td>
+      <td>101</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90932" target="_blank" rel="noopener noreferrer"><img src="img/Chthonian_Nightmare.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chthonian Nightmare.html" target="_blank" rel="noopener noreferrer">Chthonian Nightmare</a></td>
+      <td>2.98</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>46070</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.15</td>
+      <td>62.07</td>
+      <td>7.92</td>
+      <td>116</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70310</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>59.00</td>
+      <td>66.20</td>
+      <td>7.20</td>
+      <td>429</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57887</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.15</td>
+      <td>62.05</td>
+      <td>6.90</td>
+      <td>195</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12740</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.50</td>
+      <td>63.12</td>
+      <td>6.62</td>
+      <td>141</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>85763</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.40</td>
+      <td>61.44</td>
+      <td>6.04</td>
+      <td>236</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9407</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.10</td>
+      <td>60.71</td>
+      <td>5.61</td>
+      <td>112</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14861</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.00</td>
+      <td>58.56</td>
+      <td>5.56</td>
+      <td>111</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44858</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.85</td>
+      <td>61.26</td>
+      <td>5.41</td>
+      <td>222</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58190</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.60</td>
+      <td>61.81</td>
+      <td>5.21</td>
+      <td>288</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3650</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.00</td>
+      <td>60.07</td>
+      <td>5.07</td>
+      <td>273</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58493</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.40</td>
+      <td>61.36</td>
+      <td>4.96</td>
+      <td>132</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91019" target="_blank" rel="noopener noreferrer"><img src="img/Six.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Six.html" target="_blank" rel="noopener noreferrer">Six</a></td>
+      <td>1.79</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69704</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.60</td>
+      <td>61.54</td>
+      <td>4.94</td>
+      <td>143</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1832</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.55</td>
+      <td>58.16</td>
+      <td>4.61</td>
+      <td>141</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24860</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.85</td>
+      <td>61.39</td>
+      <td>4.54</td>
+      <td>101</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73643</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.10</td>
+      <td>58.25</td>
+      <td>4.15</td>
+      <td>527</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17588</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.15</td>
+      <td>60.16</td>
+      <td>4.01</td>
+      <td>128</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20921</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.55</td>
+      <td>59.29</td>
+      <td>3.74</td>
+      <td>113</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86369</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.05</td>
+      <td>57.69</td>
+      <td>3.64</td>
+      <td>130</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4862</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>58.28</td>
+      <td>3.38</td>
+      <td>163</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24557</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.20</td>
+      <td>59.57</td>
+      <td>3.37</td>
+      <td>141</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76067</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.25</td>
+      <td>58.47</td>
+      <td>3.22</td>
+      <td>354</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50615</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.00</td>
+      <td>56.97</td>
+      <td>2.97</td>
+      <td>165</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5165</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.80</td>
+      <td>57.76</td>
+      <td>2.96</td>
+      <td>116</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13952</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>57.52</td>
+      <td>2.62</td>
+      <td>113</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>83945</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.55</td>
+      <td>55.06</td>
+      <td>2.51</td>
+      <td>247</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63341</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>57.35</td>
+      <td>2.45</td>
+      <td>211</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27284</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.85</td>
+      <td>56.91</td>
+      <td>2.06</td>
+      <td>181</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57281</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>57.50</td>
+      <td>59.53</td>
+      <td>2.03</td>
+      <td>215</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12134</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.65</td>
+      <td>56.60</td>
+      <td>1.95</td>
+      <td>424</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56069</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>57.20</td>
+      <td>59.02</td>
+      <td>1.82</td>
+      <td>571</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54857</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.40</td>
+      <td>58.22</td>
+      <td>1.82</td>
+      <td>608</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54554</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>56.62</td>
+      <td>1.72</td>
+      <td>272</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53039</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.10</td>
+      <td>55.80</td>
+      <td>1.70</td>
+      <td>647</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8801</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.85</td>
+      <td>54.46</td>
+      <td>1.61</td>
+      <td>101</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76370</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.60</td>
+      <td>55.83</td>
+      <td>1.23</td>
+      <td>120</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91079" target="_blank" rel="noopener noreferrer"><img src="img/Shifting_Woodland.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shifting Woodland.html" target="_blank" rel="noopener noreferrer">Shifting Woodland</a></td>
+      <td>5.76</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7589</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.70</td>
+      <td>55.92</td>
+      <td>1.22</td>
+      <td>152</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77279</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.70</td>
+      <td>55.86</td>
+      <td>1.16</td>
+      <td>290</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54251</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.35</td>
+      <td>54.46</td>
+      <td>1.11</td>
+      <td>224</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6680</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.15</td>
+      <td>56.16</td>
+      <td>1.01</td>
+      <td>203</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67280</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.60</td>
+      <td>54.46</td>
+      <td>0.86</td>
+      <td>101</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91049" target="_blank" rel="noopener noreferrer"><img src="img/Planar_Genesis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Planar Genesis.html" target="_blank" rel="noopener noreferrer">Planar Genesis</a></td>
+      <td>8.10</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56978</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.05</td>
+      <td>55.91</td>
+      <td>0.86</td>
+      <td>508</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56675</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.40</td>
+      <td>56.97</td>
+      <td>0.57</td>
+      <td>581</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30920</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.30</td>
+      <td>54.84</td>
+      <td>0.54</td>
+      <td>155</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43040</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.00</td>
+      <td>55.45</td>
+      <td>0.45</td>
+      <td>202</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77582</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.70</td>
+      <td>55.12</td>
+      <td>0.42</td>
+      <td>537</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51221</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.50</td>
+      <td>55.84</td>
+      <td>0.34</td>
+      <td>548</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55160</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.00</td>
+      <td>52.16</td>
+      <td>0.16</td>
+      <td>232</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40010</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.35</td>
+      <td>55.51</td>
+      <td>0.16</td>
+      <td>236</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62129</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.45</td>
+      <td>54.58</td>
+      <td>0.13</td>
+      <td>273</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91031" target="_blank" rel="noopener noreferrer"><img src="img/Cursed_Wombat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cursed Wombat.html" target="_blank" rel="noopener noreferrer">Cursed Wombat</a></td>
+      <td>5.37</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52736</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.85</td>
+      <td>56.97</td>
+      <td>0.12</td>
+      <td>574</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4256</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.10</td>
+      <td>54.21</td>
+      <td>0.11</td>
+      <td>3263</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td>2.77</td>
+      <td>G</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>59099</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.55</td>
+      <td>56.48</td>
+      <td>-0.07</td>
+      <td>108</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91021" target="_blank" rel="noopener noreferrer"><img src="img/Springheart_Nantuko.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Springheart Nantuko.html" target="_blank" rel="noopener noreferrer">Springheart Nantuko</a></td>
+      <td>1.57</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73037</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.30</td>
+      <td>55.23</td>
+      <td>-0.07</td>
+      <td>306</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52130</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.30</td>
+      <td>53.94</td>
+      <td>-0.36</td>
+      <td>406</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32132</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.20</td>
+      <td>54.83</td>
+      <td>-0.37</td>
+      <td>414</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75764</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.40</td>
+      <td>53.99</td>
+      <td>-0.41</td>
+      <td>213</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63038</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.70</td>
+      <td>52.20</td>
+      <td>-0.50</td>
+      <td>500</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59402</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.20</td>
+      <td>53.63</td>
+      <td>-0.57</td>
+      <td>455</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74855</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.00</td>
+      <td>54.43</td>
+      <td>-0.57</td>
+      <td>158</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37586</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>57.20</td>
+      <td>56.60</td>
+      <td>-0.60</td>
+      <td>159</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59705</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.35</td>
+      <td>54.15</td>
+      <td>-1.20</td>
+      <td>229</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73340</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.65</td>
+      <td>53.42</td>
+      <td>-1.23</td>
+      <td>219</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11528</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.20</td>
+      <td>53.57</td>
+      <td>-1.63</td>
+      <td>112</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69098</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.80</td>
+      <td>52.16</td>
+      <td>-1.64</td>
+      <td>232</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51827</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.95</td>
+      <td>54.30</td>
+      <td>-1.65</td>
+      <td>186</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5771</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.25</td>
+      <td>53.55</td>
+      <td>-1.70</td>
+      <td>282</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35768</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.95</td>
+      <td>50.97</td>
+      <td>-1.98</td>
+      <td>310</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8195</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.10</td>
+      <td>52.04</td>
+      <td>-2.06</td>
+      <td>221</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>91217</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.65</td>
+      <td>50.37</td>
+      <td>-2.28</td>
+      <td>135</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75461</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.80</td>
+      <td>52.30</td>
+      <td>-2.50</td>
+      <td>239</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2135</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.85</td>
+      <td>52.34</td>
+      <td>-2.51</td>
+      <td>214</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3953</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>52.28</td>
+      <td>-2.62</td>
+      <td>285</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60614</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.10</td>
+      <td>52.35</td>
+      <td>-2.75</td>
+      <td>170</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70007</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.75</td>
+      <td>51.66</td>
+      <td>-3.09</td>
+      <td>151</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91058" target="_blank" rel="noopener noreferrer"><img src="img/Wight_of_the_Reliquary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wight of the Reliquary.html" target="_blank" rel="noopener noreferrer">Wight of the Reliquary</a></td>
+      <td>4.17</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31526</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.55</td>
+      <td>52.25</td>
+      <td>-3.30</td>
+      <td>377</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6377</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.85</td>
+      <td>51.50</td>
+      <td>-3.35</td>
+      <td>167</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60311</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.75</td>
+      <td>49.18</td>
+      <td>-3.57</td>
+      <td>183</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30617</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.10</td>
+      <td>52.49</td>
+      <td>-3.61</td>
+      <td>221</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12437</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.95</td>
+      <td>52.34</td>
+      <td>-3.61</td>
+      <td>128</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36677</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.50</td>
+      <td>49.54</td>
+      <td>-3.96</td>
+      <td>109</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90946" target="_blank" rel="noopener noreferrer"><img src="img/Grim_Servant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grim Servant.html" target="_blank" rel="noopener noreferrer">Grim Servant</a></td>
+      <td>8.36</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40919</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.00</td>
+      <td>51.73</td>
+      <td>-4.27</td>
+      <td>462</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69401</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.60</td>
+      <td>52.29</td>
+      <td>-4.31</td>
+      <td>109</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28193</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>56.25</td>
+      <td>51.72</td>
+      <td>-4.53</td>
+      <td>174</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53645</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.85</td>
+      <td>48.23</td>
+      <td>-4.62</td>
+      <td>141</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91003" target="_blank" rel="noopener noreferrer"><img src="img/Fangs_of_Kalonia.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fangs of Kalonia.html" target="_blank" rel="noopener noreferrer">Fangs of Kalonia</a></td>
+      <td>7.29</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74249</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.75</td>
+      <td>50.10</td>
+      <td>-4.65</td>
+      <td>509</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41222</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.35</td>
+      <td>50.66</td>
+      <td>-4.69</td>
+      <td>152</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37283</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.55</td>
+      <td>49.65</td>
+      <td>-4.90</td>
+      <td>141</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36980</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.95</td>
+      <td>50.00</td>
+      <td>-4.95</td>
+      <td>132</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55463</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.15</td>
+      <td>47.02</td>
+      <td>-5.13</td>
+      <td>151</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91009" target="_blank" rel="noopener noreferrer"><img src="img/Hydra_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydra Trainer.html" target="_blank" rel="noopener noreferrer">Hydra Trainer</a></td>
+      <td>7.31</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36374</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.30</td>
+      <td>47.15</td>
+      <td>-5.15</td>
+      <td>263</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34859</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.25</td>
+      <td>47.73</td>
+      <td>-5.52</td>
+      <td>132</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90940" target="_blank" rel="noopener noreferrer"><img src="img/Etched_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etched Slith.html" target="_blank" rel="noopener noreferrer">Etched Slith</a></td>
+      <td>5.90</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33950</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.90</td>
+      <td>48.08</td>
+      <td>-5.82</td>
+      <td>312</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35465</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.90</td>
+      <td>49.04</td>
+      <td>-5.86</td>
+      <td>261</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39404</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.30</td>
+      <td>48.27</td>
+      <td>-6.03</td>
+      <td>404</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27890</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>52.85</td>
+      <td>46.46</td>
+      <td>-6.39</td>
+      <td>127</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4559</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>53.95</td>
+      <td>45.67</td>
+      <td>-8.28</td>
+      <td>127</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>38798</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>51.85</td>
+      <td>42.59</td>
+      <td>-9.26</td>
+      <td>162</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90953" target="_blank" rel="noopener noreferrer"><img src="img/Quest_for_the_Necropolis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quest for the Necropolis.html" target="_blank" rel="noopener noreferrer">Quest for the Necropolis</a></td>
+      <td>9.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39101</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>55.45</td>
+      <td>43.68</td>
+      <td>-11.77</td>
+      <td>174</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7286</th>
+      <td>mythic</td>
+      <td>G</td>
+      <td>2.77</td>
+      <td><a href=".//Grist, Voracious Larva.html" target="_blank" rel="noopener noreferrer">Grist, Voracious Larva</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90828" target="_blank" rel="noopener noreferrer"><img src="img/Grist,_Voracious_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.1</td>
+      <td>54.60</td>
+      <td>42.59</td>
+      <td>-12.01</td>
+      <td>108</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

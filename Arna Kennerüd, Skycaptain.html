@@ -1,0 +1,2484 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>22321</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>68.12</td>
+      <td>12.62</td>
+      <td>138</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90898" target="_blank" rel="noopener noreferrer"><img src="img/Wrath_of_the_Skies.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrath of the Skies.html" target="_blank" rel="noopener noreferrer">Wrath of the Skies</a></td>
+      <td>2.81</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>29896</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>51.55</td>
+      <td>62.90</td>
+      <td>11.35</td>
+      <td>124</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90923" target="_blank" rel="noopener noreferrer"><img src="img/Triton_Wavebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Triton Wavebreaker.html" target="_blank" rel="noopener noreferrer">Triton Wavebreaker</a></td>
+      <td>10.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31411</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.90</td>
+      <td>67.46</td>
+      <td>10.56</td>
+      <td>126</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90928" target="_blank" rel="noopener noreferrer"><img src="img/Volatile_Stormdrake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Volatile Stormdrake.html" target="_blank" rel="noopener noreferrer">Volatile Stormdrake</a></td>
+      <td>4.06</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5353</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>65.38</td>
+      <td>9.88</td>
+      <td>546</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75346</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.50</td>
+      <td>64.05</td>
+      <td>9.55</td>
+      <td>153</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91075" target="_blank" rel="noopener noreferrer"><img src="img/Polluted_Delta.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Polluted Delta.html" target="_blank" rel="noopener noreferrer">Polluted Delta</a></td>
+      <td>6.40</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6565</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.55</td>
+      <td>62.87</td>
+      <td>7.32</td>
+      <td>237</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61105</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.10</td>
+      <td>62.98</td>
+      <td>6.88</td>
+      <td>208</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91027" target="_blank" rel="noopener noreferrer"><img src="img/Abstruse_Appropriation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abstruse Appropriation.html" target="_blank" rel="noopener noreferrer">Abstruse Appropriation</a></td>
+      <td>3.20</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>77164</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.10</td>
+      <td>62.90</td>
+      <td>6.80</td>
+      <td>124</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91081" target="_blank" rel="noopener noreferrer"><img src="img/Spymaster's_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spymaster's Vault.html" target="_blank" rel="noopener noreferrer">Spymaster's Vault</a></td>
+      <td>5.81</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36865</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.20</td>
+      <td>60.77</td>
+      <td>6.57</td>
+      <td>130</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90946" target="_blank" rel="noopener noreferrer"><img src="img/Grim_Servant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grim Servant.html" target="_blank" rel="noopener noreferrer">Grim Servant</a></td>
+      <td>8.36</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34744</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.10</td>
+      <td>63.64</td>
+      <td>6.54</td>
+      <td>165</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90939" target="_blank" rel="noopener noreferrer"><img src="img/Emperor_of_Bones.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emperor of Bones.html" target="_blank" rel="noopener noreferrer">Emperor of Bones</a></td>
+      <td>2.18</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>2323</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.55</td>
+      <td>61.65</td>
+      <td>6.10</td>
+      <td>339</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40198</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.05</td>
+      <td>62.02</td>
+      <td>5.97</td>
+      <td>603</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38077</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.05</td>
+      <td>62.99</td>
+      <td>5.94</td>
+      <td>335</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90950" target="_blank" rel="noopener noreferrer"><img src="img/Mindless_Conscription.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mindless Conscription.html" target="_blank" rel="noopener noreferrer">Mindless Conscription</a></td>
+      <td>7.50</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26866</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.50</td>
+      <td>62.38</td>
+      <td>5.88</td>
+      <td>210</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27775</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.95</td>
+      <td>62.45</td>
+      <td>5.50</td>
+      <td>229</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20806</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.10</td>
+      <td>62.50</td>
+      <td>5.40</td>
+      <td>136</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90893" target="_blank" rel="noopener noreferrer"><img src="img/Static_Prison.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Static Prison.html" target="_blank" rel="noopener noreferrer">Static Prison</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37774</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.90</td>
+      <td>63.19</td>
+      <td>5.29</td>
+      <td>345</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24139</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.15</td>
+      <td>59.44</td>
+      <td>5.29</td>
+      <td>180</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71407</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.95</td>
+      <td>61.06</td>
+      <td>5.11</td>
+      <td>208</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55045</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.10</td>
+      <td>62.16</td>
+      <td>5.06</td>
+      <td>111</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32320</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.90</td>
+      <td>60.95</td>
+      <td>5.05</td>
+      <td>740</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75952</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.10</td>
+      <td>60.03</td>
+      <td>4.93</td>
+      <td>663</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32623</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.85</td>
+      <td>60.76</td>
+      <td>4.91</td>
+      <td>158</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90932" target="_blank" rel="noopener noreferrer"><img src="img/Chthonian_Nightmare.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chthonian Nightmare.html" target="_blank" rel="noopener noreferrer">Chthonian Nightmare</a></td>
+      <td>2.98</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>64438</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.60</td>
+      <td>61.47</td>
+      <td>4.87</td>
+      <td>327</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91038" target="_blank" rel="noopener noreferrer"><img src="img/Horrid_Shadowspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrid Shadowspinner.html" target="_blank" rel="noopener noreferrer">Horrid Shadowspinner</a></td>
+      <td>8.15</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25957</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.05</td>
+      <td>60.87</td>
+      <td>4.82</td>
+      <td>253</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35956</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.65</td>
+      <td>58.42</td>
+      <td>4.77</td>
+      <td>469</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29290</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>52.35</td>
+      <td>56.83</td>
+      <td>4.48</td>
+      <td>139</td>
+      <td>49.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90921" target="_blank" rel="noopener noreferrer"><img src="img/Tamiyo_Meets_the_Story_Circle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tamiyo Meets the Story Circle.html" target="_blank" rel="noopener noreferrer">Tamiyo Meets the Story Circle</a></td>
+      <td>9.53</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35653</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.60</td>
+      <td>60.04</td>
+      <td>4.44</td>
+      <td>553</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37471</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.25</td>
+      <td>59.51</td>
+      <td>4.26</td>
+      <td>247</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28381</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.95</td>
+      <td>61.19</td>
+      <td>4.24</td>
+      <td>773</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41107</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.70</td>
+      <td>60.94</td>
+      <td>4.24</td>
+      <td>896</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11716</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.90</td>
+      <td>60.00</td>
+      <td>4.10</td>
+      <td>130</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7171</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.25</td>
+      <td>59.25</td>
+      <td>4.00</td>
+      <td>427</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39592</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.00</td>
+      <td>58.97</td>
+      <td>3.97</td>
+      <td>429</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39289</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.15</td>
+      <td>60.04</td>
+      <td>3.89</td>
+      <td>458</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73528</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.35</td>
+      <td>59.02</td>
+      <td>3.67</td>
+      <td>1452</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14140</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.60</td>
+      <td>59.27</td>
+      <td>3.67</td>
+      <td>599</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57166</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.75</td>
+      <td>59.41</td>
+      <td>3.66</td>
+      <td>101</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>83830</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.10</td>
+      <td>60.74</td>
+      <td>3.64</td>
+      <td>135</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91103" target="_blank" rel="noopener noreferrer"><img src="img/Toxic_Deluge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Toxic Deluge.html" target="_blank" rel="noopener noreferrer">Toxic Deluge</a></td>
+      <td>2.32</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7474</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.30</td>
+      <td>58.82</td>
+      <td>3.52</td>
+      <td>408</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29593</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>58.85</td>
+      <td>3.35</td>
+      <td>469</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22018</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.00</td>
+      <td>58.33</td>
+      <td>3.33</td>
+      <td>204</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90897" target="_blank" rel="noopener noreferrer"><img src="img/Wing_It.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wing It.html" target="_blank" rel="noopener noreferrer">Wing It</a></td>
+      <td>10.50</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18382</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.85</td>
+      <td>57.00</td>
+      <td>3.15</td>
+      <td>100</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90885" target="_blank" rel="noopener noreferrer"><img src="img/Muster_the_Departed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Muster the Departed.html" target="_blank" rel="noopener noreferrer">Muster the Departed</a></td>
+      <td>9.11</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73831</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.80</td>
+      <td>57.87</td>
+      <td>3.07</td>
+      <td>648</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25048</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.55</td>
+      <td>60.57</td>
+      <td>3.02</td>
+      <td>246</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66862</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>52.75</td>
+      <td>55.70</td>
+      <td>2.95</td>
+      <td>377</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91046" target="_blank" rel="noopener noreferrer"><img src="img/Ondu_Knotmaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ondu Knotmaster.html" target="_blank" rel="noopener noreferrer">Ondu Knotmaster</a></td>
+      <td>7.62</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13231</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.35</td>
+      <td>59.22</td>
+      <td>2.87</td>
+      <td>255</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90868" target="_blank" rel="noopener noreferrer"><img src="img/Ajani_Fells_the_Godsire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani Fells the Godsire.html" target="_blank" rel="noopener noreferrer">Ajani Fells the Godsire</a></td>
+      <td>4.80</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30199</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>58.28</td>
+      <td>2.78</td>
+      <td>441</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34138</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.60</td>
+      <td>57.21</td>
+      <td>2.61</td>
+      <td>631</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77467</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.40</td>
+      <td>58.01</td>
+      <td>2.61</td>
+      <td>562</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74134</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.00</td>
+      <td>57.53</td>
+      <td>2.53</td>
+      <td>146</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91071" target="_blank" rel="noopener noreferrer"><img src="img/Flooded_Strand.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Flooded Strand.html" target="_blank" rel="noopener noreferrer">Flooded Strand</a></td>
+      <td>6.10</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20200</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.20</td>
+      <td>56.67</td>
+      <td>2.47</td>
+      <td>180</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90891" target="_blank" rel="noopener noreferrer"><img src="img/Rosecot_Knight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rosecot Knight.html" target="_blank" rel="noopener noreferrer">Rosecot Knight</a></td>
+      <td>11.27</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8383</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.80</td>
+      <td>57.25</td>
+      <td>2.45</td>
+      <td>131</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>84133</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.25</td>
+      <td>55.68</td>
+      <td>2.43</td>
+      <td>185</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75649</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>57.79</td>
+      <td>2.29</td>
+      <td>571</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63832</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.60</td>
+      <td>58.85</td>
+      <td>2.25</td>
+      <td>243</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91036" target="_blank" rel="noopener noreferrer"><img src="img/Genku,_Future_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Genku, Future Shaper.html" target="_blank" rel="noopener noreferrer">Genku, Future Shaper</a></td>
+      <td>2.50</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>17473</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.30</td>
+      <td>57.53</td>
+      <td>2.23</td>
+      <td>186</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81103</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.90</td>
+      <td>57.85</td>
+      <td>1.95</td>
+      <td>325</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53227</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.80</td>
+      <td>56.69</td>
+      <td>1.89</td>
+      <td>157</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>67771</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>58.85</td>
+      <td>60.73</td>
+      <td>1.88</td>
+      <td>247</td>
+      <td>62.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91050" target="_blank" rel="noopener noreferrer"><img src="img/Psychic_Frog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Psychic Frog.html" target="_blank" rel="noopener noreferrer">Psychic Frog</a></td>
+      <td>2.82</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15049</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.70</td>
+      <td>55.50</td>
+      <td>1.80</td>
+      <td>373</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15958</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.60</td>
+      <td>56.36</td>
+      <td>1.76</td>
+      <td>220</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90877" target="_blank" rel="noopener noreferrer"><img src="img/Guardian_of_the_Forgotten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guardian of the Forgotten.html" target="_blank" rel="noopener noreferrer">Guardian of the Forgotten</a></td>
+      <td>7.23</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62923</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.80</td>
+      <td>56.44</td>
+      <td>1.64</td>
+      <td>303</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91033" target="_blank" rel="noopener noreferrer"><img src="img/Emissary_of_Soulfire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emissary of Soulfire.html" target="_blank" rel="noopener noreferrer">Emissary of Soulfire</a></td>
+      <td>7.52</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51409</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.20</td>
+      <td>57.84</td>
+      <td>1.64</td>
+      <td>102</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>808</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.05</td>
+      <td>57.67</td>
+      <td>1.62</td>
+      <td>378</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90804" target="_blank" rel="noopener noreferrer"><img src="img/Witch_Enchanter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Witch Enchanter.html" target="_blank" rel="noopener noreferrer">Witch Enchanter</a></td>
+      <td>5.48</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74437</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.45</td>
+      <td>56.88</td>
+      <td>1.43</td>
+      <td>647</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31714</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.25</td>
+      <td>57.53</td>
+      <td>1.28</td>
+      <td>744</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63529</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.60</td>
+      <td>56.88</td>
+      <td>1.28</td>
+      <td>160</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>80800</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>56.76</td>
+      <td>1.26</td>
+      <td>111</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91093" target="_blank" rel="noopener noreferrer"><img src="img/Sevinne's_Reclamation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sevinne's Reclamation.html" target="_blank" rel="noopener noreferrer">Sevinne's Reclamation</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>4747</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.65</td>
+      <td>55.75</td>
+      <td>1.10</td>
+      <td>113</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25654</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.55</td>
+      <td>55.64</td>
+      <td>1.09</td>
+      <td>133</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90909" target="_blank" rel="noopener noreferrer"><img src="img/Electrozoa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Electrozoa.html" target="_blank" rel="noopener noreferrer">Electrozoa</a></td>
+      <td>10.61</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24745</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.90</td>
+      <td>57.98</td>
+      <td>1.08</td>
+      <td>583</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18685</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.15</td>
+      <td>56.23</td>
+      <td>1.08</td>
+      <td>546</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1414</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.05</td>
+      <td>56.09</td>
+      <td>1.04</td>
+      <td>230</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22624</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.80</td>
+      <td>56.80</td>
+      <td>1.00</td>
+      <td>419</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>82012</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.30</td>
+      <td>55.19</td>
+      <td>0.89</td>
+      <td>154</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91097" target="_blank" rel="noopener noreferrer"><img src="img/Reef_Worm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reef Worm.html" target="_blank" rel="noopener noreferrer">Reef Worm</a></td>
+      <td>8.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17170</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.95</td>
+      <td>55.77</td>
+      <td>0.82</td>
+      <td>477</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35047</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.95</td>
+      <td>54.76</td>
+      <td>0.81</td>
+      <td>210</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90940" target="_blank" rel="noopener noreferrer"><img src="img/Etched_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etched Slith.html" target="_blank" rel="noopener noreferrer">Etched Slith</a></td>
+      <td>5.90</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33229</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>59.75</td>
+      <td>60.40</td>
+      <td>0.65</td>
+      <td>149</td>
+      <td>64.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90934" target="_blank" rel="noopener noreferrer"><img src="img/Crabomination.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crabomination.html" target="_blank" rel="noopener noreferrer">Crabomination</a></td>
+      <td>1.77</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69589</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.30</td>
+      <td>57.80</td>
+      <td>0.50</td>
+      <td>737</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68377</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.95</td>
+      <td>57.29</td>
+      <td>0.34</td>
+      <td>590</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91052" target="_blank" rel="noopener noreferrer"><img src="img/Riddle_Gate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riddle Gate Gargoyle.html" target="_blank" rel="noopener noreferrer">Riddle Gate Gargoyle</a></td>
+      <td>8.16</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75043</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.70</td>
+      <td>56.04</td>
+      <td>0.34</td>
+      <td>530</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35350</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.55</td>
+      <td>55.83</td>
+      <td>0.28</td>
+      <td>120</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90941" target="_blank" rel="noopener noreferrer"><img src="img/Etherium_Pteramander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etherium Pteramander.html" target="_blank" rel="noopener noreferrer">Etherium Pteramander</a></td>
+      <td>6.85</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61408</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>55.71</td>
+      <td>0.21</td>
+      <td>4319</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td>3.37</td>
+      <td>WUB</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>37168</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.65</td>
+      <td>55.84</td>
+      <td>0.19</td>
+      <td>437</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14746</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.30</td>
+      <td>53.42</td>
+      <td>0.12</td>
+      <td>161</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90873" target="_blank" rel="noopener noreferrer"><img src="img/Essence_Reliquary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Essence Reliquary.html" target="_blank" rel="noopener noreferrer">Essence Reliquary</a></td>
+      <td>9.20</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1111</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.40</td>
+      <td>54.50</td>
+      <td>0.10</td>
+      <td>222</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56863</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.10</td>
+      <td>57.05</td>
+      <td>-0.05</td>
+      <td>156</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31108</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.00</td>
+      <td>54.90</td>
+      <td>-0.10</td>
+      <td>306</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32926</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.50</td>
+      <td>55.37</td>
+      <td>-0.13</td>
+      <td>121</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90933" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Corruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Corruption.html" target="_blank" rel="noopener noreferrer">Consuming Corruption</a></td>
+      <td>8.04</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59590</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.90</td>
+      <td>54.74</td>
+      <td>-0.16</td>
+      <td>137</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12928</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.20</td>
+      <td>57.04</td>
+      <td>-0.16</td>
+      <td>668</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6262</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.30</td>
+      <td>55.12</td>
+      <td>-0.18</td>
+      <td>127</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19897</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.00</td>
+      <td>55.74</td>
+      <td>-0.26</td>
+      <td>296</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90890" target="_blank" rel="noopener noreferrer"><img src="img/Proud_Pack-Rhino.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Proud Pack-Rhino.html" target="_blank" rel="noopener noreferrer">Proud Pack-Rhino</a></td>
+      <td>5.30</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17776</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.85</td>
+      <td>56.46</td>
+      <td>-0.39</td>
+      <td>588</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21412</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.05</td>
+      <td>55.62</td>
+      <td>-0.43</td>
+      <td>169</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90895" target="_blank" rel="noopener noreferrer"><img src="img/Voltstorm_Angel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voltstorm Angel.html" target="_blank" rel="noopener noreferrer">Voltstorm Angel</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41410</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.05</td>
+      <td>55.60</td>
+      <td>-0.45</td>
+      <td>250</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66559</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.15</td>
+      <td>52.65</td>
+      <td>-0.50</td>
+      <td>547</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79891</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>52.55</td>
+      <td>52.05</td>
+      <td>-0.50</td>
+      <td>171</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91090" target="_blank" rel="noopener noreferrer"><img src="img/Distinguished_Conjurer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Distinguished Conjurer.html" target="_blank" rel="noopener noreferrer">Distinguished Conjurer</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14443</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.75</td>
+      <td>54.17</td>
+      <td>-0.58</td>
+      <td>312</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90872" target="_blank" rel="noopener noreferrer"><img src="img/Envoy_of_the_Ancestors.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Envoy of the Ancestors.html" target="_blank" rel="noopener noreferrer">Envoy of the Ancestors</a></td>
+      <td>5.69</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20503</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.95</td>
+      <td>55.33</td>
+      <td>-0.62</td>
+      <td>300</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21109</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.25</td>
+      <td>55.45</td>
+      <td>-0.80</td>
+      <td>532</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38986</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>52.55</td>
+      <td>51.61</td>
+      <td>-0.94</td>
+      <td>124</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90953" target="_blank" rel="noopener noreferrer"><img src="img/Quest_for_the_Necropolis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quest for the Necropolis.html" target="_blank" rel="noopener noreferrer">Quest for the Necropolis</a></td>
+      <td>9.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30805</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.80</td>
+      <td>55.84</td>
+      <td>-0.96</td>
+      <td>471</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15655</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.85</td>
+      <td>55.78</td>
+      <td>-1.07</td>
+      <td>303</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36259</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.15</td>
+      <td>55.07</td>
+      <td>-1.08</td>
+      <td>138</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90944" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Flare of Malice.html" target="_blank" rel="noopener noreferrer">Flare of Malice</a></td>
+      <td>3.72</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>83527</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.60</td>
+      <td>56.52</td>
+      <td>-1.08</td>
+      <td>115</td>
+      <td>59.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91102" target="_blank" rel="noopener noreferrer"><img src="img/Ophiomancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ophiomancer.html" target="_blank" rel="noopener noreferrer">Ophiomancer</a></td>
+      <td>2.22</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18079</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.95</td>
+      <td>54.82</td>
+      <td>-1.13</td>
+      <td>301</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5959</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.95</td>
+      <td>54.41</td>
+      <td>-1.54</td>
+      <td>204</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>505</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.70</td>
+      <td>53.16</td>
+      <td>-1.54</td>
+      <td>269</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90802" target="_blank" rel="noopener noreferrer"><img src="img/Razorgrass_Ambush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razorgrass Ambush.html" target="_blank" rel="noopener noreferrer">Razorgrass Ambush</a></td>
+      <td>6.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16867</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.80</td>
+      <td>53.26</td>
+      <td>-1.54</td>
+      <td>261</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90880" target="_blank" rel="noopener noreferrer"><img src="img/Indebted_Spirit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Indebted Spirit.html" target="_blank" rel="noopener noreferrer">Indebted Spirit</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16564</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.65</td>
+      <td>53.50</td>
+      <td>-2.15</td>
+      <td>486</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23533</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.95</td>
+      <td>54.70</td>
+      <td>-2.25</td>
+      <td>298</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36562</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.00</td>
+      <td>50.70</td>
+      <td>-2.30</td>
+      <td>359</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73225</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>56.00</td>
+      <td>53.44</td>
+      <td>-2.56</td>
+      <td>131</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19594</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>57.80</td>
+      <td>55.03</td>
+      <td>-2.77</td>
+      <td>149</td>
+      <td>60.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90889" target="_blank" rel="noopener noreferrer"><img src="img/Phelia,_Exuberant_Shepherd.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phelia, Exuberant Shepherd.html" target="_blank" rel="noopener noreferrer">Phelia, Exuberant Shepherd</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>23230</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.05</td>
+      <td>52.14</td>
+      <td>-2.91</td>
+      <td>117</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90901" target="_blank" rel="noopener noreferrer"><img src="img/Bespoke_Battlewagon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bespoke Battlewagon.html" target="_blank" rel="noopener noreferrer">Bespoke Battlewagon</a></td>
+      <td>6.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16261</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>61.40</td>
+      <td>58.47</td>
+      <td>-2.93</td>
+      <td>118</td>
+      <td>67.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90878" target="_blank" rel="noopener noreferrer"><img src="img/Guide_of_Souls.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guide of Souls.html" target="_blank" rel="noopener noreferrer">Guide of Souls</a></td>
+      <td>1.64</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32017</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.85</td>
+      <td>50.68</td>
+      <td>-3.17</td>
+      <td>146</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90930" target="_blank" rel="noopener noreferrer"><img src="img/Arcbound_Condor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arcbound Condor.html" target="_blank" rel="noopener noreferrer">Arcbound Condor</a></td>
+      <td>6.66</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34441</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.75</td>
+      <td>50.51</td>
+      <td>-3.24</td>
+      <td>297</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>54.25</td>
+      <td>50.58</td>
+      <td>-3.67</td>
+      <td>257</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27472</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.55</td>
+      <td>51.77</td>
+      <td>-3.78</td>
+      <td>282</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63226</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.40</td>
+      <td>48.82</td>
+      <td>-4.58</td>
+      <td>127</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40501</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.15</td>
+      <td>50.49</td>
+      <td>-4.66</td>
+      <td>103</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90958" target="_blank" rel="noopener noreferrer"><img src="img/Shilgengar,_Sire_of_Famine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shilgengar, Sire of Famine.html" target="_blank" rel="noopener noreferrer">Shilgengar, Sire of Famine</a></td>
+      <td>2.29</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>77770</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.40</td>
+      <td>50.34</td>
+      <td>-5.06</td>
+      <td>149</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79285</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>53.85</td>
+      <td>48.75</td>
+      <td>-5.10</td>
+      <td>160</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91088" target="_blank" rel="noopener noreferrer"><img src="img/Angel_of_the_Ruins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angel of the Ruins.html" target="_blank" rel="noopener noreferrer">Angel of the Ruins</a></td>
+      <td>8.86</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76255</th>
+      <td>mythic</td>
+      <td>WUB</td>
+      <td>3.37</td>
+      <td><a href=".//Arna Kennerüd, Skycaptain.html" target="_blank" rel="noopener noreferrer">Arna Kennerüd, Skycaptain</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91028" target="_blank" rel="noopener noreferrer"><img src="img/Arna_Kennerüd,_Skycaptain.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.5</td>
+      <td>55.95</td>
+      <td>50.00</td>
+      <td>-5.95</td>
+      <td>126</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

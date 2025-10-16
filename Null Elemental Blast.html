@@ -1,0 +1,1135 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3672</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.35</td>
+      <td>60.75</td>
+      <td>9.40</td>
+      <td>107</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54273</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>49.70</td>
+      <td>54.33</td>
+      <td>4.63</td>
+      <td>127</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59424</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.55</td>
+      <td>54.60</td>
+      <td>4.05</td>
+      <td>163</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52152</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.65</td>
+      <td>54.55</td>
+      <td>3.90</td>
+      <td>187</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70332</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>55.35</td>
+      <td>58.09</td>
+      <td>2.74</td>
+      <td>346</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60636</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.45</td>
+      <td>54.10</td>
+      <td>2.65</td>
+      <td>122</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11550</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.55</td>
+      <td>53.91</td>
+      <td>2.36</td>
+      <td>115</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7611</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.05</td>
+      <td>52.80</td>
+      <td>1.75</td>
+      <td>161</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3975</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.25</td>
+      <td>52.73</td>
+      <td>1.48</td>
+      <td>110</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12156</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.00</td>
+      <td>52.25</td>
+      <td>1.25</td>
+      <td>333</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74877</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.35</td>
+      <td>52.36</td>
+      <td>1.01</td>
+      <td>233</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69726</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.95</td>
+      <td>53.59</td>
+      <td>0.64</td>
+      <td>153</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51243</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.85</td>
+      <td>52.30</td>
+      <td>0.45</td>
+      <td>283</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24882</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>53.20</td>
+      <td>53.47</td>
+      <td>0.27</td>
+      <td>101</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56091</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>53.55</td>
+      <td>53.71</td>
+      <td>0.16</td>
+      <td>283</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43062</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.35</td>
+      <td>51.49</td>
+      <td>0.14</td>
+      <td>134</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76089</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.60</td>
+      <td>51.69</td>
+      <td>0.09</td>
+      <td>267</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53061</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.45</td>
+      <td>50.49</td>
+      <td>0.04</td>
+      <td>204</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27003</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>49.70</td>
+      <td>49.66</td>
+      <td>-0.04</td>
+      <td>149</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9429</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.45</td>
+      <td>51.18</td>
+      <td>-0.27</td>
+      <td>170</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10944</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>46.80</td>
+      <td>46.51</td>
+      <td>-0.29</td>
+      <td>1621</td>
+      <td>46.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td>11.77</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57303</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>53.85</td>
+      <td>53.42</td>
+      <td>-0.43</td>
+      <td>146</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57000</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.40</td>
+      <td>50.86</td>
+      <td>-0.54</td>
+      <td>175</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50637</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.35</td>
+      <td>49.52</td>
+      <td>-0.83</td>
+      <td>208</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44880</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.20</td>
+      <td>50.83</td>
+      <td>-1.37</td>
+      <td>181</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54879</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.75</td>
+      <td>51.27</td>
+      <td>-1.48</td>
+      <td>275</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52758</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>53.20</td>
+      <td>51.68</td>
+      <td>-1.52</td>
+      <td>327</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75786</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.75</td>
+      <td>48.91</td>
+      <td>-1.84</td>
+      <td>137</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22458</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.45</td>
+      <td>49.51</td>
+      <td>-1.94</td>
+      <td>103</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26700</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.15</td>
+      <td>50.00</td>
+      <td>-2.15</td>
+      <td>120</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4884</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.25</td>
+      <td>48.85</td>
+      <td>-2.40</td>
+      <td>131</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73059</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.65</td>
+      <td>49.05</td>
+      <td>-2.60</td>
+      <td>369</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73362</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.00</td>
+      <td>48.15</td>
+      <td>-2.85</td>
+      <td>162</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57909</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.50</td>
+      <td>48.57</td>
+      <td>-2.93</td>
+      <td>105</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>90027</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>49.35</td>
+      <td>46.40</td>
+      <td>-2.95</td>
+      <td>125</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56697</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.75</td>
+      <td>49.80</td>
+      <td>-2.95</td>
+      <td>253</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77301</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.05</td>
+      <td>48.06</td>
+      <td>-2.99</td>
+      <td>335</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30639</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.45</td>
+      <td>49.38</td>
+      <td>-3.07</td>
+      <td>243</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74271</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.10</td>
+      <td>47.54</td>
+      <td>-3.56</td>
+      <td>305</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12459</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.30</td>
+      <td>48.47</td>
+      <td>-3.83</td>
+      <td>163</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30942</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.65</td>
+      <td>46.63</td>
+      <td>-4.02</td>
+      <td>208</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27912</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>49.20</td>
+      <td>44.77</td>
+      <td>-4.43</td>
+      <td>239</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27306</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.20</td>
+      <td>46.06</td>
+      <td>-5.14</td>
+      <td>254</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69120</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.15</td>
+      <td>44.01</td>
+      <td>-6.14</td>
+      <td>334</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28215</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.60</td>
+      <td>46.11</td>
+      <td>-6.49</td>
+      <td>167</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75483</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.15</td>
+      <td>44.63</td>
+      <td>-6.52</td>
+      <td>242</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70938</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>48.35</td>
+      <td>41.78</td>
+      <td>-6.57</td>
+      <td>146</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91061" target="_blank" rel="noopener noreferrer"><img src="img/Idol_of_False_Gods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Idol of False Gods.html" target="_blank" rel="noopener noreferrer">Idol of False Gods</a></td>
+      <td>7.42</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77604</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.05</td>
+      <td>44.04</td>
+      <td>-7.01</td>
+      <td>277</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54576</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.25</td>
+      <td>43.94</td>
+      <td>-7.31</td>
+      <td>132</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24276</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>47.95</td>
+      <td>40.34</td>
+      <td>-7.61</td>
+      <td>176</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8823</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>49.20</td>
+      <td>41.38</td>
+      <td>-7.82</td>
+      <td>116</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8217</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.45</td>
+      <td>41.39</td>
+      <td>-9.06</td>
+      <td>273</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10035</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.50</td>
+      <td>40.34</td>
+      <td>-10.16</td>
+      <td>176</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73665</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>50.45</td>
+      <td>39.64</td>
+      <td>-10.81</td>
+      <td>169</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24579</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>52.55</td>
+      <td>40.58</td>
+      <td>-11.97</td>
+      <td>138</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59727</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.77</td>
+      <td><a href=".//Null Elemental Blast.html" target="_blank" rel="noopener noreferrer">Null Elemental Blast</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90861" target="_blank" rel="noopener noreferrer"><img src="img/Null_Elemental_Blast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.8</td>
+      <td>51.70</td>
+      <td>38.14</td>
+      <td>-13.56</td>
+      <td>118</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

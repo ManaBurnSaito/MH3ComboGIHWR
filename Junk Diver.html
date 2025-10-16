@@ -1,0 +1,1952 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>42106</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>55.90</td>
+      <td>62.44</td>
+      <td>6.54</td>
+      <td>205</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49984</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.40</td>
+      <td>57.81</td>
+      <td>4.41</td>
+      <td>192</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37561</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.30</td>
+      <td>55.62</td>
+      <td>4.32</td>
+      <td>356</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33319</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>55.80</td>
+      <td>60.00</td>
+      <td>4.20</td>
+      <td>260</td>
+      <td>64.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90934" target="_blank" rel="noopener noreferrer"><img src="img/Crabomination.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crabomination.html" target="_blank" rel="noopener noreferrer">Crabomination</a></td>
+      <td>1.77</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>35440</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.60</td>
+      <td>54.74</td>
+      <td>3.14</td>
+      <td>654</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90941" target="_blank" rel="noopener noreferrer"><img src="img/Etherium_Pteramander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etherium Pteramander.html" target="_blank" rel="noopener noreferrer">Etherium Pteramander</a></td>
+      <td>6.85</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44833</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.10</td>
+      <td>54.87</td>
+      <td>2.77</td>
+      <td>226</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4837</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.70</td>
+      <td>53.27</td>
+      <td>2.57</td>
+      <td>428</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73315</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.05</td>
+      <td>54.49</td>
+      <td>2.44</td>
+      <td>156</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81799</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.90</td>
+      <td>53.00</td>
+      <td>2.10</td>
+      <td>200</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91096" target="_blank" rel="noopener noreferrer"><img src="img/Kappa_Cannoneer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kappa Cannoneer.html" target="_blank" rel="noopener noreferrer">Kappa Cannoneer</a></td>
+      <td>3.83</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>83617</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.65</td>
+      <td>55.74</td>
+      <td>2.09</td>
+      <td>122</td>
+      <td>59.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91102" target="_blank" rel="noopener noreferrer"><img src="img/Ophiomancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ophiomancer.html" target="_blank" rel="noopener noreferrer">Ophiomancer</a></td>
+      <td>2.22</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>33925</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.00</td>
+      <td>50.68</td>
+      <td>1.68</td>
+      <td>369</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90936" target="_blank" rel="noopener noreferrer"><img src="img/Dreadmobile.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreadmobile.html" target="_blank" rel="noopener noreferrer">Dreadmobile</a></td>
+      <td>9.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37864</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.95</td>
+      <td>55.61</td>
+      <td>1.66</td>
+      <td>615</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32107</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.90</td>
+      <td>51.51</td>
+      <td>1.61</td>
+      <td>730</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90930" target="_blank" rel="noopener noreferrer"><img src="img/Arcbound_Condor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arcbound Condor.html" target="_blank" rel="noopener noreferrer">Arcbound Condor</a></td>
+      <td>6.66</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46651</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.10</td>
+      <td>54.69</td>
+      <td>1.59</td>
+      <td>128</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90979" target="_blank" rel="noopener noreferrer"><img src="img/Party_Thrasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Party Thrasher.html" target="_blank" rel="noopener noreferrer">Party Thrasher</a></td>
+      <td>3.45</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36349</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.20</td>
+      <td>53.48</td>
+      <td>1.28</td>
+      <td>187</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90944" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Flare of Malice.html" target="_blank" rel="noopener noreferrer">Flare of Malice</a></td>
+      <td>3.72</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>39379</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.20</td>
+      <td>53.35</td>
+      <td>1.15</td>
+      <td>1670</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42712</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.15</td>
+      <td>53.98</td>
+      <td>0.83</td>
+      <td>113</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90965" target="_blank" rel="noopener noreferrer"><img src="img/Detective's_Phoenix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Detective's Phoenix.html" target="_blank" rel="noopener noreferrer">Detective's Phoenix</a></td>
+      <td>2.03</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18775</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.20</td>
+      <td>51.89</td>
+      <td>0.69</td>
+      <td>106</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39682</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.05</td>
+      <td>51.70</td>
+      <td>0.65</td>
+      <td>1087</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17866</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.90</td>
+      <td>53.46</td>
+      <td>0.56</td>
+      <td>159</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45136</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.60</td>
+      <td>53.05</td>
+      <td>0.45</td>
+      <td>262</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44227</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.30</td>
+      <td>49.71</td>
+      <td>0.41</td>
+      <td>511</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90971" target="_blank" rel="noopener noreferrer"><img src="img/Furnace_Hellkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Furnace Hellkite.html" target="_blank" rel="noopener noreferrer">Furnace Hellkite</a></td>
+      <td>8.57</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62104</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.80</td>
+      <td>52.10</td>
+      <td>0.30</td>
+      <td>1739</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13018</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.25</td>
+      <td>53.54</td>
+      <td>0.29</td>
+      <td>127</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>88768</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>47.60</td>
+      <td>47.87</td>
+      <td>0.27</td>
+      <td>4700</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td>11.23</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41500</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.10</td>
+      <td>52.32</td>
+      <td>0.22</td>
+      <td>518</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32713</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.90</td>
+      <td>52.00</td>
+      <td>0.10</td>
+      <td>175</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90932" target="_blank" rel="noopener noreferrer"><img src="img/Chthonian_Nightmare.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chthonian Nightmare.html" target="_blank" rel="noopener noreferrer">Chthonian Nightmare</a></td>
+      <td>2.98</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>68164</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.20</td>
+      <td>49.90</td>
+      <td>-0.30</td>
+      <td>495</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91051" target="_blank" rel="noopener noreferrer"><img src="img/Pyretic_Rebirth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pyretic Rebirth.html" target="_blank" rel="noopener noreferrer">Pyretic Rebirth</a></td>
+      <td>7.72</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43924</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>47.60</td>
+      <td>47.23</td>
+      <td>-0.37</td>
+      <td>415</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90969" target="_blank" rel="noopener noreferrer"><img src="img/Frogmyr_Enforcer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Frogmyr Enforcer.html" target="_blank" rel="noopener noreferrer">Frogmyr Enforcer</a></td>
+      <td>10.33</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45439</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.35</td>
+      <td>49.82</td>
+      <td>-0.53</td>
+      <td>277</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90975" target="_blank" rel="noopener noreferrer"><img src="img/Infernal_Captor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Infernal Captor.html" target="_blank" rel="noopener noreferrer">Infernal Captor</a></td>
+      <td>10.93</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45742</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.20</td>
+      <td>50.52</td>
+      <td>-0.68</td>
+      <td>384</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90586</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.35</td>
+      <td>49.50</td>
+      <td>-0.85</td>
+      <td>101</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91125" target="_blank" rel="noopener noreferrer"><img src="img/Barbarian_Ring.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Barbarian Ring.html" target="_blank" rel="noopener noreferrer">Barbarian Ring</a></td>
+      <td>11.58</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70588</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>55.75</td>
+      <td>54.76</td>
+      <td>-0.99</td>
+      <td>126</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75739</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.55</td>
+      <td>50.50</td>
+      <td>-1.05</td>
+      <td>602</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5746</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.90</td>
+      <td>50.69</td>
+      <td>-1.21</td>
+      <td>144</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73012</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.90</td>
+      <td>49.64</td>
+      <td>-1.26</td>
+      <td>139</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91067" target="_blank" rel="noopener noreferrer"><img src="img/Bloodstained_Mire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodstained Mire.html" target="_blank" rel="noopener noreferrer">Bloodstained Mire</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>2413</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.60</td>
+      <td>50.31</td>
+      <td>-1.29</td>
+      <td>477</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39076</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>48.60</td>
+      <td>47.29</td>
+      <td>-1.31</td>
+      <td>129</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90953" target="_blank" rel="noopener noreferrer"><img src="img/Quest_for_the_Necropolis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quest for the Necropolis.html" target="_blank" rel="noopener noreferrer">Quest for the Necropolis</a></td>
+      <td>9.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7564</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.35</td>
+      <td>50.00</td>
+      <td>-1.35</td>
+      <td>126</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6049</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.00</td>
+      <td>50.52</td>
+      <td>-1.48</td>
+      <td>192</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24835</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.95</td>
+      <td>51.46</td>
+      <td>-1.49</td>
+      <td>103</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34531</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.80</td>
+      <td>48.05</td>
+      <td>-1.75</td>
+      <td>1026</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40591</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.20</td>
+      <td>49.39</td>
+      <td>-1.81</td>
+      <td>164</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90958" target="_blank" rel="noopener noreferrer"><img src="img/Shilgengar,_Sire_of_Famine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shilgengar, Sire of Famine.html" target="_blank" rel="noopener noreferrer">Shilgengar, Sire of Famine</a></td>
+      <td>2.29</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>76042</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.15</td>
+      <td>49.32</td>
+      <td>-1.83</td>
+      <td>661</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49681</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.00</td>
+      <td>50.17</td>
+      <td>-1.83</td>
+      <td>867</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77254</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.15</td>
+      <td>50.30</td>
+      <td>-1.85</td>
+      <td>167</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91081" target="_blank" rel="noopener noreferrer"><img src="img/Spymaster's_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spymaster's Vault.html" target="_blank" rel="noopener noreferrer">Spymaster's Vault</a></td>
+      <td>5.81</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>83920</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.15</td>
+      <td>51.26</td>
+      <td>-1.89</td>
+      <td>119</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91103" target="_blank" rel="noopener noreferrer"><img src="img/Toxic_Deluge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Toxic Deluge.html" target="_blank" rel="noopener noreferrer">Toxic Deluge</a></td>
+      <td>2.32</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>35137</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.00</td>
+      <td>47.94</td>
+      <td>-2.06</td>
+      <td>559</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90940" target="_blank" rel="noopener noreferrer"><img src="img/Etched_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etched Slith.html" target="_blank" rel="noopener noreferrer">Etched Slith</a></td>
+      <td>5.90</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46348</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.90</td>
+      <td>48.67</td>
+      <td>-2.23</td>
+      <td>863</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77860</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.45</td>
+      <td>49.19</td>
+      <td>-2.26</td>
+      <td>557</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21199</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.30</td>
+      <td>50.00</td>
+      <td>-2.30</td>
+      <td>106</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>84223</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.30</td>
+      <td>46.86</td>
+      <td>-2.44</td>
+      <td>239</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48469</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.70</td>
+      <td>48.24</td>
+      <td>-2.46</td>
+      <td>740</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47863</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.00</td>
+      <td>49.53</td>
+      <td>-2.47</td>
+      <td>212</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28471</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.00</td>
+      <td>50.44</td>
+      <td>-2.56</td>
+      <td>113</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44530</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.80</td>
+      <td>51.18</td>
+      <td>-2.62</td>
+      <td>678</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74527</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.50</td>
+      <td>48.78</td>
+      <td>-2.72</td>
+      <td>205</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5443</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.55</td>
+      <td>48.79</td>
+      <td>-2.76</td>
+      <td>207</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34834</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.15</td>
+      <td>50.33</td>
+      <td>-2.82</td>
+      <td>151</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90939" target="_blank" rel="noopener noreferrer"><img src="img/Emperor_of_Bones.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emperor of Bones.html" target="_blank" rel="noopener noreferrer">Emperor of Bones</a></td>
+      <td>2.18</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36046</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.70</td>
+      <td>46.79</td>
+      <td>-2.91</td>
+      <td>312</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48166</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.25</td>
+      <td>48.09</td>
+      <td>-3.16</td>
+      <td>183</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90984" target="_blank" rel="noopener noreferrer"><img src="img/Reiterating_Bolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reiterating Bolt.html" target="_blank" rel="noopener noreferrer">Reiterating Bolt</a></td>
+      <td>4.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75133</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.75</td>
+      <td>48.45</td>
+      <td>-3.30</td>
+      <td>194</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49378</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.25</td>
+      <td>47.76</td>
+      <td>-3.49</td>
+      <td>312</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37258</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.70</td>
+      <td>48.20</td>
+      <td>-3.50</td>
+      <td>222</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>64831</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>47.35</td>
+      <td>43.77</td>
+      <td>-3.58</td>
+      <td>361</td>
+      <td>47.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td>5.81</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6958</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.90</td>
+      <td>48.32</td>
+      <td>-3.58</td>
+      <td>149</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41197</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.75</td>
+      <td>49.09</td>
+      <td>-3.66</td>
+      <td>827</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43318</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.75</td>
+      <td>48.02</td>
+      <td>-3.73</td>
+      <td>606</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35743</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.65</td>
+      <td>47.91</td>
+      <td>-3.74</td>
+      <td>670</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3019</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.60</td>
+      <td>47.72</td>
+      <td>-3.88</td>
+      <td>241</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90818" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Monk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Monk.html" target="_blank" rel="noopener noreferrer">Pinnacle Monk</a></td>
+      <td>6.42</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50287</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.45</td>
+      <td>46.36</td>
+      <td>-4.09</td>
+      <td>151</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90991" target="_blank" rel="noopener noreferrer"><img src="img/Thriving_Skyclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thriving Skyclaw.html" target="_blank" rel="noopener noreferrer">Thriving Skyclaw</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50590</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.45</td>
+      <td>48.33</td>
+      <td>-4.12</td>
+      <td>180</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90992" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Amulet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Amulet.html" target="_blank" rel="noopener noreferrer">Unstable Amulet</a></td>
+      <td>5.81</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6352</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.35</td>
+      <td>47.17</td>
+      <td>-4.18</td>
+      <td>106</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48772</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.45</td>
+      <td>47.24</td>
+      <td>-4.21</td>
+      <td>199</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31804</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.30</td>
+      <td>47.54</td>
+      <td>-4.76</td>
+      <td>753</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73618</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.40</td>
+      <td>46.58</td>
+      <td>-4.82</td>
+      <td>307</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33016</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.55</td>
+      <td>46.61</td>
+      <td>-4.94</td>
+      <td>251</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90933" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Corruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Corruption.html" target="_blank" rel="noopener noreferrer">Consuming Corruption</a></td>
+      <td>8.04</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69679</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.35</td>
+      <td>48.39</td>
+      <td>-4.96</td>
+      <td>124</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47560</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>53.05</td>
+      <td>48.06</td>
+      <td>-4.99</td>
+      <td>206</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90982" target="_blank" rel="noopener noreferrer"><img src="img/Ral_and_the_Implicit_Maze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ral and the Implicit Maze.html" target="_blank" rel="noopener noreferrer">Ral and the Implicit Maze</a></td>
+      <td>5.23</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32410</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.95</td>
+      <td>46.80</td>
+      <td>-5.15</td>
+      <td>923</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2110</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.30</td>
+      <td>44.93</td>
+      <td>-5.37</td>
+      <td>296</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40288</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.10</td>
+      <td>46.67</td>
+      <td>-5.43</td>
+      <td>285</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40894</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.65</td>
+      <td>44.19</td>
+      <td>-5.46</td>
+      <td>172</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90959" target="_blank" rel="noopener noreferrer"><img src="img/Warren_Soultrader.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warren Soultrader.html" target="_blank" rel="noopener noreferrer">Warren Soultrader</a></td>
+      <td>4.55</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>71497</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.00</td>
+      <td>45.98</td>
+      <td>-6.02</td>
+      <td>174</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3625</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.65</td>
+      <td>45.16</td>
+      <td>-6.49</td>
+      <td>217</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90822" target="_blank" rel="noopener noreferrer"><img src="img/Sundering_Eruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sundering Eruption.html" target="_blank" rel="noopener noreferrer">Sundering Eruption</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66649</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.20</td>
+      <td>42.50</td>
+      <td>-6.70</td>
+      <td>280</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14230</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.65</td>
+      <td>44.80</td>
+      <td>-6.85</td>
+      <td>125</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49075</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.35</td>
+      <td>44.39</td>
+      <td>-6.96</td>
+      <td>187</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36652</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.05</td>
+      <td>42.04</td>
+      <td>-7.01</td>
+      <td>452</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90283</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.75</td>
+      <td>42.72</td>
+      <td>-7.03</td>
+      <td>103</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>79375</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>49.90</td>
+      <td>42.86</td>
+      <td>-7.04</td>
+      <td>105</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91088" target="_blank" rel="noopener noreferrer"><img src="img/Angel_of_the_Ruins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angel of the Ruins.html" target="_blank" rel="noopener noreferrer">Angel of the Ruins</a></td>
+      <td>8.86</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46954</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.05</td>
+      <td>42.25</td>
+      <td>-7.80</td>
+      <td>213</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90980" target="_blank" rel="noopener noreferrer"><img src="img/Phyrexian_Ironworks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phyrexian Ironworks.html" target="_blank" rel="noopener noreferrer">Phyrexian Ironworks</a></td>
+      <td>6.15</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17260</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.00</td>
+      <td>43.09</td>
+      <td>-7.91</td>
+      <td>123</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34228</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.65</td>
+      <td>42.43</td>
+      <td>-8.22</td>
+      <td>403</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36955</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.25</td>
+      <td>41.51</td>
+      <td>-8.74</td>
+      <td>212</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90946" target="_blank" rel="noopener noreferrer"><img src="img/Grim_Servant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grim Servant.html" target="_blank" rel="noopener noreferrer">Grim Servant</a></td>
+      <td>8.36</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72709</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>51.60</td>
+      <td>42.86</td>
+      <td>-8.74</td>
+      <td>105</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91066" target="_blank" rel="noopener noreferrer"><img src="img/Arena_of_Glory.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arena of Glory.html" target="_blank" rel="noopener noreferrer">Arena of Glory</a></td>
+      <td>6.93</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73921</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.85</td>
+      <td>41.80</td>
+      <td>-9.05</td>
+      <td>244</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76345</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>52.00</td>
+      <td>42.41</td>
+      <td>-9.59</td>
+      <td>158</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50893</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.23</td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.6</td>
+      <td>50.75</td>
+      <td>40.96</td>
+      <td>-9.79</td>
+      <td>188</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

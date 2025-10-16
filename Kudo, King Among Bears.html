@@ -1,0 +1,1686 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>58695</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.95</td>
+      <td>65.22</td>
+      <td>9.27</td>
+      <td>115</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91019" target="_blank" rel="noopener noreferrer"><img src="img/Six.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Six.html" target="_blank" rel="noopener noreferrer">Six</a></td>
+      <td>1.79</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>79299</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.70</td>
+      <td>59.49</td>
+      <td>6.79</td>
+      <td>158</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91088" target="_blank" rel="noopener noreferrer"><img src="img/Angel_of_the_Ruins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angel of the Ruins.html" target="_blank" rel="noopener noreferrer">Angel of the Ruins</a></td>
+      <td>8.86</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59301</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.10</td>
+      <td>62.87</td>
+      <td>6.77</td>
+      <td>167</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91021" target="_blank" rel="noopener noreferrer"><img src="img/Springheart_Nantuko.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Springheart Nantuko.html" target="_blank" rel="noopener noreferrer">Springheart Nantuko</a></td>
+      <td>1.57</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20820</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.95</td>
+      <td>62.05</td>
+      <td>6.10</td>
+      <td>166</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90893" target="_blank" rel="noopener noreferrer"><img src="img/Static_Prison.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Static Prison.html" target="_blank" rel="noopener noreferrer">Static Prison</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73239</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>60.24</td>
+      <td>5.39</td>
+      <td>166</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5670</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.70</td>
+      <td>59.81</td>
+      <td>5.11</td>
+      <td>209</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56271</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.75</td>
+      <td>61.66</td>
+      <td>4.91</td>
+      <td>433</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63543</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>58.23</td>
+      <td>3.78</td>
+      <td>1834</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6579</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.40</td>
+      <td>58.08</td>
+      <td>3.68</td>
+      <td>563</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13245</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.20</td>
+      <td>58.70</td>
+      <td>3.50</td>
+      <td>385</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90868" target="_blank" rel="noopener noreferrer"><img src="img/Ajani_Fells_the_Godsire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani Fells the Godsire.html" target="_blank" rel="noopener noreferrer">Ajani Fells the Godsire</a></td>
+      <td>4.80</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19608</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.65</td>
+      <td>60.00</td>
+      <td>3.35</td>
+      <td>180</td>
+      <td>60.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90889" target="_blank" rel="noopener noreferrer"><img src="img/Phelia,_Exuberant_Shepherd.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phelia, Exuberant Shepherd.html" target="_blank" rel="noopener noreferrer">Phelia, Exuberant Shepherd</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>17790</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>58.78</td>
+      <td>3.08</td>
+      <td>980</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70512</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>58.55</td>
+      <td>61.17</td>
+      <td>2.62</td>
+      <td>309</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58392</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.15</td>
+      <td>58.43</td>
+      <td>2.28</td>
+      <td>445</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6882</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.70</td>
+      <td>56.82</td>
+      <td>2.12</td>
+      <td>220</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57483</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.05</td>
+      <td>58.56</td>
+      <td>1.51</td>
+      <td>111</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75057</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.55</td>
+      <td>55.90</td>
+      <td>1.35</td>
+      <td>161</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22032</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>55.19</td>
+      <td>1.34</td>
+      <td>482</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90897" target="_blank" rel="noopener noreferrer"><img src="img/Wing_It.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wing It.html" target="_blank" rel="noopener noreferrer">Wing It</a></td>
+      <td>10.50</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52938</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.40</td>
+      <td>57.20</td>
+      <td>0.80</td>
+      <td>542</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17487</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.15</td>
+      <td>54.84</td>
+      <td>0.69</td>
+      <td>217</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51423</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.05</td>
+      <td>55.57</td>
+      <td>0.52</td>
+      <td>601</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54453</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>53.39</td>
+      <td>0.49</td>
+      <td>354</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>91419</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.20</td>
+      <td>52.66</td>
+      <td>0.46</td>
+      <td>169</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4155</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>54.90</td>
+      <td>0.45</td>
+      <td>286</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73845</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>54.09</td>
+      <td>0.44</td>
+      <td>734</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12942</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.05</td>
+      <td>56.44</td>
+      <td>0.39</td>
+      <td>1001</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16275</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>60.25</td>
+      <td>60.61</td>
+      <td>0.36</td>
+      <td>165</td>
+      <td>67.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90878" target="_blank" rel="noopener noreferrer"><img src="img/Guide_of_Souls.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guide of Souls.html" target="_blank" rel="noopener noreferrer">Guide of Souls</a></td>
+      <td>1.64</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>53544</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.80</td>
+      <td>57.00</td>
+      <td>0.20</td>
+      <td>100</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91002" target="_blank" rel="noopener noreferrer"><img src="img/Fanatic_of_Rhonas.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanatic of Rhonas.html" target="_blank" rel="noopener noreferrer">Fanatic of Rhonas</a></td>
+      <td>1.87</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>65664</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>53.33</td>
+      <td>0.13</td>
+      <td>4292</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td>7.65</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>21123</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>55.08</td>
+      <td>-0.02</td>
+      <td>797</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5973</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>54.64</td>
+      <td>-0.16</td>
+      <td>291</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20517</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>54.63</td>
+      <td>-0.17</td>
+      <td>335</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52332</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>53.68</td>
+      <td>-0.17</td>
+      <td>503</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57180</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>54.40</td>
+      <td>-0.20</td>
+      <td>772</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>519</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.55</td>
+      <td>53.27</td>
+      <td>-0.28</td>
+      <td>336</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90802" target="_blank" rel="noopener noreferrer"><img src="img/Razorgrass_Ambush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razorgrass Ambush.html" target="_blank" rel="noopener noreferrer">Razorgrass Ambush</a></td>
+      <td>6.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16881</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>53.31</td>
+      <td>-0.34</td>
+      <td>317</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90880" target="_blank" rel="noopener noreferrer"><img src="img/Indebted_Spirit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Indebted Spirit.html" target="_blank" rel="noopener noreferrer">Indebted Spirit</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74451</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>53.93</td>
+      <td>-0.37</td>
+      <td>191</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55059</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.95</td>
+      <td>55.57</td>
+      <td>-0.38</td>
+      <td>664</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79602</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.65</td>
+      <td>52.21</td>
+      <td>-0.44</td>
+      <td>113</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91089" target="_blank" rel="noopener noreferrer"><img src="img/Decree_of_Justice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Decree of Justice.html" target="_blank" rel="noopener noreferrer">Decree of Justice</a></td>
+      <td>9.46</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66876</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.60</td>
+      <td>51.11</td>
+      <td>-0.49</td>
+      <td>135</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91046" target="_blank" rel="noopener noreferrer"><img src="img/Ondu_Knotmaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ondu Knotmaster.html" target="_blank" rel="noopener noreferrer">Ondu Knotmaster</a></td>
+      <td>7.62</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15972</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.45</td>
+      <td>52.79</td>
+      <td>-0.66</td>
+      <td>305</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90877" target="_blank" rel="noopener noreferrer"><img src="img/Guardian_of_the_Forgotten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guardian of the Forgotten.html" target="_blank" rel="noopener noreferrer">Guardian of the Forgotten</a></td>
+      <td>7.23</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54756</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>53.73</td>
+      <td>-0.72</td>
+      <td>536</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16578</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>53.72</td>
+      <td>-0.78</td>
+      <td>646</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>78693</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.50</td>
+      <td>52.38</td>
+      <td>-1.12</td>
+      <td>168</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91086" target="_blank" rel="noopener noreferrer"><img src="img/Windswept_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Windswept Heath.html" target="_blank" rel="noopener noreferrer">Windswept Heath</a></td>
+      <td>6.64</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>53241</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>52.45</td>
+      <td>-1.20</td>
+      <td>734</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14457</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.60</td>
+      <td>52.38</td>
+      <td>-1.22</td>
+      <td>399</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90872" target="_blank" rel="noopener noreferrer"><img src="img/Envoy_of_the_Ancestors.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Envoy of the Ancestors.html" target="_blank" rel="noopener noreferrer">Envoy of the Ancestors</a></td>
+      <td>5.69</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75966</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>52.29</td>
+      <td>-1.66</td>
+      <td>262</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60816</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>52.94</td>
+      <td>-1.71</td>
+      <td>119</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52029</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.50</td>
+      <td>53.73</td>
+      <td>-1.77</td>
+      <td>201</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63240</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.25</td>
+      <td>50.36</td>
+      <td>-1.89</td>
+      <td>274</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76269</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>52.81</td>
+      <td>-1.99</td>
+      <td>640</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53847</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.40</td>
+      <td>50.27</td>
+      <td>-2.13</td>
+      <td>366</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91003" target="_blank" rel="noopener noreferrer"><img src="img/Fangs_of_Kalonia.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fangs of Kalonia.html" target="_blank" rel="noopener noreferrer">Fangs of Kalonia</a></td>
+      <td>7.29</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15669</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>53.54</td>
+      <td>-2.16</td>
+      <td>424</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73542</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.20</td>
+      <td>52.02</td>
+      <td>-2.18</td>
+      <td>198</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62331</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>51.78</td>
+      <td>-2.22</td>
+      <td>197</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91031" target="_blank" rel="noopener noreferrer"><img src="img/Cursed_Wombat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cursed Wombat.html" target="_blank" rel="noopener noreferrer">Cursed Wombat</a></td>
+      <td>5.37</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14154</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>52.19</td>
+      <td>-2.26</td>
+      <td>778</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17184</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.80</td>
+      <td>51.45</td>
+      <td>-2.35</td>
+      <td>587</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7185</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.10</td>
+      <td>51.56</td>
+      <td>-2.54</td>
+      <td>128</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5367</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.35</td>
+      <td>51.80</td>
+      <td>-2.55</td>
+      <td>278</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18699</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.00</td>
+      <td>51.37</td>
+      <td>-2.63</td>
+      <td>876</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18396</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.70</td>
+      <td>50.00</td>
+      <td>-2.70</td>
+      <td>136</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90885" target="_blank" rel="noopener noreferrer"><img src="img/Muster_the_Departed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Muster the Departed.html" target="_blank" rel="noopener noreferrer">Muster the Departed</a></td>
+      <td>9.11</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59604</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>51.01</td>
+      <td>-2.74</td>
+      <td>694</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12336</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.20</td>
+      <td>51.39</td>
+      <td>-2.81</td>
+      <td>144</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3852</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.55</td>
+      <td>51.69</td>
+      <td>-2.86</td>
+      <td>356</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15063</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.55</td>
+      <td>49.68</td>
+      <td>-2.87</td>
+      <td>471</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>64149</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>50.45</td>
+      <td>47.47</td>
+      <td>-2.98</td>
+      <td>514</td>
+      <td>47.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td>9.06</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56877</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.95</td>
+      <td>52.74</td>
+      <td>-3.21</td>
+      <td>493</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77481</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>50.99</td>
+      <td>-3.26</td>
+      <td>553</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19305</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>50.28</td>
+      <td>-3.97</td>
+      <td>179</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90888" target="_blank" rel="noopener noreferrer"><img src="img/Pearl-Ear,_Imperial_Advisor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pearl-Ear, Imperial Advisor.html" target="_blank" rel="noopener noreferrer">Pearl-Ear, Imperial Advisor</a></td>
+      <td>3.85</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>66573</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.00</td>
+      <td>48.00</td>
+      <td>-4.00</td>
+      <td>125</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>85965</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>50.84</td>
+      <td>-4.11</td>
+      <td>179</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>822</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>50.43</td>
+      <td>-4.47</td>
+      <td>349</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90804" target="_blank" rel="noopener noreferrer"><img src="img/Witch_Enchanter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Witch Enchanter.html" target="_blank" rel="noopener noreferrer">Witch Enchanter</a></td>
+      <td>5.48</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55362</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.55</td>
+      <td>47.02</td>
+      <td>-4.53</td>
+      <td>151</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55665</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.70</td>
+      <td>47.09</td>
+      <td>-4.61</td>
+      <td>327</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91009" target="_blank" rel="noopener noreferrer"><img src="img/Hydra_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydra Trainer.html" target="_blank" rel="noopener noreferrer">Hydra Trainer</a></td>
+      <td>7.31</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18093</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>49.39</td>
+      <td>-5.41</td>
+      <td>413</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77784</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>48.64</td>
+      <td>-5.61</td>
+      <td>257</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60513</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.30</td>
+      <td>46.59</td>
+      <td>-5.71</td>
+      <td>249</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19911</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>49.13</td>
+      <td>-5.72</td>
+      <td>346</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90890" target="_blank" rel="noopener noreferrer"><img src="img/Proud_Pack-Rhino.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Proud Pack-Rhino.html" target="_blank" rel="noopener noreferrer">Proud Pack-Rhino</a></td>
+      <td>5.30</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21426</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>49.10</td>
+      <td>-5.80</td>
+      <td>167</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90895" target="_blank" rel="noopener noreferrer"><img src="img/Voltstorm_Angel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voltstorm Angel.html" target="_blank" rel="noopener noreferrer">Voltstorm Angel</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59907</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>48.19</td>
+      <td>-6.71</td>
+      <td>166</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55968</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.60</td>
+      <td>45.88</td>
+      <td>-6.72</td>
+      <td>255</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91010" target="_blank" rel="noopener noreferrer"><img src="img/Lion_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lion Umbra.html" target="_blank" rel="noopener noreferrer">Lion Umbra</a></td>
+      <td>9.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58089</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.70</td>
+      <td>47.80</td>
+      <td>-6.90</td>
+      <td>159</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20214</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.05</td>
+      <td>45.67</td>
+      <td>-7.38</td>
+      <td>254</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90891" target="_blank" rel="noopener noreferrer"><img src="img/Rosecot_Knight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rosecot Knight.html" target="_blank" rel="noopener noreferrer">Rosecot Knight</a></td>
+      <td>11.27</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79905</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.40</td>
+      <td>43.85</td>
+      <td>-7.55</td>
+      <td>130</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91090" target="_blank" rel="noopener noreferrer"><img src="img/Distinguished_Conjurer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Distinguished Conjurer.html" target="_blank" rel="noopener noreferrer">Distinguished Conjurer</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41121</th>
+      <td>rare</td>
+      <td>WG</td>
+      <td>7.65</td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>45.56</td>
+      <td>-9.99</td>
+      <td>169</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

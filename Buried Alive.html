@@ -1,0 +1,774 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>23603</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.75</td>
+      <td>68.07</td>
+      <td>13.32</td>
+      <td>166</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25118</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>55.35</td>
+      <td>67.80</td>
+      <td>12.45</td>
+      <td>118</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29663</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.30</td>
+      <td>64.80</td>
+      <td>11.50</td>
+      <td>196</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30875</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.60</td>
+      <td>64.25</td>
+      <td>9.65</td>
+      <td>221</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1484</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>52.85</td>
+      <td>62.38</td>
+      <td>9.53</td>
+      <td>101</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28451</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.75</td>
+      <td>61.18</td>
+      <td>6.43</td>
+      <td>237</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41177</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.50</td>
+      <td>59.95</td>
+      <td>5.45</td>
+      <td>372</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41480</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.85</td>
+      <td>59.05</td>
+      <td>5.20</td>
+      <td>105</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37844</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>55.70</td>
+      <td>60.87</td>
+      <td>5.17</td>
+      <td>138</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35723</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.40</td>
+      <td>58.13</td>
+      <td>4.73</td>
+      <td>480</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74507</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.25</td>
+      <td>57.97</td>
+      <td>4.72</td>
+      <td>207</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38147</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.85</td>
+      <td>59.39</td>
+      <td>4.54</td>
+      <td>165</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90950" target="_blank" rel="noopener noreferrer"><img src="img/Mindless_Conscription.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mindless Conscription.html" target="_blank" rel="noopener noreferrer">Mindless Conscription</a></td>
+      <td>7.50</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67841</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>56.65</td>
+      <td>60.19</td>
+      <td>3.54</td>
+      <td>103</td>
+      <td>62.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91050" target="_blank" rel="noopener noreferrer"><img src="img/Psychic_Frog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Psychic Frog.html" target="_blank" rel="noopener noreferrer">Psychic Frog</a></td>
+      <td>2.82</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>2393</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.35</td>
+      <td>56.59</td>
+      <td>3.24</td>
+      <td>182</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64508</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.40</td>
+      <td>57.14</td>
+      <td>2.74</td>
+      <td>231</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91038" target="_blank" rel="noopener noreferrer"><img src="img/Horrid_Shadowspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrid Shadowspinner.html" target="_blank" rel="noopener noreferrer">Horrid Shadowspinner</a></td>
+      <td>8.15</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32390</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.70</td>
+      <td>56.35</td>
+      <td>2.65</td>
+      <td>378</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69659</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>55.10</td>
+      <td>57.45</td>
+      <td>2.35</td>
+      <td>597</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32996</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.30</td>
+      <td>55.30</td>
+      <td>2.00</td>
+      <td>132</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90933" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Corruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Corruption.html" target="_blank" rel="noopener noreferrer">Consuming Corruption</a></td>
+      <td>8.04</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7544</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.10</td>
+      <td>55.07</td>
+      <td>1.97</td>
+      <td>138</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36026</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>51.45</td>
+      <td>53.14</td>
+      <td>1.69</td>
+      <td>239</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81173</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.70</td>
+      <td>55.30</td>
+      <td>1.60</td>
+      <td>132</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>84203</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>51.05</td>
+      <td>52.34</td>
+      <td>1.29</td>
+      <td>214</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24815</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.70</td>
+      <td>55.87</td>
+      <td>1.17</td>
+      <td>247</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73598</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.15</td>
+      <td>54.09</td>
+      <td>0.94</td>
+      <td>257</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26027</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.85</td>
+      <td>54.74</td>
+      <td>0.89</td>
+      <td>137</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31784</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>54.05</td>
+      <td>54.66</td>
+      <td>0.61</td>
+      <td>386</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30269</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.30</td>
+      <td>53.68</td>
+      <td>0.38</td>
+      <td>136</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75719</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.30</td>
+      <td>53.00</td>
+      <td>-0.30</td>
+      <td>217</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>82688</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>51.10</td>
+      <td>50.42</td>
+      <td>-0.68</td>
+      <td>1297</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td>11.98</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37238</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.45</td>
+      <td>52.38</td>
+      <td>-1.07</td>
+      <td>357</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39359</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.95</td>
+      <td>52.74</td>
+      <td>-1.21</td>
+      <td>146</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40268</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.85</td>
+      <td>52.09</td>
+      <td>-1.76</td>
+      <td>311</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31178</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>52.80</td>
+      <td>50.79</td>
+      <td>-2.01</td>
+      <td>126</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36632</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>50.80</td>
+      <td>46.27</td>
+      <td>-4.53</td>
+      <td>134</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39662</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>52.80</td>
+      <td>48.05</td>
+      <td>-4.75</td>
+      <td>256</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22694</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>53.60</td>
+      <td>48.85</td>
+      <td>-4.75</td>
+      <td>131</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34208</th>
+      <td>uncommon</td>
+      <td>B</td>
+      <td>11.98</td>
+      <td><a href=".//Buried Alive.html" target="_blank" rel="noopener noreferrer">Buried Alive</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91099" target="_blank" rel="noopener noreferrer"><img src="img/Buried_Alive.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.1</td>
+      <td>52.40</td>
+      <td>46.05</td>
+      <td>-6.35</td>
+      <td>152</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

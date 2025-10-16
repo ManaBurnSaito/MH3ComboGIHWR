@@ -1,0 +1,3586 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>53469</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.35</td>
+      <td>68.58</td>
+      <td>9.23</td>
+      <td>226</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91002" target="_blank" rel="noopener noreferrer"><img src="img/Fanatic_of_Rhonas.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanatic of Rhonas.html" target="_blank" rel="noopener noreferrer">Fanatic of Rhonas</a></td>
+      <td>1.87</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>91344</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.75</td>
+      <td>63.53</td>
+      <td>8.78</td>
+      <td>266</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>65892</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.35</td>
+      <td>67.08</td>
+      <td>7.73</td>
+      <td>240</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91043" target="_blank" rel="noopener noreferrer"><img src="img/Nadu,_Winged_Wisdom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nadu, Winged Wisdom.html" target="_blank" rel="noopener noreferrer">Nadu, Winged Wisdom</a></td>
+      <td>1.80</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>71346</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>64.94</td>
+      <td>7.59</td>
+      <td>616</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76497</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.70</td>
+      <td>63.78</td>
+      <td>7.08</td>
+      <td>196</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91079" target="_blank" rel="noopener noreferrer"><img src="img/Shifting_Woodland.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shifting Woodland.html" target="_blank" rel="noopener noreferrer">Shifting Woodland</a></td>
+      <td>5.76</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>78315</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.60</td>
+      <td>60.54</td>
+      <td>6.94</td>
+      <td>147</td>
+      <td>48.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91085" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Cave.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Urza's Cave.html" target="_blank" rel="noopener noreferrer">Urza's Cave</a></td>
+      <td>11.49</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8625</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.10</td>
+      <td>61.54</td>
+      <td>6.44</td>
+      <td>221</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90853" target="_blank" rel="noopener noreferrer"><img src="img/Echoes_of_Eternity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Echoes of Eternity.html" target="_blank" rel="noopener noreferrer">Echoes of Eternity</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>85890</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.50</td>
+      <td>63.21</td>
+      <td>5.71</td>
+      <td>685</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52863</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.95</td>
+      <td>64.42</td>
+      <td>5.47</td>
+      <td>2206</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69831</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.70</td>
+      <td>63.97</td>
+      <td>5.27</td>
+      <td>1049</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60741</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.20</td>
+      <td>62.46</td>
+      <td>5.26</td>
+      <td>871</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29229</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.75</td>
+      <td>59.00</td>
+      <td>5.25</td>
+      <td>100</td>
+      <td>49.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90921" target="_blank" rel="noopener noreferrer"><img src="img/Tamiyo_Meets_the_Story_Circle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tamiyo Meets the Story Circle.html" target="_blank" rel="noopener noreferrer">Tamiyo Meets the Story Circle</a></td>
+      <td>9.53</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74376</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.85</td>
+      <td>62.04</td>
+      <td>5.19</td>
+      <td>1412</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71043</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.10</td>
+      <td>59.23</td>
+      <td>5.13</td>
+      <td>417</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91061" target="_blank" rel="noopener noreferrer"><img src="img/Idol_of_False_Gods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Idol of False Gods.html" target="_blank" rel="noopener noreferrer">Idol of False Gods</a></td>
+      <td>7.42</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73164</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.40</td>
+      <td>62.52</td>
+      <td>5.12</td>
+      <td>2711</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4080</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>61.94</td>
+      <td>4.94</td>
+      <td>649</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70437</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>61.10</td>
+      <td>65.72</td>
+      <td>4.62</td>
+      <td>2856</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57408</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.60</td>
+      <td>64.21</td>
+      <td>4.61</td>
+      <td>894</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54984</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>63.08</td>
+      <td>4.58</td>
+      <td>1996</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86799</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.20</td>
+      <td>61.76</td>
+      <td>4.56</td>
+      <td>102</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91113" target="_blank" rel="noopener noreferrer"><img src="img/Sylvan_Safekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sylvan Safekeeper.html" target="_blank" rel="noopener noreferrer">Sylvan Safekeeper</a></td>
+      <td>6.74</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>9534</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.20</td>
+      <td>61.62</td>
+      <td>4.42</td>
+      <td>800</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11655</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.30</td>
+      <td>61.68</td>
+      <td>4.38</td>
+      <td>689</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6807</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.25</td>
+      <td>61.53</td>
+      <td>4.28</td>
+      <td>980</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58014</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.25</td>
+      <td>61.43</td>
+      <td>4.18</td>
+      <td>713</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37713</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.30</td>
+      <td>63.41</td>
+      <td>4.11</td>
+      <td>164</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5898</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>61.45</td>
+      <td>4.10</td>
+      <td>454</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77406</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.80</td>
+      <td>60.88</td>
+      <td>4.08</td>
+      <td>1531</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49833</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.75</td>
+      <td>62.82</td>
+      <td>4.07</td>
+      <td>1084</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8928</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.95</td>
+      <td>58.98</td>
+      <td>4.03</td>
+      <td>646</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46500</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.45</td>
+      <td>62.45</td>
+      <td>4.00</td>
+      <td>269</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90979" target="_blank" rel="noopener noreferrer"><img src="img/Party_Thrasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Party Thrasher.html" target="_blank" rel="noopener noreferrer">Party Thrasher</a></td>
+      <td>3.45</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>56802</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>62.46</td>
+      <td>3.96</td>
+      <td>1982</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42561</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>62.30</td>
+      <td>3.80</td>
+      <td>305</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90965" target="_blank" rel="noopener noreferrer"><img src="img/Detective's_Phoenix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Detective's Phoenix.html" target="_blank" rel="noopener noreferrer">Detective's Phoenix</a></td>
+      <td>2.03</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73770</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.20</td>
+      <td>59.97</td>
+      <td>3.77</td>
+      <td>762</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51348</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.60</td>
+      <td>61.27</td>
+      <td>3.67</td>
+      <td>1792</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12564</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.05</td>
+      <td>61.64</td>
+      <td>3.59</td>
+      <td>941</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76194</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>60.87</td>
+      <td>3.52</td>
+      <td>2402</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48924</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.70</td>
+      <td>60.14</td>
+      <td>3.44</td>
+      <td>888</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76800</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.80</td>
+      <td>57.23</td>
+      <td>3.43</td>
+      <td>159</td>
+      <td>49.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td>12.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59529</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.30</td>
+      <td>59.66</td>
+      <td>3.36</td>
+      <td>937</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54681</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>60.26</td>
+      <td>3.26</td>
+      <td>765</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55287</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.10</td>
+      <td>57.32</td>
+      <td>3.22</td>
+      <td>164</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24987</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.95</td>
+      <td>62.07</td>
+      <td>3.12</td>
+      <td>588</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56196</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.30</td>
+      <td>62.33</td>
+      <td>3.03</td>
+      <td>2339</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7413</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.70</td>
+      <td>59.70</td>
+      <td>3.00</td>
+      <td>134</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>86496</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.15</td>
+      <td>59.11</td>
+      <td>2.96</td>
+      <td>538</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60438</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.85</td>
+      <td>57.78</td>
+      <td>2.93</td>
+      <td>360</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59832</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>60.32</td>
+      <td>2.87</td>
+      <td>693</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72558</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.95</td>
+      <td>59.80</td>
+      <td>2.85</td>
+      <td>204</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91066" target="_blank" rel="noopener noreferrer"><img src="img/Arena_of_Glory.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arena of Glory.html" target="_blank" rel="noopener noreferrer">Arena of Glory</a></td>
+      <td>6.93</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>50742</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.10</td>
+      <td>58.91</td>
+      <td>2.81</td>
+      <td>2193</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12261</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.75</td>
+      <td>59.53</td>
+      <td>2.78</td>
+      <td>1846</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4989</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>59.75</td>
+      <td>2.75</td>
+      <td>810</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25896</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>59.87</td>
+      <td>2.42</td>
+      <td>461</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>90132</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.10</td>
+      <td>57.52</td>
+      <td>2.42</td>
+      <td>452</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10140</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.25</td>
+      <td>58.67</td>
+      <td>2.42</td>
+      <td>796</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44682</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>59.86</td>
+      <td>2.41</td>
+      <td>735</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52257</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.40</td>
+      <td>58.79</td>
+      <td>2.39</td>
+      <td>1087</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51954</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.05</td>
+      <td>60.43</td>
+      <td>2.38</td>
+      <td>561</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1353</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.45</td>
+      <td>58.81</td>
+      <td>2.36</td>
+      <td>352</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9837</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.40</td>
+      <td>57.75</td>
+      <td>2.35</td>
+      <td>142</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90857" target="_blank" rel="noopener noreferrer"><img src="img/Herigast,_Erupting_Nullkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Herigast, Erupting Nullkite.html" target="_blank" rel="noopener noreferrer">Herigast, Erupting Nullkite</a></td>
+      <td>1.94</td>
+      <td>R</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>50439</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.80</td>
+      <td>60.06</td>
+      <td>2.26</td>
+      <td>333</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90992" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Amulet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Amulet.html" target="_blank" rel="noopener noreferrer">Unstable Amulet</a></td>
+      <td>5.81</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31047</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.40</td>
+      <td>58.63</td>
+      <td>2.23</td>
+      <td>863</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28017</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.95</td>
+      <td>57.17</td>
+      <td>2.22</td>
+      <td>1039</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77709</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.80</td>
+      <td>59.01</td>
+      <td>2.21</td>
+      <td>2276</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75588</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.90</td>
+      <td>59.06</td>
+      <td>2.16</td>
+      <td>1700</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43167</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.10</td>
+      <td>59.26</td>
+      <td>2.16</td>
+      <td>1998</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68013</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.55</td>
+      <td>57.56</td>
+      <td>2.01</td>
+      <td>271</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91051" target="_blank" rel="noopener noreferrer"><img src="img/Pyretic_Rebirth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pyretic Rebirth.html" target="_blank" rel="noopener noreferrer">Pyretic Rebirth</a></td>
+      <td>7.72</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10746</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.05</td>
+      <td>60.94</td>
+      <td>1.89</td>
+      <td>256</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90860" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Command.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Command.html" target="_blank" rel="noopener noreferrer">Kozilek's Command</a></td>
+      <td>2.58</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>11352</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.40</td>
+      <td>59.18</td>
+      <td>1.78</td>
+      <td>245</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90862" target="_blank" rel="noopener noreferrer"><img src="img/Nulldrifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nulldrifter.html" target="_blank" rel="noopener noreferrer">Nulldrifter</a></td>
+      <td>1.62</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>57105</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.15</td>
+      <td>58.93</td>
+      <td>1.78</td>
+      <td>1220</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24684</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.30</td>
+      <td>59.93</td>
+      <td>1.63</td>
+      <td>916</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49227</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.60</td>
+      <td>58.18</td>
+      <td>1.58</td>
+      <td>1186</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7716</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.80</td>
+      <td>58.20</td>
+      <td>1.40</td>
+      <td>744</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53166</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.20</td>
+      <td>57.56</td>
+      <td>1.36</td>
+      <td>1256</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27108</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.45</td>
+      <td>56.74</td>
+      <td>1.29</td>
+      <td>571</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54378</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.45</td>
+      <td>56.65</td>
+      <td>1.20</td>
+      <td>466</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8322</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.20</td>
+      <td>57.40</td>
+      <td>1.20</td>
+      <td>1277</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44379</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.15</td>
+      <td>60.28</td>
+      <td>1.13</td>
+      <td>1901</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73467</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.75</td>
+      <td>57.86</td>
+      <td>1.11</td>
+      <td>541</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60135</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.95</td>
+      <td>56.00</td>
+      <td>1.05</td>
+      <td>275</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91024" target="_blank" rel="noopener noreferrer"><img src="img/Thief_of_Existence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thief of Existence.html" target="_blank" rel="noopener noreferrer">Thief of Existence</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>69225</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.90</td>
+      <td>56.94</td>
+      <td>1.04</td>
+      <td>1440</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90435</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.70</td>
+      <td>56.73</td>
+      <td>1.03</td>
+      <td>171</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91125" target="_blank" rel="noopener noreferrer"><img src="img/Barbarian_Ring.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Barbarian Ring.html" target="_blank" rel="noopener noreferrer">Barbarian Ring</a></td>
+      <td>11.58</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46197</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.25</td>
+      <td>57.21</td>
+      <td>0.96</td>
+      <td>1241</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44985</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.95</td>
+      <td>58.86</td>
+      <td>0.91</td>
+      <td>2399</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75891</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.50</td>
+      <td>57.38</td>
+      <td>0.88</td>
+      <td>1145</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37410</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.65</td>
+      <td>57.43</td>
+      <td>0.78</td>
+      <td>101</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45288</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.70</td>
+      <td>56.29</td>
+      <td>0.59</td>
+      <td>517</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90975" target="_blank" rel="noopener noreferrer"><img src="img/Infernal_Captor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Infernal Captor.html" target="_blank" rel="noopener noreferrer">Infernal Captor</a></td>
+      <td>10.93</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74982</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.10</td>
+      <td>57.62</td>
+      <td>0.52</td>
+      <td>1810</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9231</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.30</td>
+      <td>58.82</td>
+      <td>0.52</td>
+      <td>102</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90855" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul,_the_World_Anew.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul, the World Anew.html" target="_blank" rel="noopener noreferrer">Emrakul, the World Anew</a></td>
+      <td>1.59</td>
+      <td></td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>6504</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.95</td>
+      <td>57.40</td>
+      <td>0.45</td>
+      <td>331</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3777</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.10</td>
+      <td>57.47</td>
+      <td>0.37</td>
+      <td>703</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30744</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.20</td>
+      <td>58.53</td>
+      <td>0.33</td>
+      <td>1242</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24078</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.55</td>
+      <td>55.87</td>
+      <td>0.32</td>
+      <td>247</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28320</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.35</td>
+      <td>58.62</td>
+      <td>0.27</td>
+      <td>911</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5292</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.90</td>
+      <td>57.14</td>
+      <td>0.24</td>
+      <td>105</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4686</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.05</td>
+      <td>56.25</td>
+      <td>0.20</td>
+      <td>416</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>42864</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.30</td>
+      <td>58.25</td>
+      <td>-0.05</td>
+      <td>12455</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td>2.21</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>2868</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.95</td>
+      <td>56.89</td>
+      <td>-0.06</td>
+      <td>777</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90818" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Monk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Monk.html" target="_blank" rel="noopener noreferrer">Pinnacle Monk</a></td>
+      <td>6.42</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48015</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.60</td>
+      <td>56.50</td>
+      <td>-0.10</td>
+      <td>531</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90984" target="_blank" rel="noopener noreferrer"><img src="img/Reiterating_Bolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reiterating Bolt.html" target="_blank" rel="noopener noreferrer">Reiterating Bolt</a></td>
+      <td>4.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>84678</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.00</td>
+      <td>52.83</td>
+      <td>-0.17</td>
+      <td>106</td>
+      <td>47.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91106" target="_blank" rel="noopener noreferrer"><img src="img/Fledgling_Dragon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fledgling Dragon.html" target="_blank" rel="noopener noreferrer">Fledgling Dragon</a></td>
+      <td>11.01</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53772</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.95</td>
+      <td>54.73</td>
+      <td>-0.22</td>
+      <td>201</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91003" target="_blank" rel="noopener noreferrer"><img src="img/Fangs_of_Kalonia.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fangs of Kalonia.html" target="_blank" rel="noopener noreferrer">Fangs of Kalonia</a></td>
+      <td>7.29</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22563</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.20</td>
+      <td>56.92</td>
+      <td>-0.28</td>
+      <td>520</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45894</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.35</td>
+      <td>55.96</td>
+      <td>-0.39</td>
+      <td>109</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90977" target="_blank" rel="noopener noreferrer"><img src="img/Mogg_Mob.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mogg Mob.html" target="_blank" rel="noopener noreferrer">Mogg Mob</a></td>
+      <td>11.14</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58317</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.70</td>
+      <td>58.31</td>
+      <td>-0.39</td>
+      <td>662</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3474</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>56.54</td>
+      <td>-0.46</td>
+      <td>902</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90822" target="_blank" rel="noopener noreferrer"><img src="img/Sundering_Eruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sundering Eruption.html" target="_blank" rel="noopener noreferrer">Sundering Eruption</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23472</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.35</td>
+      <td>57.84</td>
+      <td>-0.51</td>
+      <td>268</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63771</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.00</td>
+      <td>57.39</td>
+      <td>-0.61</td>
+      <td>115</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91036" target="_blank" rel="noopener noreferrer"><img src="img/Genku,_Future_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Genku, Future Shaper.html" target="_blank" rel="noopener noreferrer">Genku, Future Shaper</a></td>
+      <td>2.50</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>78921</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.80</td>
+      <td>56.12</td>
+      <td>-0.68</td>
+      <td>294</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91087" target="_blank" rel="noopener noreferrer"><img src="img/Wooded_Foothills.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wooded Foothills.html" target="_blank" rel="noopener noreferrer">Wooded Foothills</a></td>
+      <td>5.76</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>47409</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.40</td>
+      <td>57.64</td>
+      <td>-0.76</td>
+      <td>694</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90982" target="_blank" rel="noopener noreferrer"><img src="img/Ral_and_the_Implicit_Maze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ral and the Implicit Maze.html" target="_blank" rel="noopener noreferrer">Ral and the Implicit Maze</a></td>
+      <td>5.23</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41955</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>61.25</td>
+      <td>60.47</td>
+      <td>-0.78</td>
+      <td>549</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47712</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>56.53</td>
+      <td>-0.82</td>
+      <td>681</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27411</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.95</td>
+      <td>56.12</td>
+      <td>-0.83</td>
+      <td>1340</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62256</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.55</td>
+      <td>55.66</td>
+      <td>-0.89</td>
+      <td>106</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91031" target="_blank" rel="noopener noreferrer"><img src="img/Cursed_Wombat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cursed Wombat.html" target="_blank" rel="noopener noreferrer">Cursed Wombat</a></td>
+      <td>5.37</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68922</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.50</td>
+      <td>58.59</td>
+      <td>-0.91</td>
+      <td>384</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91054" target="_blank" rel="noopener noreferrer"><img src="img/Scurry_of_Gremlins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurry of Gremlins.html" target="_blank" rel="noopener noreferrer">Scurry of Gremlins</a></td>
+      <td>4.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20745</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>57.59</td>
+      <td>-0.91</td>
+      <td>191</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90893" target="_blank" rel="noopener noreferrer"><img src="img/Static_Prison.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Static Prison.html" target="_blank" rel="noopener noreferrer">Static Prison</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30441</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.40</td>
+      <td>58.40</td>
+      <td>-1.00</td>
+      <td>125</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90925" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Binding.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ugin's Binding.html" target="_blank" rel="noopener noreferrer">Ugin's Binding</a></td>
+      <td>2.22</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>26805</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.90</td>
+      <td>56.80</td>
+      <td>-1.10</td>
+      <td>463</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8019</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>56.32</td>
+      <td>-1.13</td>
+      <td>348</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90851" target="_blank" rel="noopener noreferrer"><img src="img/Devourer_of_Destiny.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Devourer of Destiny.html" target="_blank" rel="noopener noreferrer">Devourer of Destiny</a></td>
+      <td>2.50</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>58620</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>57.32</td>
+      <td>-1.18</td>
+      <td>246</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91019" target="_blank" rel="noopener noreferrer"><img src="img/Six.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Six.html" target="_blank" rel="noopener noreferrer">Six</a></td>
+      <td>1.79</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30138</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.90</td>
+      <td>55.64</td>
+      <td>-1.26</td>
+      <td>505</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81042</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.30</td>
+      <td>55.97</td>
+      <td>-1.33</td>
+      <td>318</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67407</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.70</td>
+      <td>54.18</td>
+      <td>-1.52</td>
+      <td>395</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91049" target="_blank" rel="noopener noreferrer"><img src="img/Planar_Genesis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Planar Genesis.html" target="_blank" rel="noopener noreferrer">Planar Genesis</a></td>
+      <td>8.10</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12867</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.60</td>
+      <td>57.07</td>
+      <td>-1.53</td>
+      <td>403</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29532</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.90</td>
+      <td>55.34</td>
+      <td>-1.56</td>
+      <td>506</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27714</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.35</td>
+      <td>56.78</td>
+      <td>-1.57</td>
+      <td>273</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6201</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.70</td>
+      <td>55.07</td>
+      <td>-1.63</td>
+      <td>612</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35592</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>55.17</td>
+      <td>-1.83</td>
+      <td>203</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1050</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.80</td>
+      <td>53.96</td>
+      <td>-1.84</td>
+      <td>265</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13170</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.75</td>
+      <td>55.84</td>
+      <td>-1.91</td>
+      <td>154</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90868" target="_blank" rel="noopener noreferrer"><img src="img/Ajani_Fells_the_Godsire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani Fells the Godsire.html" target="_blank" rel="noopener noreferrer">Ajani Fells the Godsire</a></td>
+      <td>4.80</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24381</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.70</td>
+      <td>51.59</td>
+      <td>-2.11</td>
+      <td>471</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59226</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.65</td>
+      <td>56.54</td>
+      <td>-2.11</td>
+      <td>237</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91021" target="_blank" rel="noopener noreferrer"><img src="img/Springheart_Nantuko.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Springheart Nantuko.html" target="_blank" rel="noopener noreferrer">Springheart Nantuko</a></td>
+      <td>1.57</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>21048</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.65</td>
+      <td>55.53</td>
+      <td>-2.12</td>
+      <td>407</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49530</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>55.22</td>
+      <td>-2.13</td>
+      <td>1092</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58923</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.55</td>
+      <td>56.25</td>
+      <td>-2.30</td>
+      <td>272</td>
+      <td>58.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91020" target="_blank" rel="noopener noreferrer"><img src="img/Sowing_Mycospawn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sowing Mycospawn.html" target="_blank" rel="noopener noreferrer">Sowing Mycospawn</a></td>
+      <td>2.22</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5595</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.25</td>
+      <td>54.86</td>
+      <td>-2.39</td>
+      <td>514</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61650</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.50</td>
+      <td>55.90</td>
+      <td>-2.60</td>
+      <td>619</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91029" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Goblin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Goblin.html" target="_blank" rel="noopener noreferrer">Conduit Goblin</a></td>
+      <td>6.47</td>
+      <td>WR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45591</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.55</td>
+      <td>53.92</td>
+      <td>-2.63</td>
+      <td>293</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41046</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.10</td>
+      <td>55.38</td>
+      <td>-2.72</td>
+      <td>372</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25593</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.95</td>
+      <td>53.12</td>
+      <td>-2.83</td>
+      <td>160</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90909" target="_blank" rel="noopener noreferrer"><img src="img/Electrozoa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Electrozoa.html" target="_blank" rel="noopener noreferrer">Electrozoa</a></td>
+      <td>10.61</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62559</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.35</td>
+      <td>53.32</td>
+      <td>-3.03</td>
+      <td>437</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91032" target="_blank" rel="noopener noreferrer"><img src="img/Cyclops_Superconductor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cyclops Superconductor.html" target="_blank" rel="noopener noreferrer">Cyclops Superconductor</a></td>
+      <td>9.51</td>
+      <td>UR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40137</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>54.32</td>
+      <td>-3.13</td>
+      <td>162</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16503</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.05</td>
+      <td>53.87</td>
+      <td>-3.18</td>
+      <td>349</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2262</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.95</td>
+      <td>53.72</td>
+      <td>-3.23</td>
+      <td>121</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>81951</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.70</td>
+      <td>52.45</td>
+      <td>-3.25</td>
+      <td>143</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91097" target="_blank" rel="noopener noreferrer"><img src="img/Reef_Worm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reef Worm.html" target="_blank" rel="noopener noreferrer">Reef Worm</a></td>
+      <td>8.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>85587</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.35</td>
+      <td>50.00</td>
+      <td>-3.35</td>
+      <td>102</td>
+      <td>48.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91109" target="_blank" rel="noopener noreferrer"><img src="img/Meteoric_Mace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Meteoric Mace.html" target="_blank" rel="noopener noreferrer">Meteoric Mace</a></td>
+      <td>11.35</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17109</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.35</td>
+      <td>52.92</td>
+      <td>-3.43</td>
+      <td>308</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7110</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.65</td>
+      <td>53.12</td>
+      <td>-3.53</td>
+      <td>256</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21957</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.40</td>
+      <td>52.57</td>
+      <td>-3.83</td>
+      <td>175</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90897" target="_blank" rel="noopener noreferrer"><img src="img/Wing_It.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wing It.html" target="_blank" rel="noopener noreferrer">Wing It</a></td>
+      <td>10.50</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17715</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.25</td>
+      <td>54.36</td>
+      <td>-3.89</td>
+      <td>390</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>747</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>53.50</td>
+      <td>-3.95</td>
+      <td>200</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90804" target="_blank" rel="noopener noreferrer"><img src="img/Witch_Enchanter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Witch Enchanter.html" target="_blank" rel="noopener noreferrer">Witch Enchanter</a></td>
+      <td>5.48</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48621</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.80</td>
+      <td>52.73</td>
+      <td>-4.07</td>
+      <td>641</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17412</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.70</td>
+      <td>52.60</td>
+      <td>-4.10</td>
+      <td>154</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22866</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.75</td>
+      <td>52.50</td>
+      <td>-4.25</td>
+      <td>120</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90900" target="_blank" rel="noopener noreferrer"><img src="img/Amphibian_Downpour.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amphibian Downpour.html" target="_blank" rel="noopener noreferrer">Amphibian Downpour</a></td>
+      <td>3.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32259</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.30</td>
+      <td>53.01</td>
+      <td>-4.29</td>
+      <td>266</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15594</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.25</td>
+      <td>53.89</td>
+      <td>-4.36</td>
+      <td>193</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18018</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>52.60</td>
+      <td>-4.75</td>
+      <td>154</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14079</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>52.08</td>
+      <td>-4.92</td>
+      <td>336</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55590</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.25</td>
+      <td>48.92</td>
+      <td>-5.33</td>
+      <td>231</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91009" target="_blank" rel="noopener noreferrer"><img src="img/Hydra_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydra Trainer.html" target="_blank" rel="noopener noreferrer">Hydra Trainer</a></td>
+      <td>7.31</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34380</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.15</td>
+      <td>49.64</td>
+      <td>-5.51</td>
+      <td>139</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63165</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.80</td>
+      <td>49.15</td>
+      <td>-5.65</td>
+      <td>177</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23169</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.45</td>
+      <td>50.56</td>
+      <td>-5.89</td>
+      <td>180</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90901" target="_blank" rel="noopener noreferrer"><img src="img/Bespoke_Battlewagon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bespoke Battlewagon.html" target="_blank" rel="noopener noreferrer">Bespoke Battlewagon</a></td>
+      <td>6.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34077</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.00</td>
+      <td>50.00</td>
+      <td>-6.00</td>
+      <td>164</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>444</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.10</td>
+      <td>50.00</td>
+      <td>-6.10</td>
+      <td>146</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90802" target="_blank" rel="noopener noreferrer"><img src="img/Razorgrass_Ambush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razorgrass Ambush.html" target="_blank" rel="noopener noreferrer">Razorgrass Ambush</a></td>
+      <td>6.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50136</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.80</td>
+      <td>49.63</td>
+      <td>-6.17</td>
+      <td>538</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90991" target="_blank" rel="noopener noreferrer"><img src="img/Thriving_Skyclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thriving Skyclaw.html" target="_blank" rel="noopener noreferrer">Thriving Skyclaw</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48318</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.05</td>
+      <td>49.79</td>
+      <td>-6.26</td>
+      <td>476</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36501</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.40</td>
+      <td>48.12</td>
+      <td>-6.28</td>
+      <td>160</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18624</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.55</td>
+      <td>50.17</td>
+      <td>-6.38</td>
+      <td>295</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68316</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>58.35</td>
+      <td>51.94</td>
+      <td>-6.41</td>
+      <td>129</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91052" target="_blank" rel="noopener noreferrer"><img src="img/Riddle_Gate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riddle Gate Gargoyle.html" target="_blank" rel="noopener noreferrer">Riddle Gate Gargoyle</a></td>
+      <td>8.16</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39228</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.55</td>
+      <td>51.11</td>
+      <td>-6.44</td>
+      <td>270</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>84981</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>59.50</td>
+      <td>52.97</td>
+      <td>-6.53</td>
+      <td>219</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91107" target="_blank" rel="noopener noreferrer"><img src="img/Laelia,_the_Blade_Reforged.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laelia, the Blade Reforged.html" target="_blank" rel="noopener noreferrer">Laelia, the Blade Reforged</a></td>
+      <td>1.78</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>10443</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.30</td>
+      <td>50.32</td>
+      <td>-6.98</td>
+      <td>155</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td>1.46</td>
+      <td></td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>63468</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.00</td>
+      <td>50.00</td>
+      <td>-7.00</td>
+      <td>144</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31653</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.65</td>
+      <td>50.61</td>
+      <td>-7.04</td>
+      <td>247</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19836</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.40</td>
+      <td>50.31</td>
+      <td>-7.09</td>
+      <td>161</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90890" target="_blank" rel="noopener noreferrer"><img src="img/Proud_Pack-Rhino.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Proud Pack-Rhino.html" target="_blank" rel="noopener noreferrer">Proud Pack-Rhino</a></td>
+      <td>5.30</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46803</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.40</td>
+      <td>47.77</td>
+      <td>-7.63</td>
+      <td>224</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90980" target="_blank" rel="noopener noreferrer"><img src="img/Phyrexian_Ironworks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phyrexian Ironworks.html" target="_blank" rel="noopener noreferrer">Phyrexian Ironworks</a></td>
+      <td>6.15</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1959</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.65</td>
+      <td>47.41</td>
+      <td>-8.24</td>
+      <td>116</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20442</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.35</td>
+      <td>48.99</td>
+      <td>-8.36</td>
+      <td>296</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14988</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.10</td>
+      <td>46.63</td>
+      <td>-8.47</td>
+      <td>163</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35895</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>55.05</td>
+      <td>46.50</td>
+      <td>-8.55</td>
+      <td>200</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41652</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.20</td>
+      <td>47.54</td>
+      <td>-8.66</td>
+      <td>122</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90962" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Revolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Revolt.html" target="_blank" rel="noopener noreferrer">Aether Revolt</a></td>
+      <td>3.43</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>64983</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.15</td>
+      <td>48.34</td>
+      <td>-8.81</td>
+      <td>151</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91040" target="_blank" rel="noopener noreferrer"><img src="img/Invert_Polarity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Invert Polarity.html" target="_blank" rel="noopener noreferrer">Invert Polarity</a></td>
+      <td>5.05</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>39531</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>56.40</td>
+      <td>46.45</td>
+      <td>-9.95</td>
+      <td>183</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61953</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.15</td>
+      <td>46.53</td>
+      <td>-10.62</td>
+      <td>288</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44076</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>54.65</td>
+      <td>43.36</td>
+      <td>-11.29</td>
+      <td>113</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90971" target="_blank" rel="noopener noreferrer"><img src="img/Furnace_Hellkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Furnace Hellkite.html" target="_blank" rel="noopener noreferrer">Furnace Hellkite</a></td>
+      <td>8.57</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21351</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>57.45</td>
+      <td>45.93</td>
+      <td>-11.52</td>
+      <td>135</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90895" target="_blank" rel="noopener noreferrer"><img src="img/Voltstorm_Angel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voltstorm Angel.html" target="_blank" rel="noopener noreferrer">Voltstorm Angel</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>65286</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>2.21</td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>58.3</td>
+      <td>53.85</td>
+      <td>33.33</td>
+      <td>-20.52</td>
+      <td>105</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91041" target="_blank" rel="noopener noreferrer"><img src="img/Izzet_Generatorium.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Izzet Generatorium.html" target="_blank" rel="noopener noreferrer">Izzet Generatorium</a></td>
+      <td>8.95</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

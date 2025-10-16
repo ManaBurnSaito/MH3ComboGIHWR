@@ -1,0 +1,869 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>71493</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.90</td>
+      <td>66.24</td>
+      <td>10.34</td>
+      <td>157</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73311</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.95</td>
+      <td>65.22</td>
+      <td>9.27</td>
+      <td>138</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28467</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.90</td>
+      <td>64.84</td>
+      <td>7.94</td>
+      <td>219</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69675</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>57.25</td>
+      <td>64.97</td>
+      <td>7.72</td>
+      <td>157</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37860</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>57.85</td>
+      <td>65.52</td>
+      <td>7.67</td>
+      <td>116</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24831</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.85</td>
+      <td>63.69</td>
+      <td>6.84</td>
+      <td>157</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27861</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.90</td>
+      <td>63.36</td>
+      <td>6.46</td>
+      <td>131</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6348</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.25</td>
+      <td>61.27</td>
+      <td>6.02</td>
+      <td>142</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7560</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.25</td>
+      <td>60.96</td>
+      <td>5.71</td>
+      <td>146</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75129</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.65</td>
+      <td>60.81</td>
+      <td>5.16</td>
+      <td>370</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77856</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.35</td>
+      <td>60.43</td>
+      <td>5.08</td>
+      <td>139</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22710</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.75</td>
+      <td>60.57</td>
+      <td>4.82</td>
+      <td>175</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5439</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.45</td>
+      <td>60.19</td>
+      <td>4.74</td>
+      <td>103</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77553</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.35</td>
+      <td>59.59</td>
+      <td>4.24</td>
+      <td>146</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31800</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.20</td>
+      <td>60.00</td>
+      <td>3.80</td>
+      <td>175</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76038</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.05</td>
+      <td>58.45</td>
+      <td>3.40</td>
+      <td>373</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73614</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.30</td>
+      <td>58.01</td>
+      <td>2.71</td>
+      <td>412</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29679</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.45</td>
+      <td>57.98</td>
+      <td>2.53</td>
+      <td>188</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46344</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.80</td>
+      <td>57.27</td>
+      <td>2.47</td>
+      <td>110</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74523</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.40</td>
+      <td>57.72</td>
+      <td>2.32</td>
+      <td>123</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75735</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.45</td>
+      <td>57.32</td>
+      <td>1.87</td>
+      <td>396</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73917</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.75</td>
+      <td>56.39</td>
+      <td>1.64</td>
+      <td>133</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40284</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.00</td>
+      <td>57.55</td>
+      <td>1.55</td>
+      <td>106</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68463</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.90</td>
+      <td>58.24</td>
+      <td>1.34</td>
+      <td>170</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91052" target="_blank" rel="noopener noreferrer"><img src="img/Riddle_Gate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riddle Gate Gargoyle.html" target="_blank" rel="noopener noreferrer">Riddle Gate Gargoyle</a></td>
+      <td>8.16</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4833</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.60</td>
+      <td>55.91</td>
+      <td>1.31</td>
+      <td>127</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41193</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.65</td>
+      <td>57.89</td>
+      <td>1.24</td>
+      <td>152</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39678</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.95</td>
+      <td>56.05</td>
+      <td>1.10</td>
+      <td>157</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35739</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.55</td>
+      <td>56.35</td>
+      <td>0.80</td>
+      <td>126</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32406</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.85</td>
+      <td>55.94</td>
+      <td>0.09</td>
+      <td>202</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43314</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.65</td>
+      <td>55.73</td>
+      <td>0.08</td>
+      <td>131</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66645</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>53.10</td>
+      <td>52.85</td>
+      <td>-0.25</td>
+      <td>123</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>87552</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.40</td>
+      <td>55.07</td>
+      <td>-0.33</td>
+      <td>1382</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td>6.33</td>
+      <td>WUBR</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>62706</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.90</td>
+      <td>54.35</td>
+      <td>-0.55</td>
+      <td>138</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91032" target="_blank" rel="noopener noreferrer"><img src="img/Cyclops_Superconductor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cyclops Superconductor.html" target="_blank" rel="noopener noreferrer">Cyclops Superconductor</a></td>
+      <td>9.51</td>
+      <td>UR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39375</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.10</td>
+      <td>55.14</td>
+      <td>-0.96</td>
+      <td>185</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76341</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.90</td>
+      <td>54.90</td>
+      <td>-1.00</td>
+      <td>102</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7257</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.20</td>
+      <td>53.49</td>
+      <td>-1.71</td>
+      <td>129</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44526</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>57.70</td>
+      <td>55.61</td>
+      <td>-2.09</td>
+      <td>187</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62100</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.70</td>
+      <td>53.47</td>
+      <td>-2.23</td>
+      <td>144</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30285</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.45</td>
+      <td>52.98</td>
+      <td>-2.47</td>
+      <td>168</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30891</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>56.75</td>
+      <td>52.42</td>
+      <td>-4.33</td>
+      <td>124</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17256</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>54.90</td>
+      <td>48.54</td>
+      <td>-6.36</td>
+      <td>103</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49677</th>
+      <td>mythic</td>
+      <td>WUBR</td>
+      <td>6.33</td>
+      <td><a href=".//Breya, Etherium Shaper.html" target="_blank" rel="noopener noreferrer">Breya, Etherium Shaper</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91115" target="_blank" rel="noopener noreferrer"><img src="img/Breya,_Etherium_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>55.4</td>
+      <td>55.90</td>
+      <td>45.90</td>
+      <td>-10.00</td>
+      <td>122</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

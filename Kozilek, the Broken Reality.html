@@ -1,0 +1,2693 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>30334</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.40</td>
+      <td>72.00</td>
+      <td>13.60</td>
+      <td>100</td>
+      <td>60.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90925" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Binding.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ugin's Binding.html" target="_blank" rel="noopener noreferrer">Ugin's Binding</a></td>
+      <td>2.22</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>57301</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.60</td>
+      <td>70.54</td>
+      <td>11.94</td>
+      <td>611</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70330</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>60.10</td>
+      <td>69.68</td>
+      <td>9.58</td>
+      <td>1161</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10639</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.05</td>
+      <td>67.35</td>
+      <td>9.30</td>
+      <td>196</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90860" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Command.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Command.html" target="_blank" rel="noopener noreferrer">Kozilek's Command</a></td>
+      <td>2.58</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>37303</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.65</td>
+      <td>64.22</td>
+      <td>8.57</td>
+      <td>109</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53362</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.35</td>
+      <td>66.67</td>
+      <td>8.32</td>
+      <td>162</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91002" target="_blank" rel="noopener noreferrer"><img src="img/Fanatic_of_Rhonas.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanatic of Rhonas.html" target="_blank" rel="noopener noreferrer">Fanatic of Rhonas</a></td>
+      <td>1.87</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>59725</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.45</td>
+      <td>64.43</td>
+      <td>7.98</td>
+      <td>461</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44878</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.95</td>
+      <td>64.67</td>
+      <td>7.72</td>
+      <td>767</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8215</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.20</td>
+      <td>62.87</td>
+      <td>7.67</td>
+      <td>886</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>78814</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.80</td>
+      <td>63.43</td>
+      <td>7.63</td>
+      <td>134</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91087" target="_blank" rel="noopener noreferrer"><img src="img/Wooded_Foothills.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wooded Foothills.html" target="_blank" rel="noopener noreferrer">Wooded Foothills</a></td>
+      <td>5.76</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>27910</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.95</td>
+      <td>61.38</td>
+      <td>7.43</td>
+      <td>971</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90025</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.10</td>
+      <td>61.45</td>
+      <td>7.35</td>
+      <td>415</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67300</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.70</td>
+      <td>61.87</td>
+      <td>7.17</td>
+      <td>396</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91049" target="_blank" rel="noopener noreferrer"><img src="img/Planar_Genesis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Planar Genesis.html" target="_blank" rel="noopener noreferrer">Planar Genesis</a></td>
+      <td>8.10</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3367</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>63.13</td>
+      <td>7.13</td>
+      <td>198</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90822" target="_blank" rel="noopener noreferrer"><img src="img/Sundering_Eruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sundering Eruption.html" target="_blank" rel="noopener noreferrer">Sundering Eruption</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69118</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.90</td>
+      <td>62.02</td>
+      <td>7.12</td>
+      <td>1156</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30637</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.20</td>
+      <td>64.24</td>
+      <td>7.04</td>
+      <td>987</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56695</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.50</td>
+      <td>64.53</td>
+      <td>7.03</td>
+      <td>1294</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86389</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.15</td>
+      <td>62.10</td>
+      <td>6.95</td>
+      <td>343</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48817</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.70</td>
+      <td>62.56</td>
+      <td>6.86</td>
+      <td>227</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3973</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>62.77</td>
+      <td>6.77</td>
+      <td>368</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23365</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.35</td>
+      <td>63.78</td>
+      <td>6.43</td>
+      <td>254</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>85783</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.50</td>
+      <td>62.92</td>
+      <td>6.42</td>
+      <td>445</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>80935</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.30</td>
+      <td>62.41</td>
+      <td>6.11</td>
+      <td>274</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27001</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.45</td>
+      <td>60.56</td>
+      <td>6.11</td>
+      <td>464</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4882</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>61.99</td>
+      <td>5.99</td>
+      <td>463</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56089</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.30</td>
+      <td>64.07</td>
+      <td>5.77</td>
+      <td>1372</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52756</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.95</td>
+      <td>63.72</td>
+      <td>5.77</td>
+      <td>1337</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44575</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.45</td>
+      <td>62.21</td>
+      <td>5.76</td>
+      <td>217</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71239</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.35</td>
+      <td>62.09</td>
+      <td>5.74</td>
+      <td>422</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54877</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.50</td>
+      <td>63.20</td>
+      <td>5.70</td>
+      <td>1182</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76087</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.35</td>
+      <td>61.99</td>
+      <td>5.64</td>
+      <td>855</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75481</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.90</td>
+      <td>61.51</td>
+      <td>5.61</td>
+      <td>756</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24880</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.95</td>
+      <td>63.47</td>
+      <td>5.52</td>
+      <td>479</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62149</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.55</td>
+      <td>61.06</td>
+      <td>5.51</td>
+      <td>113</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91031" target="_blank" rel="noopener noreferrer"><img src="img/Cursed_Wombat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cursed Wombat.html" target="_blank" rel="noopener noreferrer">Cursed Wombat</a></td>
+      <td>5.37</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60028</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.95</td>
+      <td>59.29</td>
+      <td>5.34</td>
+      <td>140</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91024" target="_blank" rel="noopener noreferrer"><img src="img/Thief_of_Existence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thief of Existence.html" target="_blank" rel="noopener noreferrer">Thief of Existence</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>74269</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.85</td>
+      <td>61.04</td>
+      <td>5.19</td>
+      <td>983</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6700</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.25</td>
+      <td>61.43</td>
+      <td>5.18</td>
+      <td>407</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69724</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.70</td>
+      <td>62.74</td>
+      <td>5.04</td>
+      <td>365</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10033</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.25</td>
+      <td>60.29</td>
+      <td>5.04</td>
+      <td>491</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12457</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.05</td>
+      <td>62.07</td>
+      <td>5.02</td>
+      <td>551</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53059</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.20</td>
+      <td>60.05</td>
+      <td>4.85</td>
+      <td>806</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9427</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.20</td>
+      <td>61.05</td>
+      <td>4.85</td>
+      <td>493</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77299</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.80</td>
+      <td>60.56</td>
+      <td>4.76</td>
+      <td>900</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27304</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.95</td>
+      <td>60.68</td>
+      <td>4.73</td>
+      <td>969</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23062</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.45</td>
+      <td>60.18</td>
+      <td>4.73</td>
+      <td>113</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90901" target="_blank" rel="noopener noreferrer"><img src="img/Bespoke_Battlewagon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bespoke Battlewagon.html" target="_blank" rel="noopener noreferrer">Bespoke Battlewagon</a></td>
+      <td>6.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59422</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.30</td>
+      <td>59.89</td>
+      <td>4.59</td>
+      <td>561</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12154</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.75</td>
+      <td>60.30</td>
+      <td>4.55</td>
+      <td>1068</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41848</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>60.25</td>
+      <td>64.71</td>
+      <td>4.46</td>
+      <td>102</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22759</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.75</td>
+      <td>60.19</td>
+      <td>4.44</td>
+      <td>108</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90900" target="_blank" rel="noopener noreferrer"><img src="img/Amphibian_Downpour.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amphibian Downpour.html" target="_blank" rel="noopener noreferrer">Amphibian Downpour</a></td>
+      <td>3.87</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73057</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.40</td>
+      <td>60.84</td>
+      <td>4.44</td>
+      <td>1241</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44272</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.15</td>
+      <td>62.53</td>
+      <td>4.38</td>
+      <td>443</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11245</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.40</td>
+      <td>60.71</td>
+      <td>4.31</td>
+      <td>140</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90862" target="_blank" rel="noopener noreferrer"><img src="img/Nulldrifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nulldrifter.html" target="_blank" rel="noopener noreferrer">Nulldrifter</a></td>
+      <td>1.62</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7609</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.80</td>
+      <td>60.05</td>
+      <td>4.25</td>
+      <td>428</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35485</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>59.90</td>
+      <td>3.90</td>
+      <td>207</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74875</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.10</td>
+      <td>59.87</td>
+      <td>3.77</td>
+      <td>628</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30940</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.40</td>
+      <td>59.07</td>
+      <td>3.67</td>
+      <td>711</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40030</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.45</td>
+      <td>60.00</td>
+      <td>3.55</td>
+      <td>170</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49120</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.60</td>
+      <td>59.14</td>
+      <td>3.54</td>
+      <td>279</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8821</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.95</td>
+      <td>57.48</td>
+      <td>3.53</td>
+      <td>301</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77602</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.80</td>
+      <td>59.28</td>
+      <td>3.48</td>
+      <td>884</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57907</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.25</td>
+      <td>59.68</td>
+      <td>3.43</td>
+      <td>372</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>943</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.80</td>
+      <td>58.17</td>
+      <td>3.37</td>
+      <td>263</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4579</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.05</td>
+      <td>58.13</td>
+      <td>3.08</td>
+      <td>160</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58816</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.55</td>
+      <td>60.61</td>
+      <td>3.06</td>
+      <td>198</td>
+      <td>58.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91020" target="_blank" rel="noopener noreferrer"><img src="img/Sowing_Mycospawn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sowing Mycospawn.html" target="_blank" rel="noopener noreferrer">Sowing Mycospawn</a></td>
+      <td>2.22</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>26698</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.90</td>
+      <td>59.94</td>
+      <td>3.04</td>
+      <td>312</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49726</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.75</td>
+      <td>60.70</td>
+      <td>2.95</td>
+      <td>341</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55483</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.25</td>
+      <td>56.15</td>
+      <td>2.90</td>
+      <td>130</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91009" target="_blank" rel="noopener noreferrer"><img src="img/Hydra_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydra Trainer.html" target="_blank" rel="noopener noreferrer">Hydra Trainer</a></td>
+      <td>7.31</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51241</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.60</td>
+      <td>59.45</td>
+      <td>2.85</td>
+      <td>1095</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50635</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.10</td>
+      <td>57.92</td>
+      <td>2.82</td>
+      <td>442</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>91237</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.75</td>
+      <td>56.49</td>
+      <td>2.74</td>
+      <td>131</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70936</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.10</td>
+      <td>55.81</td>
+      <td>2.71</td>
+      <td>258</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91061" target="_blank" rel="noopener noreferrer"><img src="img/Idol_of_False_Gods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Idol of False Gods.html" target="_blank" rel="noopener noreferrer">Idol of False Gods</a></td>
+      <td>7.42</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76390</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.70</td>
+      <td>58.39</td>
+      <td>2.69</td>
+      <td>149</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91079" target="_blank" rel="noopener noreferrer"><img src="img/Shifting_Woodland.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shifting Woodland.html" target="_blank" rel="noopener noreferrer">Shifting Woodland</a></td>
+      <td>5.76</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3670</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.10</td>
+      <td>58.79</td>
+      <td>2.69</td>
+      <td>364</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60634</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.20</td>
+      <td>58.77</td>
+      <td>2.57</td>
+      <td>405</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24577</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.30</td>
+      <td>59.61</td>
+      <td>2.31</td>
+      <td>812</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58210</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.70</td>
+      <td>59.91</td>
+      <td>2.21</td>
+      <td>434</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73663</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.20</td>
+      <td>57.35</td>
+      <td>2.15</td>
+      <td>490</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1852</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.65</td>
+      <td>56.78</td>
+      <td>2.13</td>
+      <td>118</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7912</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.45</td>
+      <td>58.38</td>
+      <td>1.93</td>
+      <td>173</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90851" target="_blank" rel="noopener noreferrer"><img src="img/Devourer_of_Destiny.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Devourer of Destiny.html" target="_blank" rel="noopener noreferrer">Devourer of Destiny</a></td>
+      <td>2.50</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>25789</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.45</td>
+      <td>58.31</td>
+      <td>1.86</td>
+      <td>367</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28213</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.35</td>
+      <td>59.09</td>
+      <td>1.74</td>
+      <td>875</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7306</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.70</td>
+      <td>57.43</td>
+      <td>1.73</td>
+      <td>202</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73360</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.75</td>
+      <td>57.33</td>
+      <td>1.58</td>
+      <td>450</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58513</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.50</td>
+      <td>59.06</td>
+      <td>1.56</td>
+      <td>149</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91019" target="_blank" rel="noopener noreferrer"><img src="img/Six.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Six.html" target="_blank" rel="noopener noreferrer">Six</a></td>
+      <td>1.79</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>51847</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.05</td>
+      <td>58.60</td>
+      <td>1.55</td>
+      <td>285</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56998</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.15</td>
+      <td>57.62</td>
+      <td>1.47</td>
+      <td>630</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48514</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.80</td>
+      <td>57.26</td>
+      <td>1.46</td>
+      <td>117</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24274</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>52.70</td>
+      <td>54.07</td>
+      <td>1.37</td>
+      <td>418</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29122</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>52.75</td>
+      <td>54.05</td>
+      <td>1.30</td>
+      <td>111</td>
+      <td>49.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90921" target="_blank" rel="noopener noreferrer"><img src="img/Tamiyo_Meets_the_Story_Circle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tamiyo Meets the Story Circle.html" target="_blank" rel="noopener noreferrer">Tamiyo Meets the Story Circle</a></td>
+      <td>9.53</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59119</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.65</td>
+      <td>58.87</td>
+      <td>1.22</td>
+      <td>124</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91021" target="_blank" rel="noopener noreferrer"><img src="img/Springheart_Nantuko.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Springheart Nantuko.html" target="_blank" rel="noopener noreferrer">Springheart Nantuko</a></td>
+      <td>1.57</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>60331</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.85</td>
+      <td>54.89</td>
+      <td>1.04</td>
+      <td>184</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11548</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.30</td>
+      <td>57.24</td>
+      <td>0.94</td>
+      <td>435</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47908</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.60</td>
+      <td>56.34</td>
+      <td>0.74</td>
+      <td>142</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90984" target="_blank" rel="noopener noreferrer"><img src="img/Reiterating_Bolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reiterating Bolt.html" target="_blank" rel="noopener noreferrer">Reiterating Bolt</a></td>
+      <td>4.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52150</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.40</td>
+      <td>56.13</td>
+      <td>0.73</td>
+      <td>506</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43060</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.10</td>
+      <td>56.81</td>
+      <td>0.71</td>
+      <td>551</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5791</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.35</td>
+      <td>56.68</td>
+      <td>0.33</td>
+      <td>277</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1246</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.45</td>
+      <td>55.56</td>
+      <td>0.11</td>
+      <td>306</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55180</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.10</td>
+      <td>53.15</td>
+      <td>0.05</td>
+      <td>111</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53665</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.95</td>
+      <td>53.98</td>
+      <td>0.03</td>
+      <td>113</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91003" target="_blank" rel="noopener noreferrer"><img src="img/Fangs_of_Kalonia.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fangs of Kalonia.html" target="_blank" rel="noopener noreferrer">Fangs of Kalonia</a></td>
+      <td>7.29</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54574</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>55.77</td>
+      <td>-0.23</td>
+      <td>416</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10336</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.30</td>
+      <td>56.02</td>
+      <td>-0.28</td>
+      <td>5660</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td>1.46</td>
+      <td></td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>31546</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.65</td>
+      <td>56.34</td>
+      <td>-0.31</td>
+      <td>284</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29425</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.90</td>
+      <td>55.27</td>
+      <td>-0.63</td>
+      <td>465</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2155</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.95</td>
+      <td>55.15</td>
+      <td>-0.80</td>
+      <td>136</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>2761</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.95</td>
+      <td>55.15</td>
+      <td>-0.80</td>
+      <td>165</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90818" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Monk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Monk.html" target="_blank" rel="noopener noreferrer">Pinnacle Monk</a></td>
+      <td>6.42</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75784</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.50</td>
+      <td>54.69</td>
+      <td>-0.81</td>
+      <td>309</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22456</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.20</td>
+      <td>55.20</td>
+      <td>-1.00</td>
+      <td>375</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32152</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.30</td>
+      <td>55.29</td>
+      <td>-1.01</td>
+      <td>331</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46090</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.25</td>
+      <td>54.12</td>
+      <td>-1.13</td>
+      <td>255</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27607</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.35</td>
+      <td>56.15</td>
+      <td>-1.20</td>
+      <td>187</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37000</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.05</td>
+      <td>54.84</td>
+      <td>-1.21</td>
+      <td>217</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23971</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.55</td>
+      <td>53.11</td>
+      <td>-1.44</td>
+      <td>209</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35788</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.05</td>
+      <td>52.55</td>
+      <td>-1.50</td>
+      <td>196</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6397</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.95</td>
+      <td>54.44</td>
+      <td>-1.51</td>
+      <td>169</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36394</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.40</td>
+      <td>51.43</td>
+      <td>-1.97</td>
+      <td>175</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40939</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.10</td>
+      <td>54.90</td>
+      <td>-2.20</td>
+      <td>337</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6094</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.70</td>
+      <td>52.88</td>
+      <td>-2.82</td>
+      <td>191</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13972</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.00</td>
+      <td>52.99</td>
+      <td>-3.01</td>
+      <td>134</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33970</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.00</td>
+      <td>51.92</td>
+      <td>-3.08</td>
+      <td>208</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65785</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.35</td>
+      <td>55.06</td>
+      <td>-3.29</td>
+      <td>158</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91043" target="_blank" rel="noopener noreferrer"><img src="img/Nadu,_Winged_Wisdom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nadu, Winged Wisdom.html" target="_blank" rel="noopener noreferrer">Nadu, Winged Wisdom</a></td>
+      <td>1.80</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30031</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.90</td>
+      <td>52.53</td>
+      <td>-3.37</td>
+      <td>316</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54271</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.45</td>
+      <td>50.88</td>
+      <td>-3.57</td>
+      <td>283</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47302</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.40</td>
+      <td>53.73</td>
+      <td>-3.67</td>
+      <td>201</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90982" target="_blank" rel="noopener noreferrer"><img src="img/Ral_and_the_Implicit_Maze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ral and the Implicit Maze.html" target="_blank" rel="noopener noreferrer">Ral and the Implicit Maze</a></td>
+      <td>5.23</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>81844</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.70</td>
+      <td>50.93</td>
+      <td>-3.77</td>
+      <td>108</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91097" target="_blank" rel="noopener noreferrer"><img src="img/Reef_Worm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reef Worm.html" target="_blank" rel="noopener noreferrer">Reef Worm</a></td>
+      <td>8.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20941</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.65</td>
+      <td>52.68</td>
+      <td>-3.97</td>
+      <td>112</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69421</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.70</td>
+      <td>53.12</td>
+      <td>-4.58</td>
+      <td>192</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62452</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.35</td>
+      <td>50.00</td>
+      <td>-5.35</td>
+      <td>102</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91032" target="_blank" rel="noopener noreferrer"><img src="img/Cyclops_Superconductor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cyclops Superconductor.html" target="_blank" rel="noopener noreferrer">Cyclops Superconductor</a></td>
+      <td>9.51</td>
+      <td>UR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39121</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.55</td>
+      <td>51.01</td>
+      <td>-5.54</td>
+      <td>149</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12760</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.60</td>
+      <td>52.03</td>
+      <td>-5.57</td>
+      <td>123</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47605</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.35</td>
+      <td>50.43</td>
+      <td>-5.92</td>
+      <td>117</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8518</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>54.10</td>
+      <td>48.11</td>
+      <td>-5.99</td>
+      <td>106</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90853" target="_blank" rel="noopener noreferrer"><img src="img/Echoes_of_Eternity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Echoes of Eternity.html" target="_blank" rel="noopener noreferrer">Echoes of Eternity</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>83965</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.65</td>
+      <td>47.62</td>
+      <td>-6.03</td>
+      <td>126</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49423</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>56.35</td>
+      <td>50.31</td>
+      <td>-6.04</td>
+      <td>161</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42757</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>57.30</td>
+      <td>50.32</td>
+      <td>-6.98</td>
+      <td>155</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td>2.21</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7003</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.65</td>
+      <td>48.10</td>
+      <td>-7.55</td>
+      <td>158</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63058</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>53.80</td>
+      <td>45.88</td>
+      <td>-7.92</td>
+      <td>194</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37606</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>58.30</td>
+      <td>48.84</td>
+      <td>-9.46</td>
+      <td>129</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39424</th>
+      <td>mythic</td>
+      <td></td>
+      <td>1.46</td>
+      <td><a href=".//Kozilek, the Broken Reality.html" target="_blank" rel="noopener noreferrer">Kozilek, the Broken Reality</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90859" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek,_the_Broken_Reality.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.3</td>
+      <td>55.40</td>
+      <td>45.52</td>
+      <td>-9.88</td>
+      <td>134</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

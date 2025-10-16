@@ -1,0 +1,660 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>66401</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>50.00</td>
+      <td>61.98</td>
+      <td>11.98</td>
+      <td>121</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17315</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.15</td>
+      <td>61.94</td>
+      <td>9.79</td>
+      <td>155</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19739</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.85</td>
+      <td>60.71</td>
+      <td>7.86</td>
+      <td>112</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90890" target="_blank" rel="noopener noreferrer"><img src="img/Proud_Pack-Rhino.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Proud Pack-Rhino.html" target="_blank" rel="noopener noreferrer">Proud Pack-Rhino</a></td>
+      <td>5.30</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16406</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.50</td>
+      <td>57.73</td>
+      <td>5.23</td>
+      <td>220</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>347</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.55</td>
+      <td>56.20</td>
+      <td>4.65</td>
+      <td>121</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90802" target="_blank" rel="noopener noreferrer"><img src="img/Razorgrass_Ambush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razorgrass Ambush.html" target="_blank" rel="noopener noreferrer">Razorgrass Ambush</a></td>
+      <td>6.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74885</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.55</td>
+      <td>57.14</td>
+      <td>4.59</td>
+      <td>147</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12770</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>54.05</td>
+      <td>58.58</td>
+      <td>4.53</td>
+      <td>239</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20951</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.10</td>
+      <td>57.39</td>
+      <td>4.29</td>
+      <td>176</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75794</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.95</td>
+      <td>55.81</td>
+      <td>3.86</td>
+      <td>172</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17618</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.70</td>
+      <td>56.85</td>
+      <td>3.15</td>
+      <td>241</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13073</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.20</td>
+      <td>56.03</td>
+      <td>2.83</td>
+      <td>116</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90868" target="_blank" rel="noopener noreferrer"><img src="img/Ajani_Fells_the_Godsire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani Fells the Godsire.html" target="_blank" rel="noopener noreferrer">Ajani Fells the Godsire</a></td>
+      <td>4.80</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>63371</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.45</td>
+      <td>55.08</td>
+      <td>2.63</td>
+      <td>118</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14285</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.60</td>
+      <td>54.00</td>
+      <td>2.40</td>
+      <td>100</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90872" target="_blank" rel="noopener noreferrer"><img src="img/Envoy_of_the_Ancestors.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Envoy of the Ancestors.html" target="_blank" rel="noopener noreferrer">Envoy of the Ancestors</a></td>
+      <td>5.69</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17012</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.80</td>
+      <td>53.15</td>
+      <td>1.35</td>
+      <td>222</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13376</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>49.20</td>
+      <td>50.04</td>
+      <td>0.84</td>
+      <td>1251</td>
+      <td>49.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td>9.15</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7013</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.10</td>
+      <td>52.88</td>
+      <td>0.78</td>
+      <td>104</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77309</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.25</td>
+      <td>52.80</td>
+      <td>0.55</td>
+      <td>125</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17921</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.80</td>
+      <td>53.00</td>
+      <td>0.20</td>
+      <td>100</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20345</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.80</td>
+      <td>52.97</td>
+      <td>0.17</td>
+      <td>202</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14891</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>50.55</td>
+      <td>50.55</td>
+      <td>0.00</td>
+      <td>182</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61553</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.95</td>
+      <td>53.64</td>
+      <td>-0.31</td>
+      <td>110</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91029" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Goblin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Goblin.html" target="_blank" rel="noopener noreferrer">Conduit Goblin</a></td>
+      <td>6.47</td>
+      <td>WR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76097</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.80</td>
+      <td>51.82</td>
+      <td>-0.98</td>
+      <td>137</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13982</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.45</td>
+      <td>51.46</td>
+      <td>-0.99</td>
+      <td>206</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18527</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.00</td>
+      <td>50.28</td>
+      <td>-1.72</td>
+      <td>177</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21860</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.85</td>
+      <td>49.59</td>
+      <td>-2.26</td>
+      <td>123</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90897" target="_blank" rel="noopener noreferrer"><img src="img/Wing_It.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wing It.html" target="_blank" rel="noopener noreferrer">Wing It</a></td>
+      <td>10.50</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73370</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>52.20</td>
+      <td>49.33</td>
+      <td>-2.87</td>
+      <td>150</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15497</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.70</td>
+      <td>50.00</td>
+      <td>-3.70</td>
+      <td>118</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68219</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>53.80</td>
+      <td>46.04</td>
+      <td>-7.76</td>
+      <td>139</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91052" target="_blank" rel="noopener noreferrer"><img src="img/Riddle_Gate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riddle Gate Gargoyle.html" target="_blank" rel="noopener noreferrer">Riddle Gate Gargoyle</a></td>
+      <td>8.16</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16709</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.65</td>
+      <td>43.09</td>
+      <td>-8.56</td>
+      <td>123</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90880" target="_blank" rel="noopener noreferrer"><img src="img/Indebted_Spirit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Indebted Spirit.html" target="_blank" rel="noopener noreferrer">Indebted Spirit</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20042</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.05</td>
+      <td>42.42</td>
+      <td>-8.63</td>
+      <td>132</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90891" target="_blank" rel="noopener noreferrer"><img src="img/Rosecot_Knight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rosecot Knight.html" target="_blank" rel="noopener noreferrer">Rosecot Knight</a></td>
+      <td>11.27</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73673</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>9.15</td>
+      <td><a href=".//Argent Dais.html" target="_blank" rel="noopener noreferrer">Argent Dais</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90869" target="_blank" rel="noopener noreferrer"><img src="img/Argent_Dais.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.2</td>
+      <td>51.65</td>
+      <td>41.98</td>
+      <td>-9.67</td>
+      <td>131</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

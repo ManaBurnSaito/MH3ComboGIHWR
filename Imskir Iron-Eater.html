@@ -1,0 +1,1781 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>71418</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.75</td>
+      <td>58.91</td>
+      <td>7.16</td>
+      <td>202</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>72933</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.65</td>
+      <td>54.38</td>
+      <td>3.73</td>
+      <td>217</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91067" target="_blank" rel="noopener noreferrer"><img src="img/Bloodstained_Mire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodstained Mire.html" target="_blank" rel="noopener noreferrer">Bloodstained Mire</a></td>
+      <td>6.39</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>33240</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>55.55</td>
+      <td>58.46</td>
+      <td>2.91</td>
+      <td>260</td>
+      <td>64.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90934" target="_blank" rel="noopener noreferrer"><img src="img/Crabomination.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crabomination.html" target="_blank" rel="noopener noreferrer">Crabomination</a></td>
+      <td>1.77</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>42633</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.90</td>
+      <td>55.76</td>
+      <td>2.86</td>
+      <td>165</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90965" target="_blank" rel="noopener noreferrer"><img src="img/Detective's_Phoenix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Detective's Phoenix.html" target="_blank" rel="noopener noreferrer">Detective's Phoenix</a></td>
+      <td>2.03</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32028</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.65</td>
+      <td>52.45</td>
+      <td>2.80</td>
+      <td>797</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90930" target="_blank" rel="noopener noreferrer"><img src="img/Arcbound_Condor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arcbound Condor.html" target="_blank" rel="noopener noreferrer">Arcbound Condor</a></td>
+      <td>6.66</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>81720</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.65</td>
+      <td>53.21</td>
+      <td>2.56</td>
+      <td>109</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91096" target="_blank" rel="noopener noreferrer"><img src="img/Kappa_Cannoneer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kappa Cannoneer.html" target="_blank" rel="noopener noreferrer">Kappa Cannoneer</a></td>
+      <td>3.83</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>45663</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.95</td>
+      <td>53.18</td>
+      <td>2.23</td>
+      <td>551</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74448</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.25</td>
+      <td>53.39</td>
+      <td>2.14</td>
+      <td>118</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39300</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.95</td>
+      <td>53.36</td>
+      <td>1.41</td>
+      <td>1977</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41421</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.85</td>
+      <td>52.99</td>
+      <td>1.14</td>
+      <td>568</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49602</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.75</td>
+      <td>52.81</td>
+      <td>1.06</td>
+      <td>1176</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>83538</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>53.40</td>
+      <td>54.37</td>
+      <td>0.97</td>
+      <td>160</td>
+      <td>59.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91102" target="_blank" rel="noopener noreferrer"><img src="img/Ophiomancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ophiomancer.html" target="_blank" rel="noopener noreferrer">Ophiomancer</a></td>
+      <td>2.22</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73842</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.60</td>
+      <td>51.11</td>
+      <td>0.51</td>
+      <td>180</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46269</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.65</td>
+      <td>51.08</td>
+      <td>0.43</td>
+      <td>1347</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33846</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>48.75</td>
+      <td>48.94</td>
+      <td>0.19</td>
+      <td>521</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90936" target="_blank" rel="noopener noreferrer"><img src="img/Dreadmobile.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreadmobile.html" target="_blank" rel="noopener noreferrer">Dreadmobile</a></td>
+      <td>9.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39603</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.80</td>
+      <td>50.97</td>
+      <td>0.17</td>
+      <td>1501</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50208</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.20</td>
+      <td>50.31</td>
+      <td>0.11</td>
+      <td>159</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90991" target="_blank" rel="noopener noreferrer"><img src="img/Thriving_Skyclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thriving Skyclaw.html" target="_blank" rel="noopener noreferrer">Thriving Skyclaw</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75963</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.90</td>
+      <td>50.72</td>
+      <td>-0.18</td>
+      <td>838</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50511</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.20</td>
+      <td>51.99</td>
+      <td>-0.21</td>
+      <td>277</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90992" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Amulet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Amulet.html" target="_blank" rel="noopener noreferrer">Unstable Amulet</a></td>
+      <td>5.81</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64752</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>47.10</td>
+      <td>46.70</td>
+      <td>-0.40</td>
+      <td>4991</td>
+      <td>47.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td>5.81</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>37785</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>53.70</td>
+      <td>53.30</td>
+      <td>-0.40</td>
+      <td>666</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62025</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.55</td>
+      <td>51.07</td>
+      <td>-0.48</td>
+      <td>2373</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68085</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.95</td>
+      <td>49.46</td>
+      <td>-0.49</td>
+      <td>740</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91051" target="_blank" rel="noopener noreferrer"><img src="img/Pyretic_Rebirth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pyretic Rebirth.html" target="_blank" rel="noopener noreferrer">Pyretic Rebirth</a></td>
+      <td>7.72</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34452</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.55</td>
+      <td>49.00</td>
+      <td>-0.55</td>
+      <td>1300</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43845</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>47.35</td>
+      <td>46.62</td>
+      <td>-0.73</td>
+      <td>517</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90969" target="_blank" rel="noopener noreferrer"><img src="img/Frogmyr_Enforcer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Frogmyr Enforcer.html" target="_blank" rel="noopener noreferrer">Frogmyr Enforcer</a></td>
+      <td>10.33</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40512</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.95</td>
+      <td>50.00</td>
+      <td>-0.95</td>
+      <td>172</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90958" target="_blank" rel="noopener noreferrer"><img src="img/Shilgengar,_Sire_of_Famine.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shilgengar, Sire of Famine.html" target="_blank" rel="noopener noreferrer">Shilgengar, Sire of Famine</a></td>
+      <td>2.29</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32331</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.70</td>
+      <td>50.66</td>
+      <td>-1.04</td>
+      <td>1139</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41118</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.50</td>
+      <td>51.31</td>
+      <td>-1.19</td>
+      <td>1103</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71721</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>48.35</td>
+      <td>47.11</td>
+      <td>-1.24</td>
+      <td>121</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td>11.79</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48390</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.45</td>
+      <td>49.19</td>
+      <td>-1.26</td>
+      <td>1167</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43239</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.50</td>
+      <td>50.18</td>
+      <td>-1.32</td>
+      <td>857</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5970</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.75</td>
+      <td>50.32</td>
+      <td>-1.43</td>
+      <td>157</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31725</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.05</td>
+      <td>50.59</td>
+      <td>-1.46</td>
+      <td>844</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32634</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.65</td>
+      <td>50.00</td>
+      <td>-1.65</td>
+      <td>142</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90932" target="_blank" rel="noopener noreferrer"><img src="img/Chthonian_Nightmare.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chthonian Nightmare.html" target="_blank" rel="noopener noreferrer">Chthonian Nightmare</a></td>
+      <td>2.98</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>44754</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.85</td>
+      <td>50.15</td>
+      <td>-1.70</td>
+      <td>339</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5364</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.30</td>
+      <td>49.36</td>
+      <td>-1.94</td>
+      <td>235</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37482</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.05</td>
+      <td>49.10</td>
+      <td>-1.95</td>
+      <td>391</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35361</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.35</td>
+      <td>49.35</td>
+      <td>-2.00</td>
+      <td>851</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90941" target="_blank" rel="noopener noreferrer"><img src="img/Etherium_Pteramander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etherium Pteramander.html" target="_blank" rel="noopener noreferrer">Etherium Pteramander</a></td>
+      <td>6.85</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48087</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.00</td>
+      <td>48.94</td>
+      <td>-2.06</td>
+      <td>284</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90984" target="_blank" rel="noopener noreferrer"><img src="img/Reiterating_Bolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reiterating Bolt.html" target="_blank" rel="noopener noreferrer">Reiterating Bolt</a></td>
+      <td>4.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>2031</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.05</td>
+      <td>47.98</td>
+      <td>-2.07</td>
+      <td>371</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6879</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.65</td>
+      <td>49.44</td>
+      <td>-2.21</td>
+      <td>178</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>36270</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.95</td>
+      <td>49.74</td>
+      <td>-2.21</td>
+      <td>189</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90944" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Flare of Malice.html" target="_blank" rel="noopener noreferrer">Flare of Malice</a></td>
+      <td>3.72</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>75660</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.30</td>
+      <td>48.86</td>
+      <td>-2.44</td>
+      <td>747</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42027</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>55.65</td>
+      <td>53.02</td>
+      <td>-2.63</td>
+      <td>298</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17787</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.65</td>
+      <td>50.00</td>
+      <td>-2.65</td>
+      <td>112</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36876</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.00</td>
+      <td>47.22</td>
+      <td>-2.78</td>
+      <td>252</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90946" target="_blank" rel="noopener noreferrer"><img src="img/Grim_Servant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grim Servant.html" target="_blank" rel="noopener noreferrer">Grim Servant</a></td>
+      <td>8.36</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>2334</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.35</td>
+      <td>48.40</td>
+      <td>-2.95</td>
+      <td>500</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77781</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.20</td>
+      <td>48.06</td>
+      <td>-3.14</td>
+      <td>620</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66570</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>48.95</td>
+      <td>45.74</td>
+      <td>-3.21</td>
+      <td>188</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>72630</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.35</td>
+      <td>48.12</td>
+      <td>-3.23</td>
+      <td>133</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91066" target="_blank" rel="noopener noreferrer"><img src="img/Arena_of_Glory.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arena of Glory.html" target="_blank" rel="noopener noreferrer">Arena of Glory</a></td>
+      <td>6.93</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>90507</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.10</td>
+      <td>46.84</td>
+      <td>-3.26</td>
+      <td>158</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91125" target="_blank" rel="noopener noreferrer"><img src="img/Barbarian_Ring.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Barbarian Ring.html" target="_blank" rel="noopener noreferrer">Barbarian Ring</a></td>
+      <td>11.58</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>88689</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>47.35</td>
+      <td>43.77</td>
+      <td>-3.58</td>
+      <td>361</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91119" target="_blank" rel="noopener noreferrer"><img src="img/Junk_Diver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Junk Diver.html" target="_blank" rel="noopener noreferrer">Junk Diver</a></td>
+      <td>11.23</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73236</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.80</td>
+      <td>48.21</td>
+      <td>-3.59</td>
+      <td>112</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46875</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.80</td>
+      <td>46.15</td>
+      <td>-3.65</td>
+      <td>247</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90980" target="_blank" rel="noopener noreferrer"><img src="img/Phyrexian_Ironworks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phyrexian Ironworks.html" target="_blank" rel="noopener noreferrer">Phyrexian Ironworks</a></td>
+      <td>6.15</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>83841</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.90</td>
+      <td>48.80</td>
+      <td>-4.10</td>
+      <td>125</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91103" target="_blank" rel="noopener noreferrer"><img src="img/Toxic_Deluge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Toxic Deluge.html" target="_blank" rel="noopener noreferrer">Toxic Deluge</a></td>
+      <td>2.32</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34149</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.40</td>
+      <td>46.11</td>
+      <td>-4.29</td>
+      <td>475</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4758</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.45</td>
+      <td>46.15</td>
+      <td>-4.30</td>
+      <td>611</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35058</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.75</td>
+      <td>45.44</td>
+      <td>-4.31</td>
+      <td>647</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90940" target="_blank" rel="noopener noreferrer"><img src="img/Etched_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etched Slith.html" target="_blank" rel="noopener noreferrer">Etched Slith</a></td>
+      <td>5.90</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>47481</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.80</td>
+      <td>48.39</td>
+      <td>-4.41</td>
+      <td>279</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90982" target="_blank" rel="noopener noreferrer"><img src="img/Ral_and_the_Implicit_Maze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ral and the Implicit Maze.html" target="_blank" rel="noopener noreferrer">Ral and the Implicit Maze</a></td>
+      <td>5.23</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44148</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.05</td>
+      <td>44.58</td>
+      <td>-4.47</td>
+      <td>664</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90971" target="_blank" rel="noopener noreferrer"><img src="img/Furnace_Hellkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Furnace Hellkite.html" target="_blank" rel="noopener noreferrer">Furnace Hellkite</a></td>
+      <td>8.57</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40815</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.40</td>
+      <td>44.90</td>
+      <td>-4.50</td>
+      <td>196</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90959" target="_blank" rel="noopener noreferrer"><img src="img/Warren_Soultrader.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warren Soultrader.html" target="_blank" rel="noopener noreferrer">Warren Soultrader</a></td>
+      <td>4.55</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>85053</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>53.90</td>
+      <td>49.31</td>
+      <td>-4.59</td>
+      <td>144</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91107" target="_blank" rel="noopener noreferrer"><img src="img/Laelia,_the_Blade_Reforged.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laelia, the Blade Reforged.html" target="_blank" rel="noopener noreferrer">Laelia, the Blade Reforged</a></td>
+      <td>1.78</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36573</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>48.80</td>
+      <td>44.21</td>
+      <td>-4.59</td>
+      <td>475</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35967</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.45</td>
+      <td>44.84</td>
+      <td>-4.61</td>
+      <td>310</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5667</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.65</td>
+      <td>47.03</td>
+      <td>-4.62</td>
+      <td>185</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35664</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.40</td>
+      <td>46.77</td>
+      <td>-4.63</td>
+      <td>727</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38997</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>48.35</td>
+      <td>43.48</td>
+      <td>-4.87</td>
+      <td>138</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90953" target="_blank" rel="noopener noreferrer"><img src="img/Quest_for_the_Necropolis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quest for the Necropolis.html" target="_blank" rel="noopener noreferrer">Quest for the Necropolis</a></td>
+      <td>9.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46572</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.85</td>
+      <td>47.72</td>
+      <td>-5.13</td>
+      <td>197</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90979" target="_blank" rel="noopener noreferrer"><img src="img/Party_Thrasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Party Thrasher.html" target="_blank" rel="noopener noreferrer">Party Thrasher</a></td>
+      <td>3.45</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>45360</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.10</td>
+      <td>44.93</td>
+      <td>-5.17</td>
+      <td>365</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90975" target="_blank" rel="noopener noreferrer"><img src="img/Infernal_Captor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Infernal Captor.html" target="_blank" rel="noopener noreferrer">Infernal Captor</a></td>
+      <td>10.93</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2940</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.35</td>
+      <td>46.15</td>
+      <td>-5.20</td>
+      <td>364</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90818" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Monk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Monk.html" target="_blank" rel="noopener noreferrer">Pinnacle Monk</a></td>
+      <td>6.42</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44451</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>53.55</td>
+      <td>48.33</td>
+      <td>-5.22</td>
+      <td>836</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47784</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.75</td>
+      <td>46.51</td>
+      <td>-5.24</td>
+      <td>258</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45057</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.35</td>
+      <td>46.84</td>
+      <td>-5.51</td>
+      <td>316</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32937</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.30</td>
+      <td>45.49</td>
+      <td>-5.81</td>
+      <td>255</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90933" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Corruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Corruption.html" target="_blank" rel="noopener noreferrer">Consuming Corruption</a></td>
+      <td>8.04</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34755</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>52.90</td>
+      <td>46.78</td>
+      <td>-6.12</td>
+      <td>171</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90939" target="_blank" rel="noopener noreferrer"><img src="img/Emperor_of_Bones.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emperor of Bones.html" target="_blank" rel="noopener noreferrer">Emperor of Bones</a></td>
+      <td>2.18</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>48996</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.10</td>
+      <td>44.95</td>
+      <td>-6.15</td>
+      <td>198</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73539</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.15</td>
+      <td>44.93</td>
+      <td>-6.22</td>
+      <td>227</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77175</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.90</td>
+      <td>45.64</td>
+      <td>-6.26</td>
+      <td>195</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91081" target="_blank" rel="noopener noreferrer"><img src="img/Spymaster's_Vault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spymaster's Vault.html" target="_blank" rel="noopener noreferrer">Spymaster's Vault</a></td>
+      <td>5.81</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>49299</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.00</td>
+      <td>44.74</td>
+      <td>-6.26</td>
+      <td>333</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49905</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>53.15</td>
+      <td>46.83</td>
+      <td>-6.32</td>
+      <td>205</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3546</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.40</td>
+      <td>44.79</td>
+      <td>-6.61</td>
+      <td>326</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90822" target="_blank" rel="noopener noreferrer"><img src="img/Sundering_Eruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sundering Eruption.html" target="_blank" rel="noopener noreferrer">Sundering Eruption</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>84144</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>49.05</td>
+      <td>42.13</td>
+      <td>-6.92</td>
+      <td>216</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91104" target="_blank" rel="noopener noreferrer"><img src="img/Victimize.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Victimize.html" target="_blank" rel="noopener noreferrer">Victimize</a></td>
+      <td>7.69</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40209</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.85</td>
+      <td>44.51</td>
+      <td>-7.34</td>
+      <td>328</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76266</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.75</td>
+      <td>43.80</td>
+      <td>-7.95</td>
+      <td>137</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7485</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.10</td>
+      <td>43.07</td>
+      <td>-8.03</td>
+      <td>137</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90848" target="_blank" rel="noopener noreferrer"><img src="img/Waterlogged_Teachings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Waterlogged Teachings.html" target="_blank" rel="noopener noreferrer">Waterlogged Teachings</a></td>
+      <td>8.91</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37179</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.45</td>
+      <td>42.71</td>
+      <td>-8.74</td>
+      <td>199</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48693</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.20</td>
+      <td>41.06</td>
+      <td>-10.14</td>
+      <td>263</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75054</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>51.50</td>
+      <td>39.49</td>
+      <td>-12.01</td>
+      <td>157</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50814</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>50.50</td>
+      <td>36.77</td>
+      <td>-13.73</td>
+      <td>223</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70509</th>
+      <td>rare</td>
+      <td>BR</td>
+      <td>5.81</td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.1</td>
+      <td>55.50</td>
+      <td>37.14</td>
+      <td>-18.36</td>
+      <td>105</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

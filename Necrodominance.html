@@ -1,0 +1,451 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>28305</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>51.30</td>
+      <td>58.97</td>
+      <td>7.67</td>
+      <td>117</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69513</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>51.65</td>
+      <td>57.14</td>
+      <td>5.49</td>
+      <td>196</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32244</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>50.25</td>
+      <td>54.58</td>
+      <td>4.33</td>
+      <td>251</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37092</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>50.00</td>
+      <td>53.74</td>
+      <td>3.74</td>
+      <td>227</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38001</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>51.40</td>
+      <td>54.05</td>
+      <td>2.65</td>
+      <td>111</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90950" target="_blank" rel="noopener noreferrer"><img src="img/Mindless_Conscription.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mindless Conscription.html" target="_blank" rel="noopener noreferrer">Mindless Conscription</a></td>
+      <td>7.50</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73452</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.70</td>
+      <td>52.29</td>
+      <td>2.59</td>
+      <td>109</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31638</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>50.60</td>
+      <td>52.94</td>
+      <td>2.34</td>
+      <td>204</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32850</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.85</td>
+      <td>51.33</td>
+      <td>1.48</td>
+      <td>113</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90933" target="_blank" rel="noopener noreferrer"><img src="img/Consuming_Corruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Consuming Corruption.html" target="_blank" rel="noopener noreferrer">Consuming Corruption</a></td>
+      <td>8.04</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75573</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.85</td>
+      <td>51.00</td>
+      <td>1.15</td>
+      <td>100</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34062</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>48.95</td>
+      <td>50.00</td>
+      <td>1.05</td>
+      <td>182</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>40122</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>50.40</td>
+      <td>51.15</td>
+      <td>0.75</td>
+      <td>174</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>38304</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>44.20</td>
+      <td>44.38</td>
+      <td>0.18</td>
+      <td>712</td>
+      <td>44.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td>7.10</td>
+      <td>B</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>35880</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>48.00</td>
+      <td>47.24</td>
+      <td>-0.76</td>
+      <td>127</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2247</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.90</td>
+      <td>49.11</td>
+      <td>-0.79</td>
+      <td>112</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41031</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>51.05</td>
+      <td>49.50</td>
+      <td>-1.55</td>
+      <td>200</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35577</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.95</td>
+      <td>47.64</td>
+      <td>-2.31</td>
+      <td>212</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34365</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>48.10</td>
+      <td>44.55</td>
+      <td>-3.55</td>
+      <td>101</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39516</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>49.35</td>
+      <td>45.32</td>
+      <td>-4.03</td>
+      <td>139</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39213</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>50.50</td>
+      <td>44.12</td>
+      <td>-6.38</td>
+      <td>170</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36486</th>
+      <td>mythic</td>
+      <td>B</td>
+      <td>7.1</td>
+      <td><a href=".//Necrodominance.html" target="_blank" rel="noopener noreferrer">Necrodominance</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90951" target="_blank" rel="noopener noreferrer"><img src="img/Necrodominance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.2</td>
+      <td>47.35</td>
+      <td>38.61</td>
+      <td>-8.74</td>
+      <td>101</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

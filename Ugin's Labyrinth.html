@@ -1,0 +1,1705 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>49949</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.55</td>
+      <td>65.03</td>
+      <td>8.48</td>
+      <td>183</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71159</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>51.90</td>
+      <td>59.90</td>
+      <td>8.00</td>
+      <td>207</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91061" target="_blank" rel="noopener noreferrer"><img src="img/Idol_of_False_Gods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Idol of False Gods.html" target="_blank" rel="noopener noreferrer">Idol of False Gods</a></td>
+      <td>7.42</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10862</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.85</td>
+      <td>64.14</td>
+      <td>7.29</td>
+      <td>145</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90860" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Command.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Command.html" target="_blank" rel="noopener noreferrer">Kozilek's Command</a></td>
+      <td>2.58</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>27224</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.25</td>
+      <td>60.25</td>
+      <td>7.00</td>
+      <td>317</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71462</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.15</td>
+      <td>62.15</td>
+      <td>7.00</td>
+      <td>214</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4196</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.80</td>
+      <td>61.68</td>
+      <td>6.88</td>
+      <td>214</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70553</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>58.90</td>
+      <td>65.09</td>
+      <td>6.19</td>
+      <td>613</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7832</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.60</td>
+      <td>60.68</td>
+      <td>6.08</td>
+      <td>440</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57524</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>57.40</td>
+      <td>63.36</td>
+      <td>5.96</td>
+      <td>363</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52373</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.20</td>
+      <td>60.13</td>
+      <td>5.93</td>
+      <td>301</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12680</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.85</td>
+      <td>61.19</td>
+      <td>5.34</td>
+      <td>371</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44495</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.95</td>
+      <td>62.29</td>
+      <td>5.34</td>
+      <td>236</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57221</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.95</td>
+      <td>60.06</td>
+      <td>5.11</td>
+      <td>318</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8135</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.25</td>
+      <td>60.14</td>
+      <td>4.89</td>
+      <td>148</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90851" target="_blank" rel="noopener noreferrer"><img src="img/Devourer_of_Destiny.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Devourer of Destiny.html" target="_blank" rel="noopener noreferrer">Devourer of Destiny</a></td>
+      <td>2.50</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>23588</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.15</td>
+      <td>60.90</td>
+      <td>4.75</td>
+      <td>133</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8438</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.00</td>
+      <td>58.64</td>
+      <td>4.64</td>
+      <td>868</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9650</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.00</td>
+      <td>59.62</td>
+      <td>4.62</td>
+      <td>364</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69947</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.50</td>
+      <td>61.03</td>
+      <td>4.53</td>
+      <td>213</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59948</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.25</td>
+      <td>59.76</td>
+      <td>4.51</td>
+      <td>246</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11771</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.10</td>
+      <td>59.21</td>
+      <td>4.11</td>
+      <td>331</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55100</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.30</td>
+      <td>60.17</td>
+      <td>3.87</td>
+      <td>575</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52979</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.75</td>
+      <td>59.84</td>
+      <td>3.09</td>
+      <td>640</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54797</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.80</td>
+      <td>57.80</td>
+      <td>3.00</td>
+      <td>218</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5105</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.80</td>
+      <td>57.77</td>
+      <td>2.97</td>
+      <td>367</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>86612</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.95</td>
+      <td>56.79</td>
+      <td>2.84</td>
+      <td>162</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60857</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.00</td>
+      <td>57.58</td>
+      <td>2.58</td>
+      <td>264</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10256</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.05</td>
+      <td>56.52</td>
+      <td>2.47</td>
+      <td>322</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30254</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.70</td>
+      <td>57.14</td>
+      <td>2.44</td>
+      <td>168</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52070</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.85</td>
+      <td>58.28</td>
+      <td>2.43</td>
+      <td>151</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31163</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.20</td>
+      <td>56.56</td>
+      <td>2.36</td>
+      <td>442</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11468</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.20</td>
+      <td>57.33</td>
+      <td>2.13</td>
+      <td>150</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90862" target="_blank" rel="noopener noreferrer"><img src="img/Nulldrifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nulldrifter.html" target="_blank" rel="noopener noreferrer">Nulldrifter</a></td>
+      <td>1.62</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>8741</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>52.90</td>
+      <td>55.00</td>
+      <td>2.10</td>
+      <td>120</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90853" target="_blank" rel="noopener noreferrer"><img src="img/Echoes_of_Eternity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Echoes of Eternity.html" target="_blank" rel="noopener noreferrer">Echoes of Eternity</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12377</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.55</td>
+      <td>56.65</td>
+      <td>2.10</td>
+      <td>865</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73583</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.55</td>
+      <td>56.49</td>
+      <td>1.94</td>
+      <td>154</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58130</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.05</td>
+      <td>56.88</td>
+      <td>1.83</td>
+      <td>218</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9044</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>52.75</td>
+      <td>54.47</td>
+      <td>1.72</td>
+      <td>235</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49040</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.50</td>
+      <td>56.00</td>
+      <td>1.50</td>
+      <td>125</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24497</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>51.50</td>
+      <td>52.94</td>
+      <td>1.44</td>
+      <td>323</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26012</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.25</td>
+      <td>56.68</td>
+      <td>1.43</td>
+      <td>187</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27527</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.75</td>
+      <td>56.10</td>
+      <td>1.35</td>
+      <td>574</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6317</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.50</td>
+      <td>55.73</td>
+      <td>1.23</td>
+      <td>131</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59645</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.10</td>
+      <td>55.31</td>
+      <td>1.21</td>
+      <td>226</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76310</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.15</td>
+      <td>56.20</td>
+      <td>1.05</td>
+      <td>379</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73280</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.20</td>
+      <td>56.22</td>
+      <td>1.02</td>
+      <td>667</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58433</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.50</td>
+      <td>57.45</td>
+      <td>0.95</td>
+      <td>141</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46313</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.05</td>
+      <td>54.92</td>
+      <td>0.87</td>
+      <td>122</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25103</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.75</td>
+      <td>57.61</td>
+      <td>0.86</td>
+      <td>309</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69341</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.70</td>
+      <td>54.41</td>
+      <td>0.71</td>
+      <td>726</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90248</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>52.90</td>
+      <td>53.58</td>
+      <td>0.68</td>
+      <td>293</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>78128</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.90</td>
+      <td>54.29</td>
+      <td>0.39</td>
+      <td>2997</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td>3.71</td>
+      <td></td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>24194</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.35</td>
+      <td>53.59</td>
+      <td>0.24</td>
+      <td>153</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1166</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.60</td>
+      <td>53.78</td>
+      <td>0.18</td>
+      <td>119</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67523</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.50</td>
+      <td>53.59</td>
+      <td>0.09</td>
+      <td>237</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91049" target="_blank" rel="noopener noreferrer"><img src="img/Planar_Genesis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Planar Genesis.html" target="_blank" rel="noopener noreferrer">Planar Genesis</a></td>
+      <td>8.10</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3893</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.90</td>
+      <td>54.95</td>
+      <td>0.05</td>
+      <td>202</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1469</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.25</td>
+      <td>54.25</td>
+      <td>0.00</td>
+      <td>153</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43283</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.90</td>
+      <td>54.61</td>
+      <td>-0.29</td>
+      <td>304</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56918</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.30</td>
+      <td>55.99</td>
+      <td>-0.31</td>
+      <td>584</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56312</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>57.10</td>
+      <td>56.77</td>
+      <td>-0.33</td>
+      <td>643</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51464</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.40</td>
+      <td>54.91</td>
+      <td>-0.49</td>
+      <td>570</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74492</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.65</td>
+      <td>54.00</td>
+      <td>-0.65</td>
+      <td>537</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30860</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.00</td>
+      <td>55.30</td>
+      <td>-0.70</td>
+      <td>519</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28133</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>52.75</td>
+      <td>52.04</td>
+      <td>-0.71</td>
+      <td>613</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29648</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.70</td>
+      <td>53.71</td>
+      <td>-0.99</td>
+      <td>229</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45101</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.75</td>
+      <td>54.62</td>
+      <td>-1.13</td>
+      <td>390</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50858</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.90</td>
+      <td>52.77</td>
+      <td>-1.13</td>
+      <td>271</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6014</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.15</td>
+      <td>53.78</td>
+      <td>-1.37</td>
+      <td>119</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28436</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.15</td>
+      <td>54.64</td>
+      <td>-1.51</td>
+      <td>474</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75098</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.90</td>
+      <td>53.35</td>
+      <td>-1.55</td>
+      <td>328</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24800</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>56.10</td>
+      <td>54.48</td>
+      <td>-1.62</td>
+      <td>424</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44798</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.25</td>
+      <td>53.60</td>
+      <td>-1.65</td>
+      <td>125</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75704</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.70</td>
+      <td>52.72</td>
+      <td>-1.98</td>
+      <td>368</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86006</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.30</td>
+      <td>53.22</td>
+      <td>-2.08</td>
+      <td>233</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26921</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.70</td>
+      <td>53.55</td>
+      <td>-2.15</td>
+      <td>183</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77825</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.60</td>
+      <td>52.40</td>
+      <td>-2.20</td>
+      <td>458</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54494</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>53.25</td>
+      <td>50.34</td>
+      <td>-2.91</td>
+      <td>147</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6923</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.05</td>
+      <td>52.13</td>
+      <td>-2.92</td>
+      <td>188</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60554</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>52.65</td>
+      <td>49.59</td>
+      <td>-3.06</td>
+      <td>123</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73886</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.00</td>
+      <td>50.69</td>
+      <td>-3.31</td>
+      <td>217</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81158</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.10</td>
+      <td>51.45</td>
+      <td>-3.65</td>
+      <td>138</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53282</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.00</td>
+      <td>49.87</td>
+      <td>-4.13</td>
+      <td>389</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77522</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.60</td>
+      <td>50.40</td>
+      <td>-4.20</td>
+      <td>500</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49343</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.40</td>
+      <td>49.61</td>
+      <td>-4.79</td>
+      <td>127</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22679</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.00</td>
+      <td>50.21</td>
+      <td>-4.79</td>
+      <td>241</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32375</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.10</td>
+      <td>47.62</td>
+      <td>-7.48</td>
+      <td>105</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41162</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>55.90</td>
+      <td>46.96</td>
+      <td>-8.94</td>
+      <td>115</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76007</th>
+      <td>mythic</td>
+      <td></td>
+      <td>3.71</td>
+      <td><a href=".//Ugin's Labyrinth.html" target="_blank" rel="noopener noreferrer">Ugin's Labyrinth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91084" target="_blank" rel="noopener noreferrer"><img src="img/Ugin's_Labyrinth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.9</td>
+      <td>54.30</td>
+      <td>44.64</td>
+      <td>-9.66</td>
+      <td>112</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

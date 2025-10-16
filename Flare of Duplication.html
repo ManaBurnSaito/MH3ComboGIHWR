@@ -1,0 +1,470 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>48320</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>49.90</td>
+      <td>55.81</td>
+      <td>5.91</td>
+      <td>129</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70439</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>54.95</td>
+      <td>59.82</td>
+      <td>4.87</td>
+      <td>112</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62561</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.20</td>
+      <td>54.61</td>
+      <td>4.41</td>
+      <td>152</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91032" target="_blank" rel="noopener noreferrer"><img src="img/Cyclops_Superconductor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cyclops Superconductor.html" target="_blank" rel="noopener noreferrer">Cyclops Superconductor</a></td>
+      <td>9.51</td>
+      <td>UR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47714</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>51.20</td>
+      <td>52.48</td>
+      <td>1.28</td>
+      <td>101</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43472</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>46.00</td>
+      <td>46.26</td>
+      <td>0.26</td>
+      <td>1016</td>
+      <td>46.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td>9.13</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>76196</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>51.20</td>
+      <td>51.30</td>
+      <td>0.10</td>
+      <td>115</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50138</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>49.65</td>
+      <td>48.10</td>
+      <td>-1.55</td>
+      <td>158</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90991" target="_blank" rel="noopener noreferrer"><img src="img/Thriving_Skyclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thriving Skyclaw.html" target="_blank" rel="noopener noreferrer">Thriving Skyclaw</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43169</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.95</td>
+      <td>47.91</td>
+      <td>-3.04</td>
+      <td>215</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75590</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.75</td>
+      <td>47.54</td>
+      <td>-3.21</td>
+      <td>122</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46199</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.10</td>
+      <td>46.74</td>
+      <td>-3.36</td>
+      <td>184</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41957</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>55.10</td>
+      <td>50.50</td>
+      <td>-4.60</td>
+      <td>101</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74984</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.95</td>
+      <td>46.21</td>
+      <td>-4.74</td>
+      <td>132</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30140</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.75</td>
+      <td>46.00</td>
+      <td>-4.75</td>
+      <td>100</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49532</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>51.20</td>
+      <td>45.81</td>
+      <td>-5.39</td>
+      <td>203</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50744</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>49.95</td>
+      <td>44.38</td>
+      <td>-5.57</td>
+      <td>160</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44987</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>51.80</td>
+      <td>45.28</td>
+      <td>-6.52</td>
+      <td>159</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44381</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>53.00</td>
+      <td>45.91</td>
+      <td>-7.09</td>
+      <td>220</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48623</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.65</td>
+      <td>43.51</td>
+      <td>-7.14</td>
+      <td>131</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>61652</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>52.35</td>
+      <td>45.08</td>
+      <td>-7.27</td>
+      <td>122</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91029" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Goblin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Goblin.html" target="_blank" rel="noopener noreferrer">Conduit Goblin</a></td>
+      <td>6.47</td>
+      <td>WR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49229</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.45</td>
+      <td>43.12</td>
+      <td>-7.33</td>
+      <td>160</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45593</th>
+      <td>rare</td>
+      <td>R</td>
+      <td>9.13</td>
+      <td><a href=".//Flare of Duplication.html" target="_blank" rel="noopener noreferrer">Flare of Duplication</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90968" target="_blank" rel="noopener noreferrer"><img src="img/Flare_of_Duplication.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.0</td>
+      <td>50.40</td>
+      <td>40.74</td>
+      <td>-9.66</td>
+      <td>108</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

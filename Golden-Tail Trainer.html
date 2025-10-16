@@ -1,0 +1,2351 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16270</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>57.50</td>
+      <td>59.89</td>
+      <td>2.39</td>
+      <td>354</td>
+      <td>67.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90878" target="_blank" rel="noopener noreferrer"><img src="img/Guide_of_Souls.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guide of Souls.html" target="_blank" rel="noopener noreferrer">Guide of Souls</a></td>
+      <td>1.64</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>65962</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.05</td>
+      <td>55.21</td>
+      <td>1.16</td>
+      <td>192</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91043" target="_blank" rel="noopener noreferrer"><img src="img/Nadu,_Winged_Wisdom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nadu, Winged Wisdom.html" target="_blank" rel="noopener noreferrer">Nadu, Winged Wisdom</a></td>
+      <td>1.80</td>
+      <td>UG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>59296</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.35</td>
+      <td>54.29</td>
+      <td>0.94</td>
+      <td>420</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91021" target="_blank" rel="noopener noreferrer"><img src="img/Springheart_Nantuko.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Springheart Nantuko.html" target="_blank" rel="noopener noreferrer">Springheart Nantuko</a></td>
+      <td>1.57</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5665</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.95</td>
+      <td>52.33</td>
+      <td>0.38</td>
+      <td>451</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>64144</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>47.70</td>
+      <td>47.88</td>
+      <td>0.18</td>
+      <td>10559</td>
+      <td>47.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td>9.06</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55963</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.85</td>
+      <td>49.94</td>
+      <td>0.09</td>
+      <td>803</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91010" target="_blank" rel="noopener noreferrer"><img src="img/Lion_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lion Umbra.html" target="_blank" rel="noopener noreferrer">Lion Umbra</a></td>
+      <td>9.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76567</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.40</td>
+      <td>51.14</td>
+      <td>-0.26</td>
+      <td>176</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91079" target="_blank" rel="noopener noreferrer"><img src="img/Shifting_Woodland.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shifting Woodland.html" target="_blank" rel="noopener noreferrer">Shifting Woodland</a></td>
+      <td>5.76</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12937</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.30</td>
+      <td>52.96</td>
+      <td>-0.34</td>
+      <td>2734</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58387</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.40</td>
+      <td>52.87</td>
+      <td>-0.53</td>
+      <td>1184</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57175</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.85</td>
+      <td>51.31</td>
+      <td>-0.54</td>
+      <td>2093</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13240</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.45</td>
+      <td>51.78</td>
+      <td>-0.67</td>
+      <td>873</td>
+      <td>57.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90868" target="_blank" rel="noopener noreferrer"><img src="img/Ajani_Fells_the_Godsire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani Fells the Godsire.html" target="_blank" rel="noopener noreferrer">Ajani Fells the Godsire</a></td>
+      <td>4.80</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6574</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.65</td>
+      <td>50.98</td>
+      <td>-0.67</td>
+      <td>1575</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90842" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_the_Harvest.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of the Harvest.html" target="_blank" rel="noopener noreferrer">Strength of the Harvest</a></td>
+      <td>5.88</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14149</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.70</td>
+      <td>50.82</td>
+      <td>-0.88</td>
+      <td>2328</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63538</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.70</td>
+      <td>50.35</td>
+      <td>-1.35</td>
+      <td>4441</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91035" target="_blank" rel="noopener noreferrer"><img src="img/Faithful_Watchdog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Faithful Watchdog.html" target="_blank" rel="noopener noreferrer">Faithful Watchdog</a></td>
+      <td>8.43</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7180</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.35</td>
+      <td>50.00</td>
+      <td>-1.35</td>
+      <td>412</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74749</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.80</td>
+      <td>49.44</td>
+      <td>-1.36</td>
+      <td>178</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91073" target="_blank" rel="noopener noreferrer"><img src="img/Monumental_Henge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Monumental Henge.html" target="_blank" rel="noopener noreferrer">Monumental Henge</a></td>
+      <td>8.47</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>21118</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.35</td>
+      <td>50.98</td>
+      <td>-1.37</td>
+      <td>1991</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17785</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.95</td>
+      <td>51.58</td>
+      <td>-1.37</td>
+      <td>2216</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52630</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.55</td>
+      <td>49.15</td>
+      <td>-1.40</td>
+      <td>118</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90999" target="_blank" rel="noopener noreferrer"><img src="img/Eladamri,_Korvecdal.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eladamri, Korvecdal.html" target="_blank" rel="noopener noreferrer">Eladamri, Korvecdal</a></td>
+      <td>1.67</td>
+      <td>G</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>78688</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.75</td>
+      <td>49.34</td>
+      <td>-1.41</td>
+      <td>379</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91086" target="_blank" rel="noopener noreferrer"><img src="img/Windswept_Heath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Windswept Heath.html" target="_blank" rel="noopener noreferrer">Windswept Heath</a></td>
+      <td>6.64</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>19906</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.10</td>
+      <td>50.30</td>
+      <td>-1.80</td>
+      <td>998</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90890" target="_blank" rel="noopener noreferrer"><img src="img/Proud_Pack-Rhino.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Proud Pack-Rhino.html" target="_blank" rel="noopener noreferrer">Proud Pack-Rhino</a></td>
+      <td>5.30</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18694</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.25</td>
+      <td>49.39</td>
+      <td>-1.86</td>
+      <td>2553</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52024</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.75</td>
+      <td>50.68</td>
+      <td>-2.07</td>
+      <td>515</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59599</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.00</td>
+      <td>48.84</td>
+      <td>-2.16</td>
+      <td>1943</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52327</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.10</td>
+      <td>48.93</td>
+      <td>-2.17</td>
+      <td>1353</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79900</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>48.65</td>
+      <td>46.37</td>
+      <td>-2.28</td>
+      <td>358</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91090" target="_blank" rel="noopener noreferrer"><img src="img/Distinguished_Conjurer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Distinguished Conjurer.html" target="_blank" rel="noopener noreferrer">Distinguished Conjurer</a></td>
+      <td>8.49</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22027</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.10</td>
+      <td>48.75</td>
+      <td>-2.35</td>
+      <td>1436</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90897" target="_blank" rel="noopener noreferrer"><img src="img/Wing_It.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wing It.html" target="_blank" rel="noopener noreferrer">Wing It</a></td>
+      <td>10.50</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19603</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.90</td>
+      <td>51.41</td>
+      <td>-2.49</td>
+      <td>391</td>
+      <td>60.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90889" target="_blank" rel="noopener noreferrer"><img src="img/Phelia,_Exuberant_Shepherd.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phelia, Exuberant Shepherd.html" target="_blank" rel="noopener noreferrer">Phelia, Exuberant Shepherd</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3847</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.80</td>
+      <td>49.26</td>
+      <td>-2.54</td>
+      <td>881</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58690</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.20</td>
+      <td>50.65</td>
+      <td>-2.55</td>
+      <td>310</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91019" target="_blank" rel="noopener noreferrer"><img src="img/Six.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Six.html" target="_blank" rel="noopener noreferrer">Six</a></td>
+      <td>1.79</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>53539</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.05</td>
+      <td>51.41</td>
+      <td>-2.64</td>
+      <td>284</td>
+      <td>60.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91002" target="_blank" rel="noopener noreferrer"><img src="img/Fanatic_of_Rhonas.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanatic of Rhonas.html" target="_blank" rel="noopener noreferrer">Fanatic of Rhonas</a></td>
+      <td>1.87</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>514</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.80</td>
+      <td>48.14</td>
+      <td>-2.66</td>
+      <td>912</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90802" target="_blank" rel="noopener noreferrer"><img src="img/Razorgrass_Ambush.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Razorgrass Ambush.html" target="_blank" rel="noopener noreferrer">Razorgrass Ambush</a></td>
+      <td>6.21</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21421</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.15</td>
+      <td>49.45</td>
+      <td>-2.70</td>
+      <td>544</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90895" target="_blank" rel="noopener noreferrer"><img src="img/Voltstorm_Angel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voltstorm Angel.html" target="_blank" rel="noopener noreferrer">Voltstorm Angel</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51418</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.30</td>
+      <td>49.48</td>
+      <td>-2.82</td>
+      <td>1437</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65659</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.45</td>
+      <td>47.47</td>
+      <td>-2.98</td>
+      <td>514</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91042" target="_blank" rel="noopener noreferrer"><img src="img/Kudo,_King_Among_Bears.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kudo, King Among Bears.html" target="_blank" rel="noopener noreferrer">Kudo, King Among Bears</a></td>
+      <td>7.65</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15664</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.95</td>
+      <td>49.92</td>
+      <td>-3.03</td>
+      <td>1290</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18997</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>56.50</td>
+      <td>53.39</td>
+      <td>-3.11</td>
+      <td>221</td>
+      <td>65.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90887" target="_blank" rel="noopener noreferrer"><img src="img/Ocelot_Pride.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ocelot Pride.html" target="_blank" rel="noopener noreferrer">Ocelot Pride</a></td>
+      <td>1.63</td>
+      <td>W</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>19300</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.50</td>
+      <td>48.26</td>
+      <td>-3.24</td>
+      <td>603</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90888" target="_blank" rel="noopener noreferrer"><img src="img/Pearl-Ear,_Imperial_Advisor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pearl-Ear, Imperial Advisor.html" target="_blank" rel="noopener noreferrer">Pearl-Ear, Imperial Advisor</a></td>
+      <td>3.85</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15967</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.70</td>
+      <td>47.44</td>
+      <td>-3.26</td>
+      <td>936</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90877" target="_blank" rel="noopener noreferrer"><img src="img/Guardian_of_the_Forgotten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Guardian of the Forgotten.html" target="_blank" rel="noopener noreferrer">Guardian of the Forgotten</a></td>
+      <td>7.23</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59902</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.15</td>
+      <td>48.78</td>
+      <td>-3.37</td>
+      <td>410</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54448</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.15</td>
+      <td>46.73</td>
+      <td>-3.42</td>
+      <td>903</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14452</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.85</td>
+      <td>47.42</td>
+      <td>-3.43</td>
+      <td>1162</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90872" target="_blank" rel="noopener noreferrer"><img src="img/Envoy_of_the_Ancestors.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Envoy of the Ancestors.html" target="_blank" rel="noopener noreferrer">Envoy of the Ancestors</a></td>
+      <td>5.69</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>55.80</td>
+      <td>52.30</td>
+      <td>-3.50</td>
+      <td>174</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90800" target="_blank" rel="noopener noreferrer"><img src="img/Ajani,_Nacatl_Pariah.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ajani, Nacatl Pariah.html" target="_blank" rel="noopener noreferrer">Ajani, Nacatl Pariah</a></td>
+      <td>1.38</td>
+      <td>W</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>56872</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.20</td>
+      <td>49.59</td>
+      <td>-3.61</td>
+      <td>1208</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54751</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.70</td>
+      <td>48.08</td>
+      <td>-3.62</td>
+      <td>1327</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15058</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.80</td>
+      <td>46.14</td>
+      <td>-3.66</td>
+      <td>1205</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53842</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.65</td>
+      <td>45.97</td>
+      <td>-3.68</td>
+      <td>944</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91003" target="_blank" rel="noopener noreferrer"><img src="img/Fangs_of_Kalonia.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fangs of Kalonia.html" target="_blank" rel="noopener noreferrer">Fangs of Kalonia</a></td>
+      <td>7.29</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53236</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.90</td>
+      <td>47.19</td>
+      <td>-3.71</td>
+      <td>1833</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>80809</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.60</td>
+      <td>47.86</td>
+      <td>-3.74</td>
+      <td>280</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91093" target="_blank" rel="noopener noreferrer"><img src="img/Sevinne's_Reclamation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sevinne's Reclamation.html" target="_blank" rel="noopener noreferrer">Sevinne's Reclamation</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>66871</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>48.85</td>
+      <td>45.08</td>
+      <td>-3.77</td>
+      <td>417</td>
+      <td>50.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91046" target="_blank" rel="noopener noreferrer"><img src="img/Ondu_Knotmaster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ondu Knotmaster.html" target="_blank" rel="noopener noreferrer">Ondu Knotmaster</a></td>
+      <td>7.62</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20209</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.30</td>
+      <td>46.46</td>
+      <td>-3.84</td>
+      <td>848</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90891" target="_blank" rel="noopener noreferrer"><img src="img/Rosecot_Knight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rosecot Knight.html" target="_blank" rel="noopener noreferrer">Rosecot Knight</a></td>
+      <td>11.27</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63841</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.70</td>
+      <td>48.77</td>
+      <td>-3.93</td>
+      <td>162</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91036" target="_blank" rel="noopener noreferrer"><img src="img/Genku,_Future_Shaper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Genku, Future Shaper.html" target="_blank" rel="noopener noreferrer">Genku, Future Shaper</a></td>
+      <td>2.50</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>16876</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.90</td>
+      <td>46.81</td>
+      <td>-4.09</td>
+      <td>861</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90880" target="_blank" rel="noopener noreferrer"><img src="img/Indebted_Spirit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Indebted Spirit.html" target="_blank" rel="noopener noreferrer">Indebted Spirit</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18088</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.05</td>
+      <td>47.96</td>
+      <td>-4.09</td>
+      <td>1151</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>79597</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.90</td>
+      <td>45.75</td>
+      <td>-4.15</td>
+      <td>247</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91089" target="_blank" rel="noopener noreferrer"><img src="img/Decree_of_Justice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Decree of Justice.html" target="_blank" rel="noopener noreferrer">Decree of Justice</a></td>
+      <td>9.46</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16573</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.75</td>
+      <td>47.56</td>
+      <td>-4.19</td>
+      <td>1724</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5362</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.60</td>
+      <td>47.37</td>
+      <td>-4.23</td>
+      <td>836</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90834" target="_blank" rel="noopener noreferrer"><img src="img/Glasswing_Grace.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glasswing Grace.html" target="_blank" rel="noopener noreferrer">Glasswing Grace</a></td>
+      <td>5.24</td>
+      <td>WB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58084</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.95</td>
+      <td>47.72</td>
+      <td>-4.23</td>
+      <td>438</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17482</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.40</td>
+      <td>47.17</td>
+      <td>-4.23</td>
+      <td>371</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77476</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.50</td>
+      <td>47.19</td>
+      <td>-4.31</td>
+      <td>1350</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4150</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.70</td>
+      <td>47.38</td>
+      <td>-4.32</td>
+      <td>650</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5968</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.05</td>
+      <td>47.60</td>
+      <td>-4.45</td>
+      <td>771</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73537</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.45</td>
+      <td>46.95</td>
+      <td>-4.50</td>
+      <td>509</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20815</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.20</td>
+      <td>48.66</td>
+      <td>-4.54</td>
+      <td>448</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90893" target="_blank" rel="noopener noreferrer"><img src="img/Static_Prison.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Static Prison.html" target="_blank" rel="noopener noreferrer">Static Prison</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>817</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.15</td>
+      <td>47.51</td>
+      <td>-4.64</td>
+      <td>922</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90804" target="_blank" rel="noopener noreferrer"><img src="img/Witch_Enchanter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Witch Enchanter.html" target="_blank" rel="noopener noreferrer">Witch Enchanter</a></td>
+      <td>5.48</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21724</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.50</td>
+      <td>45.83</td>
+      <td>-4.67</td>
+      <td>264</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90896" target="_blank" rel="noopener noreferrer"><img src="img/White_Orchid_Phantom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//White Orchid Phantom.html" target="_blank" rel="noopener noreferrer">White Orchid Phantom</a></td>
+      <td>5.20</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18391</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.95</td>
+      <td>45.25</td>
+      <td>-4.70</td>
+      <td>179</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90885" target="_blank" rel="noopener noreferrer"><img src="img/Muster_the_Departed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Muster the Departed.html" target="_blank" rel="noopener noreferrer">Muster the Departed</a></td>
+      <td>9.11</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73840</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.90</td>
+      <td>46.15</td>
+      <td>-4.75</td>
+      <td>1794</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52933</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.65</td>
+      <td>48.82</td>
+      <td>-4.83</td>
+      <td>934</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22330</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.60</td>
+      <td>46.57</td>
+      <td>-5.03</td>
+      <td>204</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90898" target="_blank" rel="noopener noreferrer"><img src="img/Wrath_of_the_Skies.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrath of the Skies.html" target="_blank" rel="noopener noreferrer">Wrath of the Skies</a></td>
+      <td>2.81</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31723</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.35</td>
+      <td>47.29</td>
+      <td>-5.06</td>
+      <td>129</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56266</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.00</td>
+      <td>48.91</td>
+      <td>-5.09</td>
+      <td>689</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55660</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>48.95</td>
+      <td>43.74</td>
+      <td>-5.21</td>
+      <td>999</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91009" target="_blank" rel="noopener noreferrer"><img src="img/Hydra_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydra Trainer.html" target="_blank" rel="noopener noreferrer">Hydra Trainer</a></td>
+      <td>7.31</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76264</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.05</td>
+      <td>46.78</td>
+      <td>-5.27</td>
+      <td>1430</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55054</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.20</td>
+      <td>47.84</td>
+      <td>-5.36</td>
+      <td>1693</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86869</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.90</td>
+      <td>46.50</td>
+      <td>-5.40</td>
+      <td>157</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91113" target="_blank" rel="noopener noreferrer"><img src="img/Sylvan_Safekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sylvan Safekeeper.html" target="_blank" rel="noopener noreferrer">Sylvan Safekeeper</a></td>
+      <td>6.74</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6877</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.95</td>
+      <td>46.50</td>
+      <td>-5.45</td>
+      <td>557</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>85960</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.20</td>
+      <td>46.70</td>
+      <td>-5.50</td>
+      <td>379</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>58993</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.25</td>
+      <td>47.65</td>
+      <td>-5.60</td>
+      <td>170</td>
+      <td>58.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91020" target="_blank" rel="noopener noreferrer"><img src="img/Sowing_Mycospawn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sowing Mycospawn.html" target="_blank" rel="noopener noreferrer">Sowing Mycospawn</a></td>
+      <td>2.22</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36571</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.10</td>
+      <td>43.44</td>
+      <td>-5.66</td>
+      <td>122</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17179</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.05</td>
+      <td>44.99</td>
+      <td>-6.06</td>
+      <td>1685</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75052</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.80</td>
+      <td>45.39</td>
+      <td>-6.41</td>
+      <td>293</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34147</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.70</td>
+      <td>44.15</td>
+      <td>-6.55</td>
+      <td>299</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73234</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.10</td>
+      <td>45.50</td>
+      <td>-6.60</td>
+      <td>367</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20512</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.05</td>
+      <td>45.40</td>
+      <td>-6.65</td>
+      <td>663</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71416</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.05</td>
+      <td>45.38</td>
+      <td>-6.67</td>
+      <td>130</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60205</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.65</td>
+      <td>42.86</td>
+      <td>-6.79</td>
+      <td>105</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91024" target="_blank" rel="noopener noreferrer"><img src="img/Thief_of_Existence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thief of Existence.html" target="_blank" rel="noopener noreferrer">Thief of Existence</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>60811</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.90</td>
+      <td>45.06</td>
+      <td>-6.84</td>
+      <td>253</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57478</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.30</td>
+      <td>47.46</td>
+      <td>-6.84</td>
+      <td>118</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>86566</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.85</td>
+      <td>43.96</td>
+      <td>-6.89</td>
+      <td>207</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>66568</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.25</td>
+      <td>42.27</td>
+      <td>-6.98</td>
+      <td>317</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91045" target="_blank" rel="noopener noreferrer"><img src="img/Obstinate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obstinate Gargoyle.html" target="_blank" rel="noopener noreferrer">Obstinate Gargoyle</a></td>
+      <td>10.85</td>
+      <td>WB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55357</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>48.80</td>
+      <td>41.79</td>
+      <td>-7.01</td>
+      <td>201</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14755</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.40</td>
+      <td>42.20</td>
+      <td>-7.20</td>
+      <td>173</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90873" target="_blank" rel="noopener noreferrer"><img src="img/Essence_Reliquary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Essence Reliquary.html" target="_blank" rel="noopener noreferrer">Essence Reliquary</a></td>
+      <td>9.20</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40207</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.15</td>
+      <td>44.77</td>
+      <td>-7.38</td>
+      <td>172</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>63235</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.50</td>
+      <td>42.09</td>
+      <td>-7.41</td>
+      <td>708</td>
+      <td>51.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91034" target="_blank" rel="noopener noreferrer"><img src="img/Expanding_Ooze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expanding Ooze.html" target="_blank" rel="noopener noreferrer">Expanding Ooze</a></td>
+      <td>8.62</td>
+      <td>BG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5059</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.70</td>
+      <td>44.24</td>
+      <td>-7.46</td>
+      <td>165</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70507</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>55.80</td>
+      <td>48.15</td>
+      <td>-7.65</td>
+      <td>486</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12331</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.45</td>
+      <td>43.77</td>
+      <td>-7.68</td>
+      <td>313</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2332</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.65</td>
+      <td>43.90</td>
+      <td>-7.75</td>
+      <td>123</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41116</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.80</td>
+      <td>44.80</td>
+      <td>-8.00</td>
+      <td>433</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35965</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.75</td>
+      <td>41.60</td>
+      <td>-8.15</td>
+      <td>238</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75961</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.20</td>
+      <td>42.86</td>
+      <td>-8.34</td>
+      <td>588</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>91414</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.45</td>
+      <td>40.84</td>
+      <td>-8.61</td>
+      <td>404</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60508</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.55</td>
+      <td>40.80</td>
+      <td>-8.75</td>
+      <td>647</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77779</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.50</td>
+      <td>42.60</td>
+      <td>-8.90</td>
+      <td>547</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>79294</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>49.95</td>
+      <td>39.88</td>
+      <td>-10.07</td>
+      <td>341</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91088" target="_blank" rel="noopener noreferrer"><img src="img/Angel_of_the_Ruins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angel of the Ruins.html" target="_blank" rel="noopener noreferrer">Angel of the Ruins</a></td>
+      <td>8.86</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44449</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.85</td>
+      <td>43.70</td>
+      <td>-10.15</td>
+      <td>135</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2029</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>50.35</td>
+      <td>40.00</td>
+      <td>-10.35</td>
+      <td>100</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68992</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.20</td>
+      <td>43.61</td>
+      <td>-10.59</td>
+      <td>133</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91054" target="_blank" rel="noopener noreferrer"><img src="img/Scurry_of_Gremlins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurry of Gremlins.html" target="_blank" rel="noopener noreferrer">Scurry of Gremlins</a></td>
+      <td>4.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61114</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.20</td>
+      <td>41.09</td>
+      <td>-11.11</td>
+      <td>129</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91027" target="_blank" rel="noopener noreferrer"><img src="img/Abstruse_Appropriation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Abstruse Appropriation.html" target="_blank" rel="noopener noreferrer">Abstruse Appropriation</a></td>
+      <td>3.20</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>62326</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.25</td>
+      <td>39.65</td>
+      <td>-11.60</td>
+      <td>459</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91031" target="_blank" rel="noopener noreferrer"><img src="img/Cursed_Wombat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cursed Wombat.html" target="_blank" rel="noopener noreferrer">Cursed Wombat</a></td>
+      <td>5.37</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74446</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.55</td>
+      <td>39.67</td>
+      <td>-11.88</td>
+      <td>426</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37783</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>54.00</td>
+      <td>41.44</td>
+      <td>-12.56</td>
+      <td>111</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>86263</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>45.70</td>
+      <td>32.31</td>
+      <td>-13.39</td>
+      <td>195</td>
+      <td>43.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91111" target="_blank" rel="noopener noreferrer"><img src="img/Branching_Evolution.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Branching Evolution.html" target="_blank" rel="noopener noreferrer">Branching Evolution</a></td>
+      <td>6.62</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70204</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.55</td>
+      <td>38.10</td>
+      <td>-13.45</td>
+      <td>105</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91058" target="_blank" rel="noopener noreferrer"><img src="img/Wight_of_the_Reliquary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wight of the Reliquary.html" target="_blank" rel="noopener noreferrer">Wight of the Reliquary</a></td>
+      <td>4.17</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>39601</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.10</td>
+      <td>36.89</td>
+      <td>-14.21</td>
+      <td>122</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32329</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>52.00</td>
+      <td>37.50</td>
+      <td>-14.50</td>
+      <td>192</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>66265</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>47.25</td>
+      <td>32.59</td>
+      <td>-14.66</td>
+      <td>135</td>
+      <td>46.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91044" target="_blank" rel="noopener noreferrer"><img src="img/The_Necrobloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Necrobloom.html" target="_blank" rel="noopener noreferrer">The Necrobloom</a></td>
+      <td>7.08</td>
+      <td>WBG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>61720</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>53.20</td>
+      <td>37.50</td>
+      <td>-15.70</td>
+      <td>136</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91029" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Goblin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Goblin.html" target="_blank" rel="noopener noreferrer">Conduit Goblin</a></td>
+      <td>6.47</td>
+      <td>WR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43237</th>
+      <td>uncommon</td>
+      <td>WG</td>
+      <td>9.06</td>
+      <td><a href=".//Golden-Tail Trainer.html" target="_blank" rel="noopener noreferrer">Golden-Tail Trainer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91037" target="_blank" rel="noopener noreferrer"><img src="img/Golden-Tail_Trainer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>47.7</td>
+      <td>51.80</td>
+      <td>36.04</td>
+      <td>-15.76</td>
+      <td>111</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

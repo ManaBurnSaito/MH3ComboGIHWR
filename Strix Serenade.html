@@ -1,0 +1,489 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>74330</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.75</td>
+      <td>55.86</td>
+      <td>6.11</td>
+      <td>145</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30698</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>51.10</td>
+      <td>55.15</td>
+      <td>4.05</td>
+      <td>194</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27365</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.85</td>
+      <td>52.70</td>
+      <td>2.85</td>
+      <td>148</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8276</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.10</td>
+      <td>51.89</td>
+      <td>2.79</td>
+      <td>106</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74936</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>50.00</td>
+      <td>52.78</td>
+      <td>2.78</td>
+      <td>108</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28274</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>51.25</td>
+      <td>53.51</td>
+      <td>2.26</td>
+      <td>185</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28880</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>44.10</td>
+      <td>45.04</td>
+      <td>0.94</td>
+      <td>917</td>
+      <td>44.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td>9.38</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>26759</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>50.80</td>
+      <td>51.35</td>
+      <td>0.55</td>
+      <td>111</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69179</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>48.80</td>
+      <td>49.19</td>
+      <td>0.39</td>
+      <td>124</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77360</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.70</td>
+      <td>49.64</td>
+      <td>-0.06</td>
+      <td>137</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>80996</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>50.20</td>
+      <td>49.54</td>
+      <td>-0.66</td>
+      <td>109</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31001</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.30</td>
+      <td>47.34</td>
+      <td>-1.96</td>
+      <td>188</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27668</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>51.25</td>
+      <td>49.04</td>
+      <td>-2.21</td>
+      <td>104</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24638</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>51.20</td>
+      <td>48.86</td>
+      <td>-2.34</td>
+      <td>176</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69482</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>51.60</td>
+      <td>48.80</td>
+      <td>-2.80</td>
+      <td>125</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27971</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>47.85</td>
+      <td>45.00</td>
+      <td>-2.85</td>
+      <td>120</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30092</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.80</td>
+      <td>46.72</td>
+      <td>-3.08</td>
+      <td>137</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75542</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.80</td>
+      <td>45.19</td>
+      <td>-4.61</td>
+      <td>104</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29486</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.80</td>
+      <td>44.10</td>
+      <td>-5.70</td>
+      <td>161</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73421</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>49.65</td>
+      <td>43.36</td>
+      <td>-6.29</td>
+      <td>113</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22517</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>50.10</td>
+      <td>43.67</td>
+      <td>-6.43</td>
+      <td>158</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73118</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.38</td>
+      <td><a href=".//Strix Serenade.html" target="_blank" rel="noopener noreferrer">Strix Serenade</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90920" target="_blank" rel="noopener noreferrer"><img src="img/Strix_Serenade.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>44.1</td>
+      <td>50.30</td>
+      <td>41.88</td>
+      <td>-8.42</td>
+      <td>117</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

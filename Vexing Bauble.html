@@ -1,0 +1,1173 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>69623</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.35</td>
+      <td>66.41</td>
+      <td>12.06</td>
+      <td>131</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91056" target="_blank" rel="noopener noreferrer"><img src="img/Sneaky_Snacker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sneaky Snacker.html" target="_blank" rel="noopener noreferrer">Sneaky Snacker</a></td>
+      <td>8.31</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81743</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.90</td>
+      <td>61.00</td>
+      <td>9.10</td>
+      <td>100</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91096" target="_blank" rel="noopener noreferrer"><img src="img/Kappa_Cannoneer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kappa Cannoneer.html" target="_blank" rel="noopener noreferrer">Kappa Cannoneer</a></td>
+      <td>3.83</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>24779</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.95</td>
+      <td>61.42</td>
+      <td>7.47</td>
+      <td>127</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34172</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.65</td>
+      <td>57.14</td>
+      <td>5.49</td>
+      <td>119</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22658</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.85</td>
+      <td>58.00</td>
+      <td>5.15</td>
+      <td>100</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70532</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>56.75</td>
+      <td>61.54</td>
+      <td>4.79</td>
+      <td>130</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35081</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.00</td>
+      <td>55.56</td>
+      <td>4.56</td>
+      <td>162</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90940" target="_blank" rel="noopener noreferrer"><img src="img/Etched_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etched Slith.html" target="_blank" rel="noopener noreferrer">Etched Slith</a></td>
+      <td>5.90</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>40232</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.10</td>
+      <td>57.33</td>
+      <td>4.23</td>
+      <td>150</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90957" target="_blank" rel="noopener noreferrer"><img src="img/Scurrilous_Sentry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurrilous Sentry.html" target="_blank" rel="noopener noreferrer">Scurrilous Sentry</a></td>
+      <td>9.31</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32354</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.95</td>
+      <td>56.94</td>
+      <td>3.99</td>
+      <td>281</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76289</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.00</td>
+      <td>56.41</td>
+      <td>3.41</td>
+      <td>117</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2054</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.30</td>
+      <td>54.46</td>
+      <td>3.16</td>
+      <td>101</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90812" target="_blank" rel="noopener noreferrer"><img src="img/Boggart_Trawler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Boggart Trawler.html" target="_blank" rel="noopener noreferrer">Boggart Trawler</a></td>
+      <td>8.64</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>68108</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.20</td>
+      <td>54.09</td>
+      <td>2.89</td>
+      <td>159</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91051" target="_blank" rel="noopener noreferrer"><img src="img/Pyretic_Rebirth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pyretic Rebirth.html" target="_blank" rel="noopener noreferrer">Pyretic Rebirth</a></td>
+      <td>7.72</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41444</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.10</td>
+      <td>55.07</td>
+      <td>1.97</td>
+      <td>138</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90961" target="_blank" rel="noopener noreferrer"><img src="img/Wurmcoil_Larva.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wurmcoil Larva.html" target="_blank" rel="noopener noreferrer">Wurmcoil Larva</a></td>
+      <td>4.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32051</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.90</td>
+      <td>52.79</td>
+      <td>1.89</td>
+      <td>197</td>
+      <td>52.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90930" target="_blank" rel="noopener noreferrer"><img src="img/Arcbound_Condor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arcbound Condor.html" target="_blank" rel="noopener noreferrer">Arcbound Condor</a></td>
+      <td>6.66</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35990</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.70</td>
+      <td>52.38</td>
+      <td>1.68</td>
+      <td>105</td>
+      <td>51.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90943" target="_blank" rel="noopener noreferrer"><img src="img/Fetid_Gargantua.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fetid Gargantua.html" target="_blank" rel="noopener noreferrer">Fetid Gargantua</a></td>
+      <td>9.52</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37505</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.30</td>
+      <td>53.66</td>
+      <td>1.36</td>
+      <td>123</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90948" target="_blank" rel="noopener noreferrer"><img src="img/Lethal_Throwdown.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lethal Throwdown.html" target="_blank" rel="noopener noreferrer">Lethal Throwdown</a></td>
+      <td>6.92</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37808</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.95</td>
+      <td>56.13</td>
+      <td>1.18</td>
+      <td>155</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>39323</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.20</td>
+      <td>54.35</td>
+      <td>1.15</td>
+      <td>517</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31748</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.30</td>
+      <td>54.29</td>
+      <td>0.99</td>
+      <td>245</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71441</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.00</td>
+      <td>53.91</td>
+      <td>0.91</td>
+      <td>115</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35687</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.65</td>
+      <td>53.25</td>
+      <td>0.60</td>
+      <td>246</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48413</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.70</td>
+      <td>52.23</td>
+      <td>0.53</td>
+      <td>247</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75986</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.15</td>
+      <td>52.44</td>
+      <td>0.29</td>
+      <td>246</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56291</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.95</td>
+      <td>55.00</td>
+      <td>0.05</td>
+      <td>100</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12356</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.40</td>
+      <td>52.34</td>
+      <td>-0.06</td>
+      <td>107</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75683</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.55</td>
+      <td>52.45</td>
+      <td>-0.10</td>
+      <td>326</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71744</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>49.60</td>
+      <td>49.37</td>
+      <td>-0.23</td>
+      <td>1827</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td>11.79</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73865</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.85</td>
+      <td>51.46</td>
+      <td>-0.39</td>
+      <td>103</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75077</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.75</td>
+      <td>52.29</td>
+      <td>-0.46</td>
+      <td>109</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30839</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.85</td>
+      <td>53.33</td>
+      <td>-0.52</td>
+      <td>120</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2357</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.60</td>
+      <td>51.88</td>
+      <td>-0.72</td>
+      <td>160</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90814" target="_blank" rel="noopener noreferrer"><img src="img/Fell_the_Profane.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fell the Profane.html" target="_blank" rel="noopener noreferrer">Fell the Profane</a></td>
+      <td>3.59</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28415</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.00</td>
+      <td>53.28</td>
+      <td>-0.72</td>
+      <td>122</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52958</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.60</td>
+      <td>53.77</td>
+      <td>-0.83</td>
+      <td>106</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77501</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.45</td>
+      <td>51.56</td>
+      <td>-0.89</td>
+      <td>128</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45080</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.60</td>
+      <td>52.59</td>
+      <td>-1.01</td>
+      <td>116</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>64775</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>48.35</td>
+      <td>47.11</td>
+      <td>-1.24</td>
+      <td>121</td>
+      <td>47.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91039" target="_blank" rel="noopener noreferrer"><img src="img/Imskir_Iron-Eater.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Imskir Iron-Eater.html" target="_blank" rel="noopener noreferrer">Imskir Iron-Eater</a></td>
+      <td>5.81</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73259</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.05</td>
+      <td>51.43</td>
+      <td>-1.62</td>
+      <td>175</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39626</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.05</td>
+      <td>50.32</td>
+      <td>-1.73</td>
+      <td>312</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41141</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.75</td>
+      <td>52.00</td>
+      <td>-1.75</td>
+      <td>250</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43262</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.75</td>
+      <td>50.98</td>
+      <td>-1.77</td>
+      <td>153</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45686</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.20</td>
+      <td>50.42</td>
+      <td>-1.78</td>
+      <td>119</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77804</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.45</td>
+      <td>50.47</td>
+      <td>-1.98</td>
+      <td>212</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4781</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.70</td>
+      <td>49.63</td>
+      <td>-2.07</td>
+      <td>135</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30233</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.55</td>
+      <td>50.44</td>
+      <td>-2.11</td>
+      <td>113</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73562</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.40</td>
+      <td>50.00</td>
+      <td>-2.40</td>
+      <td>178</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74471</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.50</td>
+      <td>50.00</td>
+      <td>-2.50</td>
+      <td>174</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44474</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>54.80</td>
+      <td>51.95</td>
+      <td>-2.85</td>
+      <td>231</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44171</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.30</td>
+      <td>47.24</td>
+      <td>-3.06</td>
+      <td>163</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90971" target="_blank" rel="noopener noreferrer"><img src="img/Furnace_Hellkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Furnace Hellkite.html" target="_blank" rel="noopener noreferrer">Furnace Hellkite</a></td>
+      <td>8.57</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>37202</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.70</td>
+      <td>49.62</td>
+      <td>-3.08</td>
+      <td>131</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90947" target="_blank" rel="noopener noreferrer"><img src="img/Kami_of_Jealous_Thirst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kami of Jealous Thirst.html" target="_blank" rel="noopener noreferrer">Kami of Jealous Thirst</a></td>
+      <td>9.61</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34475</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.80</td>
+      <td>47.64</td>
+      <td>-3.16</td>
+      <td>275</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49322</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.25</td>
+      <td>48.72</td>
+      <td>-3.53</td>
+      <td>117</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>35384</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.60</td>
+      <td>49.06</td>
+      <td>-3.54</td>
+      <td>159</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90941" target="_blank" rel="noopener noreferrer"><img src="img/Etherium_Pteramander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Etherium Pteramander.html" target="_blank" rel="noopener noreferrer">Etherium Pteramander</a></td>
+      <td>6.85</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46292</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>51.90</td>
+      <td>47.23</td>
+      <td>-4.67</td>
+      <td>235</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33869</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.00</td>
+      <td>45.24</td>
+      <td>-4.76</td>
+      <td>126</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90936" target="_blank" rel="noopener noreferrer"><img src="img/Dreadmobile.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreadmobile.html" target="_blank" rel="noopener noreferrer">Dreadmobile</a></td>
+      <td>9.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>62048</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>52.80</td>
+      <td>47.57</td>
+      <td>-5.23</td>
+      <td>473</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>36596</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>50.05</td>
+      <td>44.26</td>
+      <td>-5.79</td>
+      <td>122</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49625</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>53.00</td>
+      <td>45.91</td>
+      <td>-7.09</td>
+      <td>257</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43868</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>11.79</td>
+      <td><a href=".//Vexing Bauble.html" target="_blank" rel="noopener noreferrer">Vexing Bauble</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91063" target="_blank" rel="noopener noreferrer"><img src="img/Vexing_Bauble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.6</td>
+      <td>48.60</td>
+      <td>39.86</td>
+      <td>-8.74</td>
+      <td>138</td>
+      <td>47.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90969" target="_blank" rel="noopener noreferrer"><img src="img/Frogmyr_Enforcer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Frogmyr Enforcer.html" target="_blank" rel="noopener noreferrer">Frogmyr Enforcer</a></td>
+      <td>10.33</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

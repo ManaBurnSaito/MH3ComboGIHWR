@@ -1,0 +1,489 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>53251</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.25</td>
+      <td>61.11</td>
+      <td>7.86</td>
+      <td>162</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52948</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>56.00</td>
+      <td>61.54</td>
+      <td>5.54</td>
+      <td>195</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77794</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.85</td>
+      <td>59.00</td>
+      <td>5.15</td>
+      <td>200</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56281</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>56.35</td>
+      <td>59.64</td>
+      <td>3.29</td>
+      <td>223</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76279</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>54.40</td>
+      <td>56.74</td>
+      <td>2.34</td>
+      <td>215</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70522</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>58.15</td>
+      <td>60.31</td>
+      <td>2.16</td>
+      <td>320</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56887</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>55.55</td>
+      <td>56.86</td>
+      <td>1.31</td>
+      <td>204</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55069</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>55.55</td>
+      <td>56.22</td>
+      <td>0.67</td>
+      <td>217</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57190</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>54.20</td>
+      <td>54.81</td>
+      <td>0.61</td>
+      <td>270</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44464</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>56.20</td>
+      <td>56.52</td>
+      <td>0.32</td>
+      <td>138</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68704</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>52.40</td>
+      <td>52.17</td>
+      <td>-0.23</td>
+      <td>1037</td>
+      <td>52.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td>9.43</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>50827</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.15</td>
+      <td>52.07</td>
+      <td>-1.08</td>
+      <td>169</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45070</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>55.00</td>
+      <td>53.47</td>
+      <td>-1.53</td>
+      <td>202</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73249</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>54.45</td>
+      <td>52.65</td>
+      <td>-1.80</td>
+      <td>226</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51433</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>54.65</td>
+      <td>51.63</td>
+      <td>-3.02</td>
+      <td>184</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12346</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.80</td>
+      <td>49.68</td>
+      <td>-4.12</td>
+      <td>155</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43252</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>54.15</td>
+      <td>50.00</td>
+      <td>-4.15</td>
+      <td>182</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52342</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.45</td>
+      <td>48.57</td>
+      <td>-4.88</td>
+      <td>175</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49312</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.65</td>
+      <td>47.89</td>
+      <td>-5.76</td>
+      <td>142</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74461</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.90</td>
+      <td>47.06</td>
+      <td>-6.84</td>
+      <td>102</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69916</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>55.75</td>
+      <td>48.51</td>
+      <td>-7.24</td>
+      <td>134</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59614</th>
+      <td>rare</td>
+      <td>RG</td>
+      <td>9.43</td>
+      <td><a href=".//Rosheen, Roaring Prophet.html" target="_blank" rel="noopener noreferrer">Rosheen, Roaring Prophet</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91053" target="_blank" rel="noopener noreferrer"><img src="img/Rosheen,_Roaring_Prophet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.4</td>
+      <td>53.35</td>
+      <td>45.30</td>
+      <td>-8.05</td>
+      <td>117</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

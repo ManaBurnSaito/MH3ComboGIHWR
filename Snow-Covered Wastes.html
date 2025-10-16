@@ -1,0 +1,1800 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10858</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.55</td>
+      <td>66.21</td>
+      <td>11.66</td>
+      <td>145</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90860" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Command.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Command.html" target="_blank" rel="noopener noreferrer">Kozilek's Command</a></td>
+      <td>2.58</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>11767</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.80</td>
+      <td>59.40</td>
+      <td>6.60</td>
+      <td>298</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8131</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.95</td>
+      <td>57.83</td>
+      <td>4.88</td>
+      <td>166</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90851" target="_blank" rel="noopener noreferrer"><img src="img/Devourer_of_Destiny.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Devourer of Destiny.html" target="_blank" rel="noopener noreferrer">Devourer of Destiny</a></td>
+      <td>2.50</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12676</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.55</td>
+      <td>58.29</td>
+      <td>4.74</td>
+      <td>422</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>45097</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.45</td>
+      <td>57.83</td>
+      <td>4.38</td>
+      <td>396</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>86002</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.00</td>
+      <td>57.25</td>
+      <td>4.25</td>
+      <td>255</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91110" target="_blank" rel="noopener noreferrer"><img src="img/Annoyed_Altisaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Annoyed Altisaur.html" target="_blank" rel="noopener noreferrer">Annoyed Altisaur</a></td>
+      <td>4.63</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46309</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.75</td>
+      <td>55.33</td>
+      <td>3.58</td>
+      <td>197</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25099</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.45</td>
+      <td>58.02</td>
+      <td>3.57</td>
+      <td>293</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26917</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.40</td>
+      <td>56.89</td>
+      <td>3.49</td>
+      <td>167</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>42976</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.80</td>
+      <td>57.23</td>
+      <td>3.43</td>
+      <td>159</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90966" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Linebreaker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Linebreaker.html" target="_blank" rel="noopener noreferrer">Eldrazi Linebreaker</a></td>
+      <td>2.21</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>70549</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>56.60</td>
+      <td>59.75</td>
+      <td>3.15</td>
+      <td>559</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27523</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.45</td>
+      <td>55.41</td>
+      <td>2.96</td>
+      <td>518</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10252</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.75</td>
+      <td>54.57</td>
+      <td>2.82</td>
+      <td>361</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31159</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.90</td>
+      <td>54.61</td>
+      <td>2.71</td>
+      <td>434</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49339</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.10</td>
+      <td>54.73</td>
+      <td>2.63</td>
+      <td>148</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24796</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.80</td>
+      <td>56.27</td>
+      <td>2.47</td>
+      <td>327</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27220</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.95</td>
+      <td>53.08</td>
+      <td>2.13</td>
+      <td>292</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56914</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.00</td>
+      <td>56.02</td>
+      <td>2.02</td>
+      <td>573</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58126</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.75</td>
+      <td>54.46</td>
+      <td>1.71</td>
+      <td>224</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91017" target="_blank" rel="noopener noreferrer"><img src="img/Propagator_Drone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Propagator Drone.html" target="_blank" rel="noopener noreferrer">Propagator Drone</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52369</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.90</td>
+      <td>53.51</td>
+      <td>1.61</td>
+      <td>299</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69943</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.20</td>
+      <td>55.79</td>
+      <td>1.59</td>
+      <td>242</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>67519</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.20</td>
+      <td>52.58</td>
+      <td>1.38</td>
+      <td>194</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91049" target="_blank" rel="noopener noreferrer"><img src="img/Planar_Genesis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Planar Genesis.html" target="_blank" rel="noopener noreferrer">Planar Genesis</a></td>
+      <td>8.10</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57520</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>55.10</td>
+      <td>56.43</td>
+      <td>1.33</td>
+      <td>319</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44491</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.65</td>
+      <td>55.93</td>
+      <td>1.28</td>
+      <td>236</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28129</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.45</td>
+      <td>51.46</td>
+      <td>1.01</td>
+      <td>513</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>90244</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.60</td>
+      <td>51.53</td>
+      <td>0.93</td>
+      <td>262</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91124" target="_blank" rel="noopener noreferrer"><img src="img/Worn_Powerstone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Worn Powerstone.html" target="_blank" rel="noopener noreferrer">Worn Powerstone</a></td>
+      <td>7.33</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30856</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.70</td>
+      <td>54.60</td>
+      <td>0.90</td>
+      <td>522</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>50854</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.60</td>
+      <td>52.01</td>
+      <td>0.41</td>
+      <td>448</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76912</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.30</td>
+      <td>49.61</td>
+      <td>0.31</td>
+      <td>3221</td>
+      <td>49.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td>12.26</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8434</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.70</td>
+      <td>51.86</td>
+      <td>0.16</td>
+      <td>565</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26008</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.95</td>
+      <td>53.08</td>
+      <td>0.13</td>
+      <td>211</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56308</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.80</td>
+      <td>54.90</td>
+      <td>0.10</td>
+      <td>623</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71458</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.85</td>
+      <td>52.90</td>
+      <td>0.05</td>
+      <td>155</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52975</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.45</td>
+      <td>54.40</td>
+      <td>-0.05</td>
+      <td>636</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55096</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.00</td>
+      <td>53.95</td>
+      <td>-0.05</td>
+      <td>608</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74488</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.35</td>
+      <td>52.23</td>
+      <td>-0.12</td>
+      <td>404</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9646</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.70</td>
+      <td>52.52</td>
+      <td>-0.18</td>
+      <td>417</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7828</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.30</td>
+      <td>51.96</td>
+      <td>-0.34</td>
+      <td>408</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77518</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.30</td>
+      <td>51.95</td>
+      <td>-0.35</td>
+      <td>410</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69337</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.40</td>
+      <td>50.96</td>
+      <td>-0.44</td>
+      <td>675</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>43279</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.60</td>
+      <td>52.08</td>
+      <td>-0.52</td>
+      <td>288</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>58429</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.20</td>
+      <td>53.65</td>
+      <td>-0.55</td>
+      <td>192</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91018" target="_blank" rel="noopener noreferrer"><img src="img/Signature_Slam.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Signature Slam.html" target="_blank" rel="noopener noreferrer">Signature Slam</a></td>
+      <td>3.57</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8737</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.60</td>
+      <td>50.00</td>
+      <td>-0.60</td>
+      <td>154</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90853" target="_blank" rel="noopener noreferrer"><img src="img/Echoes_of_Eternity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Echoes of Eternity.html" target="_blank" rel="noopener noreferrer">Echoes of Eternity</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>49036</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.20</td>
+      <td>51.47</td>
+      <td>-0.73</td>
+      <td>136</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57217</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.65</td>
+      <td>51.67</td>
+      <td>-0.98</td>
+      <td>360</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3889</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.60</td>
+      <td>51.55</td>
+      <td>-1.05</td>
+      <td>194</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90824" target="_blank" rel="noopener noreferrer"><img src="img/Bridgeworks_Battle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bridgeworks Battle.html" target="_blank" rel="noopener noreferrer">Bridgeworks Battle</a></td>
+      <td>3.79</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>71155</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.60</td>
+      <td>48.43</td>
+      <td>-1.17</td>
+      <td>254</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91061" target="_blank" rel="noopener noreferrer"><img src="img/Idol_of_False_Gods.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Idol of False Gods.html" target="_blank" rel="noopener noreferrer">Idol of False Gods</a></td>
+      <td>7.42</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51460</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.10</td>
+      <td>51.92</td>
+      <td>-1.18</td>
+      <td>572</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6919</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.75</td>
+      <td>51.56</td>
+      <td>-1.19</td>
+      <td>192</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44794</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.95</td>
+      <td>51.72</td>
+      <td>-1.23</td>
+      <td>145</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73276</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.90</td>
+      <td>51.64</td>
+      <td>-1.26</td>
+      <td>581</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12373</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.25</td>
+      <td>50.98</td>
+      <td>-1.27</td>
+      <td>612</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22675</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.70</td>
+      <td>51.18</td>
+      <td>-1.52</td>
+      <td>170</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>59944</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.95</td>
+      <td>51.30</td>
+      <td>-1.65</td>
+      <td>230</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91023" target="_blank" rel="noopener noreferrer"><img src="img/Territory_Culler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Territory Culler.html" target="_blank" rel="noopener noreferrer">Territory Culler</a></td>
+      <td>3.05</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28432</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.85</td>
+      <td>52.12</td>
+      <td>-1.73</td>
+      <td>378</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60853</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.70</td>
+      <td>50.89</td>
+      <td>-1.81</td>
+      <td>338</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1162</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.30</td>
+      <td>49.34</td>
+      <td>-1.96</td>
+      <td>152</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73579</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.25</td>
+      <td>50.25</td>
+      <td>-2.00</td>
+      <td>203</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60550</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.35</td>
+      <td>48.32</td>
+      <td>-2.03</td>
+      <td>149</td>
+      <td>51.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91025" target="_blank" rel="noopener noreferrer"><img src="img/Trickster's_Elk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Trickster's Elk.html" target="_blank" rel="noopener noreferrer">Trickster's Elk</a></td>
+      <td>7.75</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>91456</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.25</td>
+      <td>48.21</td>
+      <td>-2.04</td>
+      <td>112</td>
+      <td>51.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91128" target="_blank" rel="noopener noreferrer"><img src="img/Nesting_Grounds.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nesting Grounds.html" target="_blank" rel="noopener noreferrer">Nesting Grounds</a></td>
+      <td>9.91</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4192</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.50</td>
+      <td>50.22</td>
+      <td>-2.28</td>
+      <td>223</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90826" target="_blank" rel="noopener noreferrer"><img src="img/Disciple_of_Freyalise.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Disciple of Freyalise.html" target="_blank" rel="noopener noreferrer">Disciple of Freyalise</a></td>
+      <td>5.92</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73882</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.70</td>
+      <td>49.25</td>
+      <td>-2.45</td>
+      <td>266</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24493</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.20</td>
+      <td>46.69</td>
+      <td>-2.51</td>
+      <td>347</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6010</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.85</td>
+      <td>50.34</td>
+      <td>-2.51</td>
+      <td>145</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90838" target="_blank" rel="noopener noreferrer"><img src="img/Revitalizing_Repast.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Revitalizing Repast.html" target="_blank" rel="noopener noreferrer">Revitalizing Repast</a></td>
+      <td>4.90</td>
+      <td>BG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53278</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.70</td>
+      <td>49.16</td>
+      <td>-2.54</td>
+      <td>356</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75094</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.60</td>
+      <td>50.00</td>
+      <td>-2.60</td>
+      <td>278</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9040</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.45</td>
+      <td>47.83</td>
+      <td>-2.62</td>
+      <td>253</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24190</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.05</td>
+      <td>48.39</td>
+      <td>-2.66</td>
+      <td>155</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>86608</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.65</td>
+      <td>48.98</td>
+      <td>-2.67</td>
+      <td>147</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91112" target="_blank" rel="noopener noreferrer"><img src="img/Priest_of_Titania.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Priest of Titania.html" target="_blank" rel="noopener noreferrer">Priest of Titania</a></td>
+      <td>8.39</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29644</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.40</td>
+      <td>49.70</td>
+      <td>-2.70</td>
+      <td>169</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76306</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.85</td>
+      <td>50.13</td>
+      <td>-2.72</td>
+      <td>381</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5101</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.50</td>
+      <td>49.53</td>
+      <td>-2.97</td>
+      <td>317</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>54490</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.95</td>
+      <td>47.83</td>
+      <td>-3.12</td>
+      <td>230</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91005" target="_blank" rel="noopener noreferrer"><img src="img/Fowl_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fowl Strike.html" target="_blank" rel="noopener noreferrer">Fowl Strike</a></td>
+      <td>10.53</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75700</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.40</td>
+      <td>48.66</td>
+      <td>-3.74</td>
+      <td>298</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23584</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.85</td>
+      <td>50.00</td>
+      <td>-3.85</td>
+      <td>120</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>82063</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.20</td>
+      <td>46.79</td>
+      <td>-4.41</td>
+      <td>109</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91097" target="_blank" rel="noopener noreferrer"><img src="img/Reef_Worm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reef Worm.html" target="_blank" rel="noopener noreferrer">Reef Worm</a></td>
+      <td>8.11</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>78427</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.10</td>
+      <td>44.44</td>
+      <td>-4.66</td>
+      <td>126</td>
+      <td>48.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91085" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Cave.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Urza's Cave.html" target="_blank" rel="noopener noreferrer">Urza's Cave</a></td>
+      <td>11.49</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77821</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.30</td>
+      <td>47.58</td>
+      <td>-4.72</td>
+      <td>393</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49945</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.25</td>
+      <td>49.50</td>
+      <td>-4.75</td>
+      <td>200</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59035</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>54.05</td>
+      <td>49.19</td>
+      <td>-4.86</td>
+      <td>124</td>
+      <td>58.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91020" target="_blank" rel="noopener noreferrer"><img src="img/Sowing_Mycospawn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sowing Mycospawn.html" target="_blank" rel="noopener noreferrer">Sowing Mycospawn</a></td>
+      <td>2.22</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>52066</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.55</td>
+      <td>48.68</td>
+      <td>-4.87</td>
+      <td>152</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90997" target="_blank" rel="noopener noreferrer"><img src="img/Collective_Resistance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Collective Resistance.html" target="_blank" rel="noopener noreferrer">Collective Resistance</a></td>
+      <td>7.36</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>55399</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.60</td>
+      <td>44.55</td>
+      <td>-5.05</td>
+      <td>101</td>
+      <td>49.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91008" target="_blank" rel="noopener noreferrer"><img src="img/The_Hunger_Tide_Rises.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Hunger Tide Rises.html" target="_blank" rel="noopener noreferrer">The Hunger Tide Rises</a></td>
+      <td>9.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59641</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.80</td>
+      <td>46.50</td>
+      <td>-5.30</td>
+      <td>286</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54793</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.50</td>
+      <td>47.13</td>
+      <td>-5.37</td>
+      <td>244</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91006" target="_blank" rel="noopener noreferrer"><img src="img/Gift_of_the_Viper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gift of the Viper.html" target="_blank" rel="noopener noreferrer">Gift of the Viper</a></td>
+      <td>9.46</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41158</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.60</td>
+      <td>48.00</td>
+      <td>-5.60</td>
+      <td>125</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81154</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.80</td>
+      <td>46.97</td>
+      <td>-5.83</td>
+      <td>132</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>76003</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.00</td>
+      <td>45.74</td>
+      <td>-6.26</td>
+      <td>188</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1465</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.95</td>
+      <td>45.52</td>
+      <td>-6.43</td>
+      <td>134</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>60247</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>50.45</td>
+      <td>43.57</td>
+      <td>-6.88</td>
+      <td>140</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91024" target="_blank" rel="noopener noreferrer"><img src="img/Thief_of_Existence.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thief of Existence.html" target="_blank" rel="noopener noreferrer">Thief of Existence</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32371</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.80</td>
+      <td>45.45</td>
+      <td>-7.35</td>
+      <td>132</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30250</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>12.26</td>
+      <td><a href=".//Snow-Covered Wastes.html" target="_blank" rel="noopener noreferrer">Snow-Covered Wastes</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91080" target="_blank" rel="noopener noreferrer"><img src="img/Snow-Covered_Wastes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.40</td>
+      <td>42.20</td>
+      <td>-10.20</td>
+      <td>173</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,185 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>29659</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.40</td>
+      <td>56.36</td>
+      <td>3.96</td>
+      <td>110</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31174</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>51.90</td>
+      <td>53.40</td>
+      <td>1.50</td>
+      <td>103</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28447</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.85</td>
+      <td>55.17</td>
+      <td>1.32</td>
+      <td>116</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81472</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>49.30</td>
+      <td>50.00</td>
+      <td>0.70</td>
+      <td>628</td>
+      <td>49.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td>9.96</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>75109</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>52.60</td>
+      <td>52.78</td>
+      <td>0.18</td>
+      <td>108</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24811</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>9.96</td>
+      <td><a href=".//Estrid's Invocation.html" target="_blank" rel="noopener noreferrer">Estrid's Invocation</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91095" target="_blank" rel="noopener noreferrer"><img src="img/Estrid's_Invocation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.3</td>
+      <td>53.80</td>
+      <td>50.00</td>
+      <td>-3.80</td>
+      <td>118</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

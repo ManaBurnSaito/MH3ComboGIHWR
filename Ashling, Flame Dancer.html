@@ -1,0 +1,2161 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>42559</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.30</td>
+      <td>65.68</td>
+      <td>10.38</td>
+      <td>169</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90965" target="_blank" rel="noopener noreferrer"><img src="img/Detective's_Phoenix.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Detective's Phoenix.html" target="_blank" rel="noopener noreferrer">Detective's Phoenix</a></td>
+      <td>2.03</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>64981</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.95</td>
+      <td>60.98</td>
+      <td>7.03</td>
+      <td>164</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91040" target="_blank" rel="noopener noreferrer"><img src="img/Invert_Polarity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Invert Polarity.html" target="_blank" rel="noopener noreferrer">Invert Polarity</a></td>
+      <td>5.05</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>27712</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.15</td>
+      <td>61.51</td>
+      <td>6.36</td>
+      <td>278</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90916" target="_blank" rel="noopener noreferrer"><img src="img/Roil_Cartographer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Roil Cartographer.html" target="_blank" rel="noopener noreferrer">Roil Cartographer</a></td>
+      <td>4.92</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>41953</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>58.05</td>
+      <td>63.72</td>
+      <td>5.67</td>
+      <td>430</td>
+      <td>64.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90963" target="_blank" rel="noopener noreferrer"><img src="img/Amped_Raptor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Amped Raptor.html" target="_blank" rel="noopener noreferrer">Amped Raptor</a></td>
+      <td>3.30</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>56800</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.30</td>
+      <td>60.66</td>
+      <td>5.36</td>
+      <td>183</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8320</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.00</td>
+      <td>58.21</td>
+      <td>5.21</td>
+      <td>134</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26803</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.70</td>
+      <td>59.57</td>
+      <td>4.87</td>
+      <td>141</td>
+      <td>57.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90913" target="_blank" rel="noopener noreferrer"><img src="img/Hope-Ender_Coatl.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hope-Ender Coatl.html" target="_blank" rel="noopener noreferrer">Hope-Ender Coatl</a></td>
+      <td>4.34</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46498</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.25</td>
+      <td>59.90</td>
+      <td>4.65</td>
+      <td>192</td>
+      <td>58.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90979" target="_blank" rel="noopener noreferrer"><img src="img/Party_Thrasher.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Party Thrasher.html" target="_blank" rel="noopener noreferrer">Party Thrasher</a></td>
+      <td>3.45</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>73768</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.00</td>
+      <td>57.41</td>
+      <td>4.41</td>
+      <td>108</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91070" target="_blank" rel="noopener noreferrer"><img src="img/Deceptive_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deceptive Landscape.html" target="_blank" rel="noopener noreferrer">Deceptive Landscape</a></td>
+      <td>8.78</td>
+      <td>WBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30742</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.00</td>
+      <td>59.36</td>
+      <td>4.36</td>
+      <td>251</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47407</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.20</td>
+      <td>59.56</td>
+      <td>4.36</td>
+      <td>413</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90982" target="_blank" rel="noopener noreferrer"><img src="img/Ral_and_the_Implicit_Maze.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ral and the Implicit Maze.html" target="_blank" rel="noopener noreferrer">Ral and the Implicit Maze</a></td>
+      <td>5.23</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22561</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.00</td>
+      <td>58.19</td>
+      <td>4.19</td>
+      <td>464</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90899" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Spike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Spike.html" target="_blank" rel="noopener noreferrer">Aether Spike</a></td>
+      <td>8.69</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24682</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.10</td>
+      <td>59.10</td>
+      <td>4.00</td>
+      <td>401</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90906" target="_blank" rel="noopener noreferrer"><img src="img/Deem_Inferior.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deem Inferior.html" target="_blank" rel="noopener noreferrer">Deem Inferior</a></td>
+      <td>8.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25894</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.25</td>
+      <td>58.06</td>
+      <td>3.81</td>
+      <td>124</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90910" target="_blank" rel="noopener noreferrer"><img src="img/Emrakul's_Messenger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emrakul's Messenger.html" target="_blank" rel="noopener noreferrer">Emrakul's Messenger</a></td>
+      <td>4.39</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30136</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.70</td>
+      <td>57.33</td>
+      <td>3.63</td>
+      <td>607</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90924" target="_blank" rel="noopener noreferrer"><img src="img/Tune_the_Narrative.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tune the Narrative.html" target="_blank" rel="noopener noreferrer">Tune the Narrative</a></td>
+      <td>8.16</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>57103</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.95</td>
+      <td>57.53</td>
+      <td>3.58</td>
+      <td>146</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91014" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Hydra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Hydra.html" target="_blank" rel="noopener noreferrer">Nyxborn Hydra</a></td>
+      <td>6.29</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45286</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.50</td>
+      <td>55.98</td>
+      <td>3.48</td>
+      <td>184</td>
+      <td>53.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90975" target="_blank" rel="noopener noreferrer"><img src="img/Infernal_Captor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Infernal Captor.html" target="_blank" rel="noopener noreferrer">Infernal Captor</a></td>
+      <td>10.93</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56194</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>56.10</td>
+      <td>59.57</td>
+      <td>3.47</td>
+      <td>230</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68314</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.15</td>
+      <td>58.60</td>
+      <td>3.45</td>
+      <td>157</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91052" target="_blank" rel="noopener noreferrer"><img src="img/Riddle_Gate_Gargoyle.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Riddle Gate Gargoyle.html" target="_blank" rel="noopener noreferrer">Riddle Gate Gargoyle</a></td>
+      <td>8.16</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>84979</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>56.30</td>
+      <td>59.66</td>
+      <td>3.36</td>
+      <td>119</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91107" target="_blank" rel="noopener noreferrer"><img src="img/Laelia,_the_Blade_Reforged.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Laelia, the Blade Reforged.html" target="_blank" rel="noopener noreferrer">Laelia, the Blade Reforged</a></td>
+      <td>1.78</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>68011</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.35</td>
+      <td>55.56</td>
+      <td>3.21</td>
+      <td>153</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91051" target="_blank" rel="noopener noreferrer"><img src="img/Pyretic_Rebirth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pyretic Rebirth.html" target="_blank" rel="noopener noreferrer">Pyretic Rebirth</a></td>
+      <td>7.72</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48619</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.60</td>
+      <td>56.73</td>
+      <td>3.13</td>
+      <td>275</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90986" target="_blank" rel="noopener noreferrer"><img src="img/Siege_Smash.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Siege Smash.html" target="_blank" rel="noopener noreferrer">Siege Smash</a></td>
+      <td>10.82</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17410</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.50</td>
+      <td>56.44</td>
+      <td>2.94</td>
+      <td>202</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90882" target="_blank" rel="noopener noreferrer"><img src="img/Jolted_Awake.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Jolted Awake.html" target="_blank" rel="noopener noreferrer">Jolted Awake</a></td>
+      <td>10.41</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44680</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.25</td>
+      <td>56.93</td>
+      <td>2.68</td>
+      <td>332</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90973" target="_blank" rel="noopener noreferrer"><img src="img/Ghostfire_Slice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ghostfire Slice.html" target="_blank" rel="noopener noreferrer">Ghostfire Slice</a></td>
+      <td>3.51</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1351</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.25</td>
+      <td>55.83</td>
+      <td>2.58</td>
+      <td>163</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90808" target="_blank" rel="noopener noreferrer"><img src="img/Sink_into_Stupor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sink into Stupor.html" target="_blank" rel="noopener noreferrer">Sink into Stupor</a></td>
+      <td>6.98</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20440</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>56.65</td>
+      <td>2.50</td>
+      <td>233</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90892" target="_blank" rel="noopener noreferrer"><img src="img/Solstice_Zealot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solstice Zealot.html" target="_blank" rel="noopener noreferrer">Solstice Zealot</a></td>
+      <td>8.72</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>52255</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.20</td>
+      <td>55.56</td>
+      <td>2.36</td>
+      <td>126</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90998" target="_blank" rel="noopener noreferrer"><img src="img/Colossal_Dreadmask.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Colossal Dreadmask.html" target="_blank" rel="noopener noreferrer">Colossal Dreadmask</a></td>
+      <td>8.30</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77404</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.60</td>
+      <td>55.91</td>
+      <td>2.31</td>
+      <td>220</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15592</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.05</td>
+      <td>57.34</td>
+      <td>2.29</td>
+      <td>143</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90876" target="_blank" rel="noopener noreferrer"><img src="img/Glyph_Elemental.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glyph Elemental.html" target="_blank" rel="noopener noreferrer">Glyph Elemental</a></td>
+      <td>3.10</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50437</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.60</td>
+      <td>56.83</td>
+      <td>2.23</td>
+      <td>366</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90992" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Amulet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Amulet.html" target="_blank" rel="noopener noreferrer">Unstable Amulet</a></td>
+      <td>5.81</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>70435</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>57.90</td>
+      <td>59.90</td>
+      <td>2.00</td>
+      <td>394</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28318</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.15</td>
+      <td>57.04</td>
+      <td>1.89</td>
+      <td>398</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6805</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.05</td>
+      <td>55.79</td>
+      <td>1.74</td>
+      <td>233</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90844" target="_blank" rel="noopener noreferrer"><img src="img/Stump_Stomp.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stump Stomp.html" target="_blank" rel="noopener noreferrer">Stump Stomp</a></td>
+      <td>3.47</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23167</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.25</td>
+      <td>54.86</td>
+      <td>1.61</td>
+      <td>257</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90901" target="_blank" rel="noopener noreferrer"><img src="img/Bespoke_Battlewagon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bespoke Battlewagon.html" target="_blank" rel="noopener noreferrer">Bespoke Battlewagon</a></td>
+      <td>6.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>51346</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.40</td>
+      <td>55.80</td>
+      <td>1.40</td>
+      <td>181</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76192</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>55.33</td>
+      <td>1.18</td>
+      <td>441</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>81040</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.10</td>
+      <td>55.19</td>
+      <td>1.09</td>
+      <td>183</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91094" target="_blank" rel="noopener noreferrer"><img src="img/Deep_Analysis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deep Analysis.html" target="_blank" rel="noopener noreferrer">Deep Analysis</a></td>
+      <td>6.89</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>52861</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.75</td>
+      <td>56.83</td>
+      <td>1.08</td>
+      <td>183</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29530</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.70</td>
+      <td>54.77</td>
+      <td>1.07</td>
+      <td>440</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90922" target="_blank" rel="noopener noreferrer"><img src="img/Tempest_Harvester.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tempest Harvester.html" target="_blank" rel="noopener noreferrer">Tempest Harvester</a></td>
+      <td>8.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41044</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.90</td>
+      <td>55.96</td>
+      <td>1.06</td>
+      <td>193</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90960" target="_blank" rel="noopener noreferrer"><img src="img/Wither_and_Bloom.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wither and Bloom.html" target="_blank" rel="noopener noreferrer">Wither and Bloom</a></td>
+      <td>4.83</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49831</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.55</td>
+      <td>56.47</td>
+      <td>0.92</td>
+      <td>278</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90990" target="_blank" rel="noopener noreferrer"><img src="img/Spawn-Gang_Commander.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spawn-Gang Commander.html" target="_blank" rel="noopener noreferrer">Spawn-Gang Commander</a></td>
+      <td>3.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6199</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.50</td>
+      <td>54.33</td>
+      <td>0.83</td>
+      <td>381</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90840" target="_blank" rel="noopener noreferrer"><img src="img/Rush_of_Inspiration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rush of Inspiration.html" target="_blank" rel="noopener noreferrer">Rush of Inspiration</a></td>
+      <td>7.12</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>59527</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.10</td>
+      <td>53.85</td>
+      <td>0.75</td>
+      <td>130</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91022" target="_blank" rel="noopener noreferrer"><img src="img/Temperamental_Oozewagg.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temperamental Oozewagg.html" target="_blank" rel="noopener noreferrer">Temperamental Oozewagg</a></td>
+      <td>7.74</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>54982</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.30</td>
+      <td>55.90</td>
+      <td>0.60</td>
+      <td>229</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31045</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.20</td>
+      <td>53.74</td>
+      <td>0.54</td>
+      <td>214</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62557</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.15</td>
+      <td>53.61</td>
+      <td>0.46</td>
+      <td>720</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91032" target="_blank" rel="noopener noreferrer"><img src="img/Cyclops_Superconductor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cyclops Superconductor.html" target="_blank" rel="noopener noreferrer">Cyclops Superconductor</a></td>
+      <td>9.51</td>
+      <td>UR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>71344</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>54.59</td>
+      <td>0.44</td>
+      <td>185</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91062" target="_blank" rel="noopener noreferrer"><img src="img/Solar_Transformer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Solar Transformer.html" target="_blank" rel="noopener noreferrer">Solar Transformer</a></td>
+      <td>4.93</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61951</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.95</td>
+      <td>54.34</td>
+      <td>0.39</td>
+      <td>265</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91030" target="_blank" rel="noopener noreferrer"><img src="img/Cranial_Ram.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cranial Ram.html" target="_blank" rel="noopener noreferrer">Cranial Ram</a></td>
+      <td>8.30</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4684</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.85</td>
+      <td>53.06</td>
+      <td>0.21</td>
+      <td>245</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90830" target="_blank" rel="noopener noreferrer"><img src="img/Bloodsoaked_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bloodsoaked Insight.html" target="_blank" rel="noopener noreferrer">Bloodsoaked Insight</a></td>
+      <td>7.05</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>49225</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.40</td>
+      <td>53.54</td>
+      <td>0.14</td>
+      <td>622</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90988" target="_blank" rel="noopener noreferrer"><img src="img/Skoa,_Embermage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skoa, Embermage.html" target="_blank" rel="noopener noreferrer">Skoa, Embermage</a></td>
+      <td>8.96</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>42256</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>51.90</td>
+      <td>51.99</td>
+      <td>0.09</td>
+      <td>3922</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td>3.42</td>
+      <td>R</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>3472</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.80</td>
+      <td>53.85</td>
+      <td>0.05</td>
+      <td>364</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90822" target="_blank" rel="noopener noreferrer"><img src="img/Sundering_Eruption.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sundering Eruption.html" target="_blank" rel="noopener noreferrer">Sundering Eruption</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>44377</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.95</td>
+      <td>55.91</td>
+      <td>-0.04</td>
+      <td>1057</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90972" target="_blank" rel="noopener noreferrer"><img src="img/Galvanic_Discharge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanic Discharge.html" target="_blank" rel="noopener noreferrer">Galvanic Discharge</a></td>
+      <td>3.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>37711</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>56.10</td>
+      <td>55.96</td>
+      <td>-0.14</td>
+      <td>109</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90949" target="_blank" rel="noopener noreferrer"><img src="img/Marionette_Apprentice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Marionette Apprentice.html" target="_blank" rel="noopener noreferrer">Marionette Apprentice</a></td>
+      <td>3.77</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50134</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.60</td>
+      <td>52.42</td>
+      <td>-0.18</td>
+      <td>433</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90991" target="_blank" rel="noopener noreferrer"><img src="img/Thriving_Skyclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thriving Skyclaw.html" target="_blank" rel="noopener noreferrer">Thriving Skyclaw</a></td>
+      <td>9.62</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44983</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.75</td>
+      <td>54.50</td>
+      <td>-0.25</td>
+      <td>578</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53164</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.00</td>
+      <td>52.74</td>
+      <td>-0.26</td>
+      <td>146</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21046</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.45</td>
+      <td>54.14</td>
+      <td>-0.31</td>
+      <td>266</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90894" target="_blank" rel="noopener noreferrer"><img src="img/Thraben_Charm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Thraben Charm.html" target="_blank" rel="noopener noreferrer">Thraben Charm</a></td>
+      <td>7.48</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32257</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.10</td>
+      <td>53.59</td>
+      <td>-0.51</td>
+      <td>209</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90931" target="_blank" rel="noopener noreferrer"><img src="img/Breathe_Your_Last.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breathe Your Last.html" target="_blank" rel="noopener noreferrer">Breathe Your Last</a></td>
+      <td>4.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>47710</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>53.64</td>
+      <td>-0.51</td>
+      <td>343</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90983" target="_blank" rel="noopener noreferrer"><img src="img/Reckless_Pyrosurfer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reckless Pyrosurfer.html" target="_blank" rel="noopener noreferrer">Reckless Pyrosurfer</a></td>
+      <td>5.53</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48013</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.40</td>
+      <td>52.53</td>
+      <td>-0.87</td>
+      <td>434</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90984" target="_blank" rel="noopener noreferrer"><img src="img/Reiterating_Bolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reiterating Bolt.html" target="_blank" rel="noopener noreferrer">Reiterating Bolt</a></td>
+      <td>4.09</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>73162</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.20</td>
+      <td>53.29</td>
+      <td>-0.91</td>
+      <td>426</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25591</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.75</td>
+      <td>51.49</td>
+      <td>-1.26</td>
+      <td>268</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90909" target="_blank" rel="noopener noreferrer"><img src="img/Electrozoa.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Electrozoa.html" target="_blank" rel="noopener noreferrer">Electrozoa</a></td>
+      <td>10.61</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20743</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.30</td>
+      <td>54.01</td>
+      <td>-1.29</td>
+      <td>137</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90893" target="_blank" rel="noopener noreferrer"><img src="img/Static_Prison.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Static Prison.html" target="_blank" rel="noopener noreferrer">Static Prison</a></td>
+      <td>5.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16501</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.85</td>
+      <td>52.46</td>
+      <td>-1.39</td>
+      <td>244</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90879" target="_blank" rel="noopener noreferrer"><img src="img/Hexgold_Slith.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hexgold Slith.html" target="_blank" rel="noopener noreferrer">Hexgold Slith</a></td>
+      <td>6.53</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>41650</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.00</td>
+      <td>51.55</td>
+      <td>-1.45</td>
+      <td>161</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90962" target="_blank" rel="noopener noreferrer"><img src="img/Aether_Revolt.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aether Revolt.html" target="_blank" rel="noopener noreferrer">Aether Revolt</a></td>
+      <td>3.43</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>36499</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>51.20</td>
+      <td>49.55</td>
+      <td>-1.65</td>
+      <td>111</td>
+      <td>50.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90945" target="_blank" rel="noopener noreferrer"><img src="img/Gravedig.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gravedig.html" target="_blank" rel="noopener noreferrer">Gravedig</a></td>
+      <td>10.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2866</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.75</td>
+      <td>51.96</td>
+      <td>-1.79</td>
+      <td>433</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90818" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Monk.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Monk.html" target="_blank" rel="noopener noreferrer">Pinnacle Monk</a></td>
+      <td>6.42</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>46801</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.20</td>
+      <td>50.35</td>
+      <td>-1.85</td>
+      <td>288</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90980" target="_blank" rel="noopener noreferrer"><img src="img/Phyrexian_Ironworks.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phyrexian Ironworks.html" target="_blank" rel="noopener noreferrer">Phyrexian Ironworks</a></td>
+      <td>6.15</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1048</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.60</td>
+      <td>50.75</td>
+      <td>-1.85</td>
+      <td>134</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90806" target="_blank" rel="noopener noreferrer"><img src="img/Hydroelectric_Specimen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hydroelectric Specimen.html" target="_blank" rel="noopener noreferrer">Hydroelectric Specimen</a></td>
+      <td>8.67</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>77707</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.60</td>
+      <td>51.68</td>
+      <td>-1.92</td>
+      <td>327</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5593</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.05</td>
+      <td>52.08</td>
+      <td>-1.97</td>
+      <td>288</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90836" target="_blank" rel="noopener noreferrer"><img src="img/Legion_Leadership.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Legion Leadership.html" target="_blank" rel="noopener noreferrer">Legion Leadership</a></td>
+      <td>6.01</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14077</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.80</td>
+      <td>51.82</td>
+      <td>-1.98</td>
+      <td>220</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90871" target="_blank" rel="noopener noreferrer"><img src="img/Dog_Umbra.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dog Umbra.html" target="_blank" rel="noopener noreferrer">Dog Umbra</a></td>
+      <td>7.16</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7108</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.45</td>
+      <td>51.42</td>
+      <td>-2.03</td>
+      <td>247</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90846" target="_blank" rel="noopener noreferrer"><img src="img/Suppression_Ray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suppression Ray.html" target="_blank" rel="noopener noreferrer">Suppression Ray</a></td>
+      <td>6.38</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>61648</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.30</td>
+      <td>53.08</td>
+      <td>-2.22</td>
+      <td>503</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91029" target="_blank" rel="noopener noreferrer"><img src="img/Conduit_Goblin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Conduit Goblin.html" target="_blank" rel="noopener noreferrer">Conduit Goblin</a></td>
+      <td>6.47</td>
+      <td>WR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34378</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>51.95</td>
+      <td>49.60</td>
+      <td>-2.35</td>
+      <td>125</td>
+      <td>52.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90938" target="_blank" rel="noopener noreferrer"><img src="img/Drossclaw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drossclaw.html" target="_blank" rel="noopener noreferrer">Drossclaw</a></td>
+      <td>10.29</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27409</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.75</td>
+      <td>51.28</td>
+      <td>-2.47</td>
+      <td>234</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39226</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.35</td>
+      <td>51.85</td>
+      <td>-2.50</td>
+      <td>243</td>
+      <td>56.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90954" target="_blank" rel="noopener noreferrer"><img src="img/Refurbished_Familiar.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Refurbished Familiar.html" target="_blank" rel="noopener noreferrer">Refurbished Familiar</a></td>
+      <td>6.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>48922</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.50</td>
+      <td>50.98</td>
+      <td>-2.52</td>
+      <td>204</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90987" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Precursor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Precursor.html" target="_blank" rel="noopener noreferrer">Skittering Precursor</a></td>
+      <td>5.92</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50740</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.90</td>
+      <td>50.36</td>
+      <td>-2.54</td>
+      <td>419</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45589</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.35</td>
+      <td>50.74</td>
+      <td>-2.61</td>
+      <td>270</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90976" target="_blank" rel="noopener noreferrer"><img src="img/Inventor's_Axe.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inventor's Axe.html" target="_blank" rel="noopener noreferrer">Inventor's Axe</a></td>
+      <td>10.69</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23470</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.15</td>
+      <td>52.50</td>
+      <td>-2.65</td>
+      <td>120</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90902" target="_blank" rel="noopener noreferrer"><img src="img/Brainsurge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brainsurge.html" target="_blank" rel="noopener noreferrer">Brainsurge</a></td>
+      <td>7.04</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>43165</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.90</td>
+      <td>51.22</td>
+      <td>-2.68</td>
+      <td>822</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90967" target="_blank" rel="noopener noreferrer"><img src="img/Fanged_Flames.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fanged Flames.html" target="_blank" rel="noopener noreferrer">Fanged Flames</a></td>
+      <td>4.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>68920</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>56.30</td>
+      <td>53.28</td>
+      <td>-3.02</td>
+      <td>259</td>
+      <td>60.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91054" target="_blank" rel="noopener noreferrer"><img src="img/Scurry_of_Gremlins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scurry of Gremlins.html" target="_blank" rel="noopener noreferrer">Scurry of Gremlins</a></td>
+      <td>4.25</td>
+      <td>WR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>74980</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.90</td>
+      <td>50.71</td>
+      <td>-3.19</td>
+      <td>633</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18016</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>50.86</td>
+      <td>-3.29</td>
+      <td>116</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90884" target="_blank" rel="noopener noreferrer"><img src="img/Metastatic_Evangel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Metastatic Evangel.html" target="_blank" rel="noopener noreferrer">Metastatic Evangel</a></td>
+      <td>4.03</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24076</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.35</td>
+      <td>49.02</td>
+      <td>-3.33</td>
+      <td>102</td>
+      <td>52.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90904" target="_blank" rel="noopener noreferrer"><img src="img/Copycrook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Copycrook.html" target="_blank" rel="noopener noreferrer">Copycrook</a></td>
+      <td>6.87</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>35590</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.80</td>
+      <td>50.36</td>
+      <td>-3.44</td>
+      <td>137</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90942" target="_blank" rel="noopener noreferrer"><img src="img/Eviscerator's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eviscerator's Insight.html" target="_blank" rel="noopener noreferrer">Eviscerator's Insight</a></td>
+      <td>9.06</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>65284</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>50.65</td>
+      <td>47.17</td>
+      <td>-3.48</td>
+      <td>265</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91041" target="_blank" rel="noopener noreferrer"><img src="img/Izzet_Generatorium.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Izzet Generatorium.html" target="_blank" rel="noopener noreferrer">Izzet Generatorium</a></td>
+      <td>8.95</td>
+      <td>UR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24985</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.75</td>
+      <td>52.21</td>
+      <td>-3.54</td>
+      <td>113</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12259</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.55</td>
+      <td>50.00</td>
+      <td>-3.55</td>
+      <td>142</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>46195</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.05</td>
+      <td>49.45</td>
+      <td>-3.60</td>
+      <td>550</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90978" target="_blank" rel="noopener noreferrer"><img src="img/Molten_Gatekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Molten Gatekeeper.html" target="_blank" rel="noopener noreferrer">Molten Gatekeeper</a></td>
+      <td>7.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74374</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.65</td>
+      <td>50.00</td>
+      <td>-3.65</td>
+      <td>160</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>49528</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.15</td>
+      <td>50.26</td>
+      <td>-3.89</td>
+      <td>770</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90989" target="_blank" rel="noopener noreferrer"><img src="img/Smelted_Chargebug.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Smelted Chargebug.html" target="_blank" rel="noopener noreferrer">Smelted Chargebug</a></td>
+      <td>7.15</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75586</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.70</td>
+      <td>49.62</td>
+      <td>-4.08</td>
+      <td>522</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17107</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.15</td>
+      <td>48.93</td>
+      <td>-4.22</td>
+      <td>280</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90881" target="_blank" rel="noopener noreferrer"><img src="img/Inspired_Inventor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Inspired Inventor.html" target="_blank" rel="noopener noreferrer">Inspired Inventor</a></td>
+      <td>7.71</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>39529</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.20</td>
+      <td>48.63</td>
+      <td>-4.57</td>
+      <td>146</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90955" target="_blank" rel="noopener noreferrer"><img src="img/Retrofitted_Transmogrant.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Retrofitted Transmogrant.html" target="_blank" rel="noopener noreferrer">Retrofitted Transmogrant</a></td>
+      <td>9.03</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12865</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.40</td>
+      <td>50.83</td>
+      <td>-4.57</td>
+      <td>242</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90867" target="_blank" rel="noopener noreferrer"><img src="img/Aerie_Auxiliary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aerie Auxiliary.html" target="_blank" rel="noopener noreferrer">Aerie Auxiliary</a></td>
+      <td>5.37</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31651</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.45</td>
+      <td>49.63</td>
+      <td>-4.82</td>
+      <td>135</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90929" target="_blank" rel="noopener noreferrer"><img src="img/Accursed_Marauder.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Accursed Marauder.html" target="_blank" rel="noopener noreferrer">Accursed Marauder</a></td>
+      <td>6.89</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>44074</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>51.45</td>
+      <td>46.49</td>
+      <td>-4.96</td>
+      <td>114</td>
+      <td>51.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90971" target="_blank" rel="noopener noreferrer"><img src="img/Furnace_Hellkite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Furnace Hellkite.html" target="_blank" rel="noopener noreferrer">Furnace Hellkite</a></td>
+      <td>8.57</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>48316</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.85</td>
+      <td>47.53</td>
+      <td>-5.32</td>
+      <td>263</td>
+      <td>53.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90985" target="_blank" rel="noopener noreferrer"><img src="img/Sarpadian_Simulacrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarpadian Simulacrum.html" target="_blank" rel="noopener noreferrer">Sarpadian Simulacrum</a></td>
+      <td>10.35</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75889</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.30</td>
+      <td>47.84</td>
+      <td>-5.46</td>
+      <td>439</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91077" target="_blank" rel="noopener noreferrer"><img src="img/Shattered_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shattered Landscape.html" target="_blank" rel="noopener noreferrer">Shattered Landscape</a></td>
+      <td>8.87</td>
+      <td>WBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73465</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.55</td>
+      <td>48.02</td>
+      <td>-5.53</td>
+      <td>202</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91069" target="_blank" rel="noopener noreferrer"><img src="img/Contaminated_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Contaminated Landscape.html" target="_blank" rel="noopener noreferrer">Contaminated Landscape</a></td>
+      <td>8.98</td>
+      <td>WUB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21349</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>54.25</td>
+      <td>47.86</td>
+      <td>-6.39</td>
+      <td>117</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90895" target="_blank" rel="noopener noreferrer"><img src="img/Voltstorm_Angel.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voltstorm Angel.html" target="_blank" rel="noopener noreferrer">Voltstorm Angel</a></td>
+      <td>4.29</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>69829</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.50</td>
+      <td>48.91</td>
+      <td>-6.59</td>
+      <td>137</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18622</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.35</td>
+      <td>46.23</td>
+      <td>-7.12</td>
+      <td>199</td>
+      <td>54.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90886" target="_blank" rel="noopener noreferrer"><img src="img/Nyxborn_Unicorn.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nyxborn Unicorn.html" target="_blank" rel="noopener noreferrer">Nyxborn Unicorn</a></td>
+      <td>8.05</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>62860</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>53.00</td>
+      <td>44.55</td>
+      <td>-8.45</td>
+      <td>101</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91033" target="_blank" rel="noopener noreferrer"><img src="img/Emissary_of_Soulfire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Emissary of Soulfire.html" target="_blank" rel="noopener noreferrer">Emissary of Soulfire</a></td>
+      <td>7.52</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14986</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>51.90</td>
+      <td>43.05</td>
+      <td>-8.85</td>
+      <td>151</td>
+      <td>51.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90874" target="_blank" rel="noopener noreferrer"><img src="img/Expel_the_Unworthy.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Expel the Unworthy.html" target="_blank" rel="noopener noreferrer">Expel the Unworthy</a></td>
+      <td>9.19</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17713</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>55.05</td>
+      <td>45.41</td>
+      <td>-9.64</td>
+      <td>196</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90883" target="_blank" rel="noopener noreferrer"><img src="img/Mandibular_Kite.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mandibular Kite.html" target="_blank" rel="noopener noreferrer">Mandibular Kite</a></td>
+      <td>7.57</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34075</th>
+      <td>mythic</td>
+      <td>R</td>
+      <td>3.42</td>
+      <td><a href=".//Ashling, Flame Dancer.html" target="_blank" rel="noopener noreferrer">Ashling, Flame Dancer</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90964" target="_blank" rel="noopener noreferrer"><img src="img/Ashling,_Flame_Dancer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>51.9</td>
+      <td>52.80</td>
+      <td>39.45</td>
+      <td>-13.35</td>
+      <td>109</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90937" target="_blank" rel="noopener noreferrer"><img src="img/Dreamdrinker_Vampire.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreamdrinker Vampire.html" target="_blank" rel="noopener noreferrer">Dreamdrinker Vampire</a></td>
+      <td>8.82</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,793 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7871</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.65</td>
+      <td>55.56</td>
+      <td>6.91</td>
+      <td>135</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90850" target="_blank" rel="noopener noreferrer"><img src="img/Breaker_of_Creation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Breaker of Creation.html" target="_blank" rel="noopener noreferrer">Breaker of Creation</a></td>
+      <td>4.21</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25142</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.80</td>
+      <td>55.00</td>
+      <td>4.20</td>
+      <td>120</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90907" target="_blank" rel="noopener noreferrer"><img src="img/Depth_Defiler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Depth Defiler.html" target="_blank" rel="noopener noreferrer">Depth Defiler</a></td>
+      <td>3.57</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9689</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.05</td>
+      <td>53.21</td>
+      <td>4.16</td>
+      <td>109</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90856" target="_blank" rel="noopener noreferrer"><img src="img/Glaring_Fleshraker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glaring Fleshraker.html" target="_blank" rel="noopener noreferrer">Glaring Fleshraker</a></td>
+      <td>3.87</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28172</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>46.80</td>
+      <td>50.75</td>
+      <td>3.95</td>
+      <td>201</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90917" target="_blank" rel="noopener noreferrer"><img src="img/Sage_of_the_Unknowable.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sage of the Unknowable.html" target="_blank" rel="noopener noreferrer">Sage of the Unknowable</a></td>
+      <td>9.58</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27566</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.80</td>
+      <td>51.43</td>
+      <td>2.63</td>
+      <td>245</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90915" target="_blank" rel="noopener noreferrer"><img src="img/Petrifying_Meddler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Petrifying Meddler.html" target="_blank" rel="noopener noreferrer">Petrifying Meddler</a></td>
+      <td>7.19</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11810</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.15</td>
+      <td>51.56</td>
+      <td>2.41</td>
+      <td>128</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90863" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Riddlekeeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Riddlekeeper.html" target="_blank" rel="noopener noreferrer">Twisted Riddlekeeper</a></td>
+      <td>4.72</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12719</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.90</td>
+      <td>52.17</td>
+      <td>2.27</td>
+      <td>138</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90866" target="_blank" rel="noopener noreferrer"><img src="img/Wastescape_Battlemage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wastescape Battlemage.html" target="_blank" rel="noopener noreferrer">Wastescape Battlemage</a></td>
+      <td>4.22</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27263</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>47.30</td>
+      <td>49.29</td>
+      <td>1.99</td>
+      <td>140</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90914" target="_blank" rel="noopener noreferrer"><img src="img/Kozilek's_Unsealing.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kozilek's Unsealing.html" target="_blank" rel="noopener noreferrer">Kozilek's Unsealing</a></td>
+      <td>5.49</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8477</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.05</td>
+      <td>49.05</td>
+      <td>1.00</td>
+      <td>263</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90852" target="_blank" rel="noopener noreferrer"><img src="img/Drownyard_Lurker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drownyard Lurker.html" target="_blank" rel="noopener noreferrer">Drownyard Lurker</a></td>
+      <td>7.71</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>89984</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>42.00</td>
+      <td>42.80</td>
+      <td>0.80</td>
+      <td>1063</td>
+      <td>42.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td>8.88</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12416</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.60</td>
+      <td>49.25</td>
+      <td>0.65</td>
+      <td>268</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90865" target="_blank" rel="noopener noreferrer"><img src="img/Warped_Tusker.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Warped Tusker.html" target="_blank" rel="noopener noreferrer">Warped Tusker</a></td>
+      <td>6.99</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30899</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.05</td>
+      <td>49.37</td>
+      <td>-0.68</td>
+      <td>158</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90926" target="_blank" rel="noopener noreferrer"><img src="img/Unfathomable_Truths.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unfathomable Truths.html" target="_blank" rel="noopener noreferrer">Unfathomable Truths</a></td>
+      <td>7.45</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5144</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.85</td>
+      <td>47.95</td>
+      <td>-0.90</td>
+      <td>146</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90832" target="_blank" rel="noopener noreferrer"><img src="img/Drowner_of_Truth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drowner of Truth.html" target="_blank" rel="noopener noreferrer">Drowner of Truth</a></td>
+      <td>4.49</td>
+      <td>UG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>57563</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>51.45</td>
+      <td>50.45</td>
+      <td>-1.00</td>
+      <td>111</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91015" target="_blank" rel="noopener noreferrer"><img src="img/Path_of_Annihilation.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Path of Annihilation.html" target="_blank" rel="noopener noreferrer">Path of Annihilation</a></td>
+      <td>3.06</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>50897</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>47.95</td>
+      <td>46.92</td>
+      <td>-1.03</td>
+      <td>130</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90993" target="_blank" rel="noopener noreferrer"><img src="img/Voidpouncer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Voidpouncer.html" target="_blank" rel="noopener noreferrer">Voidpouncer</a></td>
+      <td>8.29</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56957</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.35</td>
+      <td>48.99</td>
+      <td>-1.36</td>
+      <td>198</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91013" target="_blank" rel="noopener noreferrer"><img src="img/Nightshade_Dryad.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nightshade Dryad.html" target="_blank" rel="noopener noreferrer">Nightshade Dryad</a></td>
+      <td>3.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>70592</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>52.95</td>
+      <td>51.37</td>
+      <td>-1.58</td>
+      <td>255</td>
+      <td>63.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91059" target="_blank" rel="noopener noreferrer"><img src="img/Writhing_Chrysalis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Writhing Chrysalis.html" target="_blank" rel="noopener noreferrer">Writhing Chrysalis</a></td>
+      <td>2.66</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77561</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.65</td>
+      <td>46.70</td>
+      <td>-1.95</td>
+      <td>212</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91082" target="_blank" rel="noopener noreferrer"><img src="img/Tranquil_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tranquil Landscape.html" target="_blank" rel="noopener noreferrer">Tranquil Landscape</a></td>
+      <td>8.20</td>
+      <td>WUG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>60896</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.05</td>
+      <td>47.01</td>
+      <td>-2.04</td>
+      <td>117</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91026" target="_blank" rel="noopener noreferrer"><img src="img/Wumpus_Aberration.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wumpus Aberration.html" target="_blank" rel="noopener noreferrer">Wumpus Aberration</a></td>
+      <td>3.60</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>53321</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.05</td>
+      <td>45.79</td>
+      <td>-2.26</td>
+      <td>107</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91001" target="_blank" rel="noopener noreferrer"><img src="img/Evolution_Witness.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Evolution Witness.html" target="_blank" rel="noopener noreferrer">Evolution Witness</a></td>
+      <td>6.11</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69380</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>47.75</td>
+      <td>44.95</td>
+      <td>-2.80</td>
+      <td>287</td>
+      <td>53.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91055" target="_blank" rel="noopener noreferrer"><img src="img/Snapping_Voidcraw.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snapping Voidcraw.html" target="_blank" rel="noopener noreferrer">Snapping Voidcraw</a></td>
+      <td>5.93</td>
+      <td>UG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>73319</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.25</td>
+      <td>46.22</td>
+      <td>-3.03</td>
+      <td>238</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91068" target="_blank" rel="noopener noreferrer"><img src="img/Bountiful_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bountiful Landscape.html" target="_blank" rel="noopener noreferrer">Bountiful Landscape</a></td>
+      <td>7.11</td>
+      <td>URG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>51503</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.45</td>
+      <td>46.37</td>
+      <td>-3.08</td>
+      <td>179</td>
+      <td>56.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90995" target="_blank" rel="noopener noreferrer"><img src="img/Basking_Broodscale.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basking Broodscale.html" target="_blank" rel="noopener noreferrer">Basking Broodscale</a></td>
+      <td>4.66</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>75743</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.75</td>
+      <td>45.53</td>
+      <td>-3.22</td>
+      <td>123</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91076" target="_blank" rel="noopener noreferrer"><img src="img/Seething_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Seething Landscape.html" target="_blank" rel="noopener noreferrer">Seething Landscape</a></td>
+      <td>8.42</td>
+      <td>UBR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>53018</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.80</td>
+      <td>47.30</td>
+      <td>-3.50</td>
+      <td>222</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91000" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Repurposer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Repurposer.html" target="_blank" rel="noopener noreferrer">Eldrazi Repurposer</a></td>
+      <td>3.97</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>45140</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.80</td>
+      <td>46.27</td>
+      <td>-3.53</td>
+      <td>134</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90974" target="_blank" rel="noopener noreferrer"><img src="img/Glimpse_the_Impossible.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Glimpse the Impossible.html" target="_blank" rel="noopener noreferrer">Glimpse the Impossible</a></td>
+      <td>7.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>76349</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>49.20</td>
+      <td>44.97</td>
+      <td>-4.23</td>
+      <td>149</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91078" target="_blank" rel="noopener noreferrer"><img src="img/Sheltering_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sheltering Landscape.html" target="_blank" rel="noopener noreferrer">Sheltering Landscape</a></td>
+      <td>7.89</td>
+      <td>WRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>55139</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.35</td>
+      <td>46.02</td>
+      <td>-4.33</td>
+      <td>176</td>
+      <td>58.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91007" target="_blank" rel="noopener noreferrer"><img src="img/Horrific_Assault.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Horrific Assault.html" target="_blank" rel="noopener noreferrer">Horrific Assault</a></td>
+      <td>4.33</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>69986</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.55</td>
+      <td>45.69</td>
+      <td>-4.86</td>
+      <td>116</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91057" target="_blank" rel="noopener noreferrer"><img src="img/Titans'_Vanguard.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Titans' Vanguard.html" target="_blank" rel="noopener noreferrer">Titans' Vanguard</a></td>
+      <td>3.01</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31202</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.25</td>
+      <td>42.86</td>
+      <td>-5.39</td>
+      <td>133</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90927" target="_blank" rel="noopener noreferrer"><img src="img/Utter_Insignificance.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Utter Insignificance.html" target="_blank" rel="noopener noreferrer">Utter Insignificance</a></td>
+      <td>8.78</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28475</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>50.20</td>
+      <td>44.23</td>
+      <td>-5.97</td>
+      <td>104</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90918" target="_blank" rel="noopener noreferrer"><img src="img/Serum_Visionary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Serum Visionary.html" target="_blank" rel="noopener noreferrer">Serum Visionary</a></td>
+      <td>6.67</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24536</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>45.55</td>
+      <td>38.96</td>
+      <td>-6.59</td>
+      <td>154</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90905" target="_blank" rel="noopener noreferrer"><img src="img/Corrupted_Shapeshifter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Corrupted Shapeshifter.html" target="_blank" rel="noopener noreferrer">Corrupted Shapeshifter</a></td>
+      <td>10.25</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>77864</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.65</td>
+      <td>40.93</td>
+      <td>-7.72</td>
+      <td>193</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91083" target="_blank" rel="noopener noreferrer"><img src="img/Twisted_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Twisted Landscape.html" target="_blank" rel="noopener noreferrer">Twisted Landscape</a></td>
+      <td>7.85</td>
+      <td>BRG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>56351</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>51.15</td>
+      <td>43.14</td>
+      <td>-8.01</td>
+      <td>204</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91011" target="_blank" rel="noopener noreferrer"><img src="img/Malevolent_Rumble.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Malevolent Rumble.html" target="_blank" rel="noopener noreferrer">Malevolent Rumble</a></td>
+      <td>5.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9083</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>46.80</td>
+      <td>38.74</td>
+      <td>-8.06</td>
+      <td>111</td>
+      <td>51.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90854" target="_blank" rel="noopener noreferrer"><img src="img/Eldrazi_Ravager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eldrazi Ravager.html" target="_blank" rel="noopener noreferrer">Eldrazi Ravager</a></td>
+      <td>5.14</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10295</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.10</td>
+      <td>39.53</td>
+      <td>-8.57</td>
+      <td>129</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=90858" target="_blank" rel="noopener noreferrer"><img src="img/It_That_Heralds_the_End.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//It That Heralds the End.html" target="_blank" rel="noopener noreferrer">It That Heralds the End</a></td>
+      <td>4.84</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>75137</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.95</td>
+      <td>38.21</td>
+      <td>-10.74</td>
+      <td>123</td>
+      <td>55.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91074" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Landscape.html" target="_blank" rel="noopener noreferrer">Perilous Landscape</a></td>
+      <td>8.03</td>
+      <td>WUR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>74531</th>
+      <td>rare</td>
+      <td></td>
+      <td>8.88</td>
+      <td><a href=".//Urza's Incubator.html" target="_blank" rel="noopener noreferrer">Urza's Incubator</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91123" target="_blank" rel="noopener noreferrer"><img src="img/Urza's_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>42.0</td>
+      <td>48.70</td>
+      <td>37.78</td>
+      <td>-10.92</td>
+      <td>180</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=MH3&format=PremierDraft&start=2025-07-30&card_id=91072" target="_blank" rel="noopener noreferrer"><img src="img/Foreboding_Landscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Foreboding Landscape.html" target="_blank" rel="noopener noreferrer">Foreboding Landscape</a></td>
+      <td>8.09</td>
+      <td>UBG</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>
